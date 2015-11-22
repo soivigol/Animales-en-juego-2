@@ -7,9 +7,7 @@ function onDeviceReady () {
 $('button').on('touchend', function(){
 window.plugins.deviceFeedback.acoustic()
 });
-$('#btnSonidos').click(function(){
-window.open('sonido.html', 'location=no')
-});
+
 puntuacion=localStorage.getItem("puntuacion");
 
 }
