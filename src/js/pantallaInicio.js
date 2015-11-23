@@ -13,4 +13,8 @@ if (puntuacion==null) {
 puntuacion=0;
 };
 $('#contPuntuacion').html('Puntuación='+puntuacion);
+$('#btnSalir').click(function(e){
+e.preventDefault();
+navigator.app.exitApp();
+});
 }
