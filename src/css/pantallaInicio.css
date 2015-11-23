@@ -1,6 +1,7 @@
 body{
 	background: green;
 	padding-top: 20px;
+	background-image: url(../images/fondoPant.png);
 }
 
 a{
@@ -13,7 +14,7 @@ a{
 	font-size: 20px;
 	border: 3px outset #8b4513;
 	background: yellow;
-	background-image: url(../images/fondo.png);
+	background-image: url(../images/fondoBotones.png);
 	color: black;
 	text-decoration: none;
 }
