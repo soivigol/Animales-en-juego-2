@@ -12,17 +12,14 @@ a{
 	text-align: center;
 	font-size: 20px;
 	border: 3px outset #8b4513;
-	background: #8b4513;
+	background: yellow;
 	background-image: url(../images/fondo.png);
 	color: black;
 	text-decoration: none;
 }
 
 #contPuntuacion{
-	position: absolute;
-	bottom: 5px;
-	left: 0;
-	right: 0;
+	margin-top: 25px;
 	text-align: center;
 	font-size: 22px;
 }
