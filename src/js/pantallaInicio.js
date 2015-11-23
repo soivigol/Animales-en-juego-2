@@ -9,5 +9,8 @@ window.plugins.deviceFeedback.acoustic();
 });
 
 puntuacion=localStorage.getItem("puntuacion");
-
+if (puntuacion==null) {
+puntuacion=0;
+};
+$('#contPuntuacion').html('Puntuación='+puntuacion);
 }
