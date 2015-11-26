@@ -31,7 +31,7 @@ return Math.round(Math.random()*a);
 }
 
 function colocarAnimales(){
-$('#contAnimales').html('');
+alert('hola')
 animal1=aleatorio(20);
 animal2=aleatorio(20);
 animal3=aleatorio(20);
