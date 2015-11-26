@@ -1,5 +1,4 @@
 var puntuacion=0;
-var db;
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -9,16 +8,14 @@ if (puntuacion==null) {
 puntuacion=0;
 };
 $('#contPuntuacion').html('<p>Puntuación='+puntuacio+'</p>');
-window.setTimeout(function(){
-iniciar();
-},2000);
-db = window.sqlitePlugin.openDatabase({name: "animales.db", androidLockWorkaround: 1});
+window.setTimeout(iniciar,2000);
 
 }
 
 function iniciar(){
 $('#pagBienvenida').css('display','none');
 $('#pagPpal').css('display','block');
+var db = window.sqlitePlugin.openDatabase({name: "animales.db", androidLockWorkaround: 1});
 db.transaction(function(tx) {
 tx.executeSql("SELECT * FROM animales",[],function(tx,res){
 for(var i = 0; i < res.rows.length; i++)
