@@ -23,24 +23,23 @@ $('#contPuntuacion').html('<p>Puntuación='+puntuacion+'</p>');
 colocarAnimales();
 }
 
-function aleatorio(a){
-return Math.round(Math.random()*a);
+function aleatorio(a,b){
+return Math.round(Math.random()*(b-a)+parseInt(a))
 }
 
 function colocarAnimales(){
-animal1=aleatorio(20);
-animal2=aleatorio(20);
+animal1=aleatorio(1,21);
+animal2=aleatorio(1,21);
 if (animal1==animal2) {
 alert(animal2)
 while(animal1==animal2){
-animal2=aleatorio(20);
+animal2=aleatorio(1,21);
 }
 }
-animal3=aleatorio(20);
+animal3=aleatorio(1,21);
 if (animal3==animal1||animal3==animal2) {
-alert(animal3)
 while(animal3==animal1||animal3==animal2){
-animal3=aleatorio(20)
+animal3=aleatorio(1,21)
 }
 }
 var db = window.sqlitePlugin.openDatabase({name: "animales.db", androidLockWorkaround: 1});
