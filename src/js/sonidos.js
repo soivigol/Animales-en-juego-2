@@ -35,8 +35,6 @@ animal2=aleatorio(20);
 animal3=aleatorio(20);
 
 
-window.setTimeout(function(){
-$('#contAnimales').html('<div class="arriba3"><div>'+animal1+'</div><div>'+animal2+'</div></div><div class="abajo3">'+animal3+'</div>');
-},70);
+alert(animal1+'-'+animal2+'-'+animal3);
 
 }
