@@ -1,5 +1,4 @@
 var puntuacion=0;
-var db;
 var animal1=0;
 var animal2=0;
 var animal3=0;
@@ -10,12 +9,11 @@ var rutaAnimal3;
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady () {
+	alert('hola')
 puntuacion=localStorage.getItem("puntuacion");
 if (puntuacion==null) {
 puntuacion=0;
 };
-db = window.sqlitePlugin.openDatabase({name: "animales.db", androidLockWorkaround: 1});
-window.setTimeout(iniciar,500);
 
 }
 
@@ -35,6 +33,7 @@ alert('hola')
 animal1=aleatorio(20);
 animal2=aleatorio(20);
 animal3=aleatorio(20);
+var db = window.sqlitePlugin.openDatabase({name: "animales.db", androidLockWorkaround: 1});
 db.transaction(function(tx) {
 tx.executeSql("SELECT * FROM animales WHERE id='"+animal1+"'",[],function(tx,res){
 rutaAnimal1=res.rows.item(0).imagen;
