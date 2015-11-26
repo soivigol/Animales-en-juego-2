@@ -29,10 +29,6 @@ return Math.round(Math.random()*a);
 }
 
 function colocarAnimales(){
-alert('hola')
-animal1=aleatorio(20);
-
-
-alert(animal1);
+alert(aleatorio(20))
 
 }
