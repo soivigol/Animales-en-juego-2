@@ -31,13 +31,17 @@ function colocarAnimales(){
 animal1=aleatorio(20);
 animal2=aleatorio(20);
 if (animal1==animal2) {
+alert(animal2)
 while(animal1==animal2){
 animal2=aleatorio(20);
 }
 }
 animal3=aleatorio(20);
 if (animal3==animal1||animal3==animal2) {
-alert(animal3);
+alert(animal3)
+while(animal3==animal1||animal3==animal2){
+animal3=aleatorio(20)
+}
 }
 var db = window.sqlitePlugin.openDatabase({name: "animales.db", androidLockWorkaround: 1});
 db.transaction(function(tx) {
