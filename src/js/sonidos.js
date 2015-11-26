@@ -9,7 +9,6 @@ var rutaAnimal3;
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady () {
-	alert('hola')
 puntuacion=localStorage.getItem("puntuacion");
 if (puntuacion==null) {
 puntuacion=0;
@@ -29,7 +28,6 @@ return Math.round(Math.random()*a);
 }
 
 function colocarAnimales(){
-alert('hola')
 animal1=aleatorio(20);
 animal2=aleatorio(20);
 if (animal1==animal2) {
@@ -39,8 +37,7 @@ animal2=aleatorio(20);
 };
 animal3=aleatorio(20);
 if (animal3==animal1||animal3==animal2) {
-while(animal3==animal1||animal3==animal2){
-animal3=aleatorio(20);
+alert(animal3);
 }
 };
 var db = window.sqlitePlugin.openDatabase({name: "animales.db", androidLockWorkaround: 1});
