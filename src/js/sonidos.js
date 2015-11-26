@@ -7,7 +7,7 @@ puntuacion=localStorage.getItem("puntuacion");
 if (puntuacion==null) {
 puntuacion=0;
 };
-$('#contPuntuacion').html('<p>Puntuación='+puntuacio+'</p>');
+
 window.setTimeout(iniciar,200);
 
 }
