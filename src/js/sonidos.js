@@ -15,7 +15,7 @@ if (puntuacion==null) {
 puntuacion=0;
 };
 db = window.sqlitePlugin.openDatabase({name: "animales.db", androidLockWorkaround: 1});
-window.setTimeout(iniciar,2000);
+window.setTimeout(iniciar,500);
 
 }
 
