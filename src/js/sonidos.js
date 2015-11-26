@@ -9,7 +9,9 @@ if (puntuacion==null) {
 puntuacion=0;
 };
 $('#contPuntuacion').html('<p>Puntuación='+puntuacio+'</p>');
-window.setTimeout(iniciar,2000);
+window.setTimeout(function(){
+iniciar();
+},2000);
 db = window.sqlitePlugin.openDatabase({name: "animales.db", androidLockWorkaround: 1});
 
 }
