@@ -1,6 +1,7 @@
 var puntuacion=0;
 var animal=new Array();
 var rutaanimal= new Array();
+var animalSeleccionado=0;
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -100,17 +101,23 @@ rutaanimal[8]=res.rows.item(0).imagen;
 });
 window.setTimeout(function(){
 if (puntuacion<15) {
-$('#contAnimales').html('<div class="arriba3"><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>'+rutaanimal[3]+'</div></div>');
+animalSeleccionado=aleatorio(1,3);
+$('#contAnimales').html('<div class="arriba3"><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>Donde está el '+rutaanimal[animalSeleccionado]+'</div><div>'+rutaanimal[3]+'</div></div>');
 }else if (puntuacion<30) {
-$('#contAnimales').html('<div class="arriba4"><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>'+rutaanimal[3]+'</div><div>'+rutaanimal[4]+'</div></div>');	
+animalSeleccionado=aleatorio(1,4);
+$('#contAnimales').html('<div class="arriba4"><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>Donde está el '+rutaanimal[animalSeleccionado]+'</div><div>'+rutaanimal[3]+'</div><div>'+rutaanimal[4]+'</div></div>');	
 }else if (puntuacion<50) {
-$('#contAnimales').html('<div class="arriba5"><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>'+rutaanimal[3]+'</div><div>'+rutaanimal[4]+'</div><div>'+rutaanimal[5]+'</div></div>');
+animalSeleccionado=aleatorio(1,5);
+$('#contAnimales').html('<div class="arriba5"><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>'+rutaanimal[3]+'</div><div>Donde está el '+rutaanimal[animalSeleccionado]+'</div><div>'+rutaanimal[4]+'</div><div>'+rutaanimal[5]+'</div></div>');
 }else if (puntuacion<75) {
-$('#contAnimales').html('<div class="arriba6"><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>'+rutaanimal[3]+'</div><div>'+rutaanimal[4]+'</div><div>'+rutaanimal[5]+'</div><div>'+rutaanimal[6]+'</div></div>');
+animalSeleccionado=aleatorio(1,6);
+$('#contAnimales').html('<div class="arriba6"><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>'+rutaanimal[3]+'</div><div>'+rutaanimal[4]+'</div><div>Donde está el '+rutaanimal[animalSeleccionado]+'</div><div>'+rutaanimal[5]+'</div><div>'+rutaanimal[6]+'</div></div>');
 }else if (puntuacion<100) {
-$('#contAnimales').html('<div class="arriba7"><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>'+rutaanimal[3]+'</div><div>'+rutaanimal[4]+'</div><div>'+rutaanimal[5]+'</div><div>'+rutaanimal[6]+'</div><div>'+rutaanimal[7]+'</div></div>');
+animalSeleccionado=aleatorio(1,7);
+$('#contAnimales').html('<div class="arriba7"><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>'+rutaanimal[3]+'</div><div>'+rutaanimal[4]+'</div><div>Donde está el '+rutaanimal[animalSeleccionado]+'</div><div>'+rutaanimal[5]+'</div><div>'+rutaanimal[6]+'</div><div>'+rutaanimal[7]+'</div></div>');
 }else{
-$('#contAnimales').html('<div class="arriba8"><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>'+rutaanimal[3]+'</div><div>'+rutaanimal[4]+'</div><div>'+rutaanimal[5]+'</div><div>'+rutaanimal[6]+'</div><div>'+rutaanimal[7]+'</div><div>'+rutaanimal[8]+'</div></div>');
+animalSeleccionado=aleatorio(1,8);
+$('#contAnimales').html('<div class="arriba8"><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>'+rutaanimal[3]+'</div><div>'+rutaanimal[4]+'</div><div>Donde está el '+rutaanimal[animalSeleccionado]+'</div><div>'+rutaanimal[5]+'</div><div>'+rutaanimal[6]+'</div><div>'+rutaanimal[7]+'</div><div>'+rutaanimal[8]+'</div></div>');
 }	
 },70);
 
