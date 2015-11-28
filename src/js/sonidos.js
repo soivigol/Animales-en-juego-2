@@ -12,10 +12,6 @@ if (puntuacion==null) {
 puntuacion=0;
 }
 window.setTimeout(iniciar,500);
-$('#punt').click(function(){
-puntuacion=puntuacion+1;
-iniciar();
-});
 }
 
 function iniciar(){
@@ -129,7 +125,29 @@ animalSeleccionado=aleatorio(1,8);
 $('#contAnimales').html('<div class="arriba8"><div><input type="hidden" value="1"/><img src="'+rutaanimal[1]+'" class="btnAnimal" alt="'+nombreAnimal[1]+'"/></div><div><input type="hidden" value="2"/><img src="'+rutaanimal[2]+'" class="btnAnimal" alt="'+nombreAnimal[2]+'"/></div><div><input type="hidden" value="3"/><img src="'+rutaanimal[3]+'" class="btnAnimal" alt="'+nombreAnimal[3]+'"/></div><div><input type="hidden" value="4"/><img src="'+rutaanimal[4]+'" class="btnAnimal" alt="'+nombreAnimal[4]+'"/></div><div>Donde está el '+nombreAnimal[animalSeleccionado]+'</div><div><input type="hidden" value="5"/><img src="'+rutaanimal[5]+'" class="btnAnimal" alt="'+nombreAnimal[5]+'"/></div><div><input type="hidden" value="6"/><img src="'+rutaanimal[6]+'" class="btnAnimal" alt="'+nombreAnimal[6]+'"/></div><div><input type="hidden" value="7"/><img src="'+rutaanimal[7]+'" class="btnAnimal" alt="'+nombreAnimal[7]+'"/></div><div><input type="hidden" value="8"/><img src="'+rutaanimal[8]+'" class="btnAnimal" alt="'+nombreAnimal[8]+'"/></div></div>');
 }	
 
+$('.btnAnimal').click(comprobarSeleccion);
+
 },70);
 
 }
 
+function comprobarSeleccion(){
+var animalPulsado=$(this).parent().find('input').val();
+if(animalPulsado==animalSeleccionado){
+$('#pagPpal').hide();
+$('#pagAcierto').show();
+puntuacion=puntuacion+1;
+localStorage.setItem('puntuacion',puntuacion);
+window.setTimeout(function(){
+$('#pagAcierto').hide();
+iniciar();
+},800);
+}else{
+$('#pagPpal').hide();
+$('#pagFallo').show();
+window.setTimeout(function(){
+$('#pagFallo').hide();
+iniciar();
+},800);
+}
+}
