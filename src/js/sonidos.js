@@ -7,7 +7,7 @@ var nombreAnimal= new Array();
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady () {
-puntuacion=localStorage.getItem("puntuacion");
+puntuacion=Number(localStorage.getItem("puntuacion"));
 if (puntuacion==null) {
 puntuacion=0;
 }
