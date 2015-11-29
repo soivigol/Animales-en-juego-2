@@ -29,6 +29,7 @@ sumatorio=0;
 animalSeleccionado=aleatorio(1,21);
 if(puntuacion<15){
 animal[1]=aleatorio(animalSeleccionado-1,animalSeleccionado+1);
+}
 if(animalSeleccionado==animal[1]){
 sumatorio=sumatorio+1;
 }
@@ -77,7 +78,7 @@ nombreAnimal[5]=res.rows.item(0).nombre;
 });
 });
 $('#contAnimales').html('<div class="numeros5"><div>¿Cuantos '+nombreAnimal[0]+' hay?</div><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>'+rutaanimal[3]+'</div><div>'+rutaanimal[4]+'</div><div>'+rutaanimal[5]+'</div></div>');
-}
+
 posicionElecta=aleatorio(1,3);
 numeros[1]=aleatorio(1,5);
 numeros[2]=aleatorio(1,5);
