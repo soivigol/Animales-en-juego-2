@@ -10,7 +10,7 @@ var numeros= new Array();
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady () {
-puntuacion=localStorage.getItem("puntuacionNumeros");
+puntuacion=Number(localStorage.getItem("puntuacionNumeros"));
 if (puntuacion==null) {
 puntuacion=0;
 }
@@ -48,6 +48,7 @@ animal[5]=aleatorio(animalSeleccionado-1,animalSeleccionado+1);
 if(animalSeleccionado==animal[1]){
 sumatorio=sumatorio+1;
 }
+window.setTimeout(function(){
 var db = window.sqlitePlugin.openDatabase({name: "animales.db", androidLockWorkaround: 1});
 db.transaction(function(tx) {
 tx.executeSql("SELECT * FROM animales WHERE id='"+animalSeleccionado+"'",[],function(tx,res){
@@ -82,8 +83,10 @@ numeros[1]=aleatorio(1,5);
 numeros[2]=aleatorio(1,5);
 numeros[3]=aleatorio(1,5);
 numeros[posicionElecta]=sumatorio;
-$('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button>');
+$('#contNumeros').html('<button><input type="hidden" value="'+numeros[1]+'"/>'+numeros[1]+'</button><button><input type="hidden" value="'+numeros[2]+'"/>'+numeros[2]+'</button><button><input type="hidden" value="'+numeros[3]+'"/>'+numeros[3]+'</button>');
 $('#contNumeros button').click(comprobar);
+},70);
+
 }
 
 function aleatorio(a,b){
@@ -91,7 +94,7 @@ return Math.round(Math.random()*(b-a)+parseInt(a))
 }
 
 function comprobar(){
-if(Number($(this).text())==sumatorio){
+if($(this).find('input').val()==sumatorio){
 $('#pagPpal').hide();
 $('#pagAcierto').show();
 puntuacion=puntuacion+1;
