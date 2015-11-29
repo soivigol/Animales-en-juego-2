@@ -107,7 +107,7 @@ nombreAnimal[8]=res.rows.item(0).nombre;
 window.setTimeout(function(){
 if (puntuacion<15) {
 animalSeleccionado=aleatorio(1,3);
-$('#contAnimales').html('<div class="arriba3"><div>Donde está el '+nombreAnimal[animalSeleccionado]+'</div><div><input type="hidden" value="1"/><img src="'+rutaanimal[1]+'" class="btnAnimal" alt="'+nombreAnimal[1]+'"/></div><div><input type="hidden" value="2"/><img src="'+rutaanimal[2]+'" class="btnAnimal" alt="'+nombreAnimal[2]+'"/></div><<div><input type="hidden" value="3"/><img src="'+rutaanimal[3]+'" class="btnAnimal" alt="'+nombreAnimal[3]+'"/></div></div>');
+$('#contAnimales').html('<div class="arriba3"><div>Donde está el '+nombreAnimal[animalSeleccionado]+'</div><div><input type="hidden" value="1"/><img src="'+rutaanimal[1]+'" class="btnAnimal" alt="'+nombreAnimal[1]+'"/></div><div><input type="hidden" value="2"/><img src="'+rutaanimal[2]+'" class="btnAnimal" alt="'+nombreAnimal[2]+'"/></div><div><input type="hidden" value="3"/><img src="'+rutaanimal[3]+'" class="btnAnimal" alt="'+nombreAnimal[3]+'"/></div></div>');
 }else if (puntuacion<30) {
 animalSeleccionado=aleatorio(1,4);
 $('#contAnimales').html('<div class="arriba4"><div>Donde está el '+nombreAnimal[animalSeleccionado]+'</div><div><input type="hidden" value="1"/><img src="'+rutaanimal[1]+'" class="btnAnimal" alt="'+nombreAnimal[1]+'"/></div><div><input type="hidden" value="2"/><img src="'+rutaanimal[2]+'" class="btnAnimal" alt="'+nombreAnimal[2]+'"/></div><div><input type="hidden" value="3"/><img src="'+rutaanimal[3]+'" class="btnAnimal" alt="'+nombreAnimal[3]+'"/></div><div><input type="hidden" value="4"/><img src="'+rutaanimal[4]+'" class="btnAnimal" alt="'+nombreAnimal[4]+'"/></div></div>');	

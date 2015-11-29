@@ -83,8 +83,8 @@ numeros[1]=aleatorio(1,5);
 numeros[2]=aleatorio(1,5);
 numeros[3]=aleatorio(1,5);
 numeros[posicionElecta]=sumatorio;
-$('#contNumeros').html('<div><input type="hidden" value="'+numeros[1]+'"/>'+numeros[1]+'</div><div><input type="hidden" value="'+numeros[2]+'"/>'+numeros[2]+'</div><div><input type="hidden" value="'+numeros[3]+'"/>'+numeros[3]+'</div>');
-$('#contNumeros div').click(comprobar);
+$('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button>');
+$('#contNumeros button').click(comprobar);
 },70);
 
 }
@@ -94,7 +94,7 @@ return Math.round(Math.random()*(b-a)+parseInt(a))
 }
 
 function comprobar(){
-if($(this).find('input').val()==sumatorio){
+if(Number($(this).text())==sumatorio){
 $('#pagPpal').hide();
 $('#pagAcierto').show();
 puntuacion=puntuacion+1;
