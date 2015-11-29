@@ -29,6 +29,7 @@ colocarAnimales();
 function colocarAnimales(){
 sumatorio=0;
 animalSeleccionado=aleatorio(1,21);
+alert(animalSeleccionado);
 if(a<17){
 a=animalSeleccionado; b=animalSeleccionado+4;
 }else{
