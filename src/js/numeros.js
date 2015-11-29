@@ -26,10 +26,9 @@ colocarAnimales();
 
 function colocarAnimales(){
 sumatorio=0;
-animalSeleccionado=aleatorio(1,21);
+animalSeleccionado=aleatorio(2,20);
 if(puntuacion<15){
 animal[1]=aleatorio(animalSeleccionado-1,animalSeleccionado+1);
-}
 if(animalSeleccionado==animal[1]){
 sumatorio=sumatorio+1;
 }
@@ -86,8 +85,8 @@ numeros[3]=aleatorio(1,5);
 numeros[posicionElecta]=sumatorio;
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button>');
 $('#contNumeros button').click(comprobar);
-},70);
-
+},120);
+}
 }
 
 function aleatorio(a,b){
