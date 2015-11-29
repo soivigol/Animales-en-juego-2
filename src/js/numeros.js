@@ -60,7 +60,6 @@ animal[6]=aleatorio(a,b);
 if(animalSeleccionado==animal[6]){
 sumatorio=sumatorio+1;
 }
-window.setTimeout(function(){
 var db = window.sqlitePlugin.openDatabase({name: "animales.db", androidLockWorkaround: 1});
 db.transaction(function(tx) {
 tx.executeSql("SELECT * FROM animales WHERE id='"+animalSeleccionado+"'",[],function(tx,res){
@@ -92,6 +91,7 @@ rutaanimal[6]=res.rows.item(0).imagen;
 nombreAnimal[6]=res.rows.item(0).nombre;
 });
 });
+window.setTimeout(function(){
 $('#contAnimales').html('<div class="numeros5"><div>¿Cuantos '+nombreAnimal[0]+'s hay?</div><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>'+rutaanimal[3]+'</div><div>'+rutaanimal[4]+'</div><div>'+rutaanimal[5]+'</div><div>'+rutaanimal[6]+'</div></div>');
 
 posicionElecta=aleatorio(1,3);
