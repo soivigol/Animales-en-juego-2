@@ -29,12 +29,12 @@ colocarAnimales();
 function colocarAnimales(){
 sumatorio=0;
 animalSeleccionado=aleatorio(1,21);
-if(animalSeleccionado<19&&animalSeleccionado>2){
-a=animalSeleccionado-2; b=animalSeleccionado+2;
+if(animalSeleccionado<19&&animalSeleccionado>1){
+a=animalSeleccionado-1; b=animalSeleccionado+2;
 }else if(animalSeleccionado>19){
-b=animalSeleccionado; a=animalSeleccionado-4;
-}else if(animalSeleccionado<3){
-a=animalSeleccionado; b=animalSeleccionado+4;
+b=animalSeleccionado; a=animalSeleccionado-3;
+}else if(animalSeleccionado<2){
+a=animalSeleccionado; b=animalSeleccionado+3;
 }
 animal[1]=aleatorio(a,b);
 if(animalSeleccionado==animal[1]){
@@ -163,6 +163,166 @@ numeros[3]=aleatorio(1,9);
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button>');
 $('#contNumeros button').click(comprobar);
 },120);
+}else if(puntuacion<50){
+animal[7]=aleatorio(a,b);
+if(animalSeleccionado==animal[7]){
+sumatorio=sumatorio+1;
+}
+animal[8]=aleatorio(a,b);
+if(animalSeleccionado==animal[8]){
+sumatorio=sumatorio+1;
+}
+animal[9]=aleatorio(a,b);
+if(animalSeleccionado==animal[9]){
+sumatorio=sumatorio+1;
+}
+animal[10]=aleatorio(a,b);
+if(animalSeleccionado==animal[10]){
+sumatorio=sumatorio+1;
+}
+animal[11]=aleatorio(a,b);
+if(animalSeleccionado==animal[11]){
+sumatorio=sumatorio+1;
+}
+animal[12]=aleatorio(a,b);
+if(animalSeleccionado==animal[12]){
+sumatorio=sumatorio+1;
+}
+var db = window.sqlitePlugin.openDatabase({name: "animales.db", androidLockWorkaround: 1});
+db.transaction(function(tx) {
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[7]+"'",[],function(tx,res){
+rutaanimal[7]=res.rows.item(0).imagen;
+nombreAnimal[7]=res.rows.item(0).nombre;
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[8]+"'",[],function(tx,res){
+rutaanimal[8]=res.rows.item(0).imagen;
+nombreAnimal[8]=res.rows.item(0).nombre;
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[9]+"'",[],function(tx,res){
+rutaanimal[9]=res.rows.item(0).imagen;
+nombreAnimal[9]=res.rows.item(0).nombre;
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[10]+"'",[],function(tx,res){
+rutaanimal[10]=res.rows.item(0).imagen;
+nombreAnimal[10]=res.rows.item(0).nombre;
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[11]+"'",[],function(tx,res){
+rutaanimal[11]=res.rows.item(0).imagen;
+nombreAnimal[11]=res.rows.item(0).nombre;
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[12]+"'",[],function(tx,res){
+rutaanimal[12]=res.rows.item(0).imagen;
+nombreAnimal[12]=res.rows.item(0).nombre;
+});
+});
+window.setTimeout(function(){
+$('#contAnimales').html('<div class="numeros12"><div>¿Cuantos '+nombreAnimal[0]+'s hay?</div><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>'+rutaanimal[3]+'</div><div>'+rutaanimal[4]+'</div><div>'+rutaanimal[5]+'</div><div>'+rutaanimal[6]+'</div><div>'+rutaanimal[7]+'</div><div>'+rutaanimal[8]+'</div><div>'+rutaanimal[9]+'</div><div>'+rutaanimal[10]+'</div><div>'+rutaanimal[11]+'</div><div>'+rutaanimal[12]+'</div></div>');
+
+posicionElecta=aleatorio(1,3);
+numeros[1]=aleatorio(1,12);
+numeros[2]=aleatorio(1,12);
+numeros[3]=aleatorio(1,12);
+numeros[posicionElecta]=sumatorio;
+if(numeros[2]==numeros[1]){
+while(numeros[2]==numeros[1]){
+numeros[2]=aleatorio(1,12);
+}
+}
+if(numeros[3]==numeros[1]||numeros[3]==numeros[2]){
+while(numeros[3]==numeros[1]||numeros[3]==numeros[2]){
+numeros[3]=aleatorio(1,12);
+}
+}
+$('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button>');
+$('#contNumeros button').click(comprobar);
+},120);
+}else if(puntuacion<75){
+colocar16Animales();
+window.setTimeout(function(){
+$('#contAnimales').html('<div class="numeros16"><div>¿Cuantos '+nombreAnimal[0]+'s hay?</div><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>'+rutaanimal[3]+'</div><div>'+rutaanimal[4]+'</div><div>'+rutaanimal[5]+'</div><div>'+rutaanimal[6]+'</div><div>'+rutaanimal[7]+'</div><div>'+rutaanimal[8]+'</div><div>'+rutaanimal[9]+'</div><div>'+rutaanimal[10]+'</div><div>'+rutaanimal[11]+'</div><div>'+rutaanimal[12]+'</div><div>'+rutaanimal[13]+'</div><div>'+rutaanimal[14]+'</div><div>'+rutaanimal[15]+'</div><div>'+rutaanimal[16]+'</div></div>');
+
+posicionElecta=aleatorio(1,3);
+numeros[1]=aleatorio(1,16);
+numeros[2]=aleatorio(1,16);
+numeros[3]=aleatorio(1,16);
+numeros[posicionElecta]=sumatorio;
+if(numeros[2]==numeros[1]){
+while(numeros[2]==numeros[1]){
+numeros[2]=aleatorio(1,16);
+}
+}
+if(numeros[3]==numeros[1]||numeros[3]==numeros[2]){
+while(numeros[3]==numeros[1]||numeros[3]==numeros[2]){
+numeros[3]=aleatorio(1,16);
+}
+}
+$('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button>');
+$('#contNumeros button').click(comprobar);
+},120);
+}else if (puntuacion<100) {
+colocar16Animales();
+window.setTimeout(function(){
+$('#contAnimales').html('<div class="numeros16"><div>¿Cuantos '+nombreAnimal[0]+'s hay?</div><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>'+rutaanimal[3]+'</div><div>'+rutaanimal[4]+'</div><div>'+rutaanimal[5]+'</div><div>'+rutaanimal[6]+'</div><div>'+rutaanimal[7]+'</div><div>'+rutaanimal[8]+'</div><div>'+rutaanimal[9]+'</div><div>'+rutaanimal[10]+'</div><div>'+rutaanimal[11]+'</div><div>'+rutaanimal[12]+'</div><div>'+rutaanimal[13]+'</div><div>'+rutaanimal[14]+'</div><div>'+rutaanimal[15]+'</div><div>'+rutaanimal[16]+'</div></div>');
+
+posicionElecta=aleatorio(1,4);
+numeros[1]=aleatorio(1,16);
+numeros[2]=aleatorio(1,16);
+numeros[3]=aleatorio(1,16);
+numeros[4]=aleatorio(1,16);
+numeros[posicionElecta]=sumatorio;
+if(numeros[2]==numeros[1]){
+while(numeros[2]==numeros[1]){
+numeros[2]=aleatorio(1,16);
+}
+}
+if(numeros[3]==numeros[1]||numeros[3]==numeros[2]){
+while(numeros[3]==numeros[1]||numeros[3]==numeros[2]){
+numeros[3]=aleatorio(1,16);
+}
+}
+if(numeros[4]==numeros[1]||numeros[4]==numeros[2]||numeros[4]==numeros[3]){
+while(numeros[4]==numeros[1]||numeros[4]==numeros[2]||numeros[4]==numeros[3]){
+numeros[4]=aleatorio(1,16);
+}
+}
+$('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button><button>'+numeros[4]+'</button>');
+$('#contNumeros button').click(comprobar);
+},120);
+}else{
+colocar16Animales();
+window.setTimeout(function(){
+$('#contAnimales').html('<div class="numeros16"><div>¿Cuantos '+nombreAnimal[0]+'s hay?</div><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>'+rutaanimal[3]+'</div><div>'+rutaanimal[4]+'</div><div>'+rutaanimal[5]+'</div><div>'+rutaanimal[6]+'</div><div>'+rutaanimal[7]+'</div><div>'+rutaanimal[8]+'</div><div>'+rutaanimal[9]+'</div><div>'+rutaanimal[10]+'</div><div>'+rutaanimal[11]+'</div><div>'+rutaanimal[12]+'</div><div>'+rutaanimal[13]+'</div><div>'+rutaanimal[14]+'</div><div>'+rutaanimal[15]+'</div><div>'+rutaanimal[16]+'</div></div>');
+
+posicionElecta=aleatorio(1,5);
+numeros[1]=aleatorio(1,16);
+numeros[2]=aleatorio(1,16);
+numeros[3]=aleatorio(1,16);
+numeros[4]=aleatorio(1,16);
+numeros[5]=aleatorio(1,16);
+numeros[posicionElecta]=sumatorio;
+if(numeros[2]==numeros[1]){
+while(numeros[2]==numeros[1]){
+numeros[2]=aleatorio(1,16);
+}
+}
+if(numeros[3]==numeros[1]||numeros[3]==numeros[2]){
+while(numeros[3]==numeros[1]||numeros[3]==numeros[2]){
+numeros[3]=aleatorio(1,16);
+}
+}
+if(numeros[4]==numeros[1]||numeros[4]==numeros[2]||numeros[4]==numeros[3]){
+while(numeros[4]==numeros[1]||numeros[4]==numeros[2]||numeros[4]==numeros[3]){
+numeros[4]=aleatorio(1,16);
+}
+}
+if(numeros[5]==numeros[1]||numeros[5]==numeros[2]||numeros[5]==numeros[3]||numeros[5]==numeros[4]){
+while(numeros[5]==numeros[1]||numeros[5]==numeros[2]||numeros[5]==numeros[3]||numeros[5]==numeros[4]){
+numeros[5]=aleatorio(1,16);
+}
+}
+$('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button><button>'+numeros[4]+'</button><button>'+numeros[6]+'</button>');
+$('#contNumeros button').click(comprobar);
+},120);
 }
 }
 
@@ -188,4 +348,90 @@ $('#pagFallo').hide();
 iniciar();
 },800);
 }
+}
+
+function colocar16Animales(){
+animal[7]=aleatorio(a,b);
+if(animalSeleccionado==animal[7]){
+sumatorio=sumatorio+1;
+}
+animal[8]=aleatorio(a,b);
+if(animalSeleccionado==animal[8]){
+sumatorio=sumatorio+1;
+}
+animal[9]=aleatorio(a,b);
+if(animalSeleccionado==animal[9]){
+sumatorio=sumatorio+1;
+}
+animal[10]=aleatorio(a,b);
+if(animalSeleccionado==animal[10]){
+sumatorio=sumatorio+1;
+}
+animal[11]=aleatorio(a,b);
+if(animalSeleccionado==animal[11]){
+sumatorio=sumatorio+1;
+}
+animal[12]=aleatorio(a,b);
+if(animalSeleccionado==animal[12]){
+sumatorio=sumatorio+1;
+}
+animal[13]=aleatorio(a,b);
+if(animalSeleccionado==animal[13]){
+sumatorio=sumatorio+1;
+}
+animal[14]=aleatorio(a,b);
+if(animalSeleccionado==animal[14]){
+sumatorio=sumatorio+1;
+}
+animal[15]=aleatorio(a,b);
+if(animalSeleccionado==animal[15]){
+sumatorio=sumatorio+1;
+}
+animal[16]=aleatorio(a,b);
+if(animalSeleccionado==animal[16]){
+sumatorio=sumatorio+1;
+}
+var db = window.sqlitePlugin.openDatabase({name: "animales.db", androidLockWorkaround: 1});
+db.transaction(function(tx) {
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[7]+"'",[],function(tx,res){
+rutaanimal[7]=res.rows.item(0).imagen;
+nombreAnimal[7]=res.rows.item(0).nombre;
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[8]+"'",[],function(tx,res){
+rutaanimal[8]=res.rows.item(0).imagen;
+nombreAnimal[8]=res.rows.item(0).nombre;
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[9]+"'",[],function(tx,res){
+rutaanimal[9]=res.rows.item(0).imagen;
+nombreAnimal[9]=res.rows.item(0).nombre;
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[10]+"'",[],function(tx,res){
+rutaanimal[10]=res.rows.item(0).imagen;
+nombreAnimal[10]=res.rows.item(0).nombre;
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[11]+"'",[],function(tx,res){
+rutaanimal[11]=res.rows.item(0).imagen;
+nombreAnimal[11]=res.rows.item(0).nombre;
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[12]+"'",[],function(tx,res){
+rutaanimal[12]=res.rows.item(0).imagen;
+nombreAnimal[12]=res.rows.item(0).nombre;
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[13]+"'",[],function(tx,res){
+rutaanimal[13]=res.rows.item(0).imagen;
+nombreAnimal[13]=res.rows.item(0).nombre;
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[14]+"'",[],function(tx,res){
+rutaanimal[14]=res.rows.item(0).imagen;
+nombreAnimal[14]=res.rows.item(0).nombre;
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[15]+"'",[],function(tx,res){
+rutaanimal[15]=res.rows.item(0).imagen;
+nombreAnimal[15]=res.rows.item(0).nombre;
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[16]+"'",[],function(tx,res){
+rutaanimal[16]=res.rows.item(0).imagen;
+nombreAnimal[16]=res.rows.item(0).nombre;
+});
+});
 }
