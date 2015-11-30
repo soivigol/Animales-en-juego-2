@@ -336,10 +336,22 @@ $('#pagPpal').hide();
 $('#pagAcierto').show();
 puntuacion=puntuacion+1;
 localStorage.setItem('puntuacionNumeros',puntuacion);
+if (puntuacion==15||puntuacion==30||puntuacion==50||puntuacion==75||puntuacion==100) {
+$('#pagNivel').show();
+$('#pagAcierto').hide();
+window.setTimeout(function(){
+$('#pagNivel').hide();
+iniciar();
+},800);
+}else if(puntuacion==150){
+$('#pagFin').show();
+$('#pagAcierto').hide();
+}else{
 window.setTimeout(function(){
 $('#pagAcierto').hide();
 iniciar();
-},800)
+},800);
+}
 }else{
 $('#pagPpal').hide();
 $('#pagFallo').show();
