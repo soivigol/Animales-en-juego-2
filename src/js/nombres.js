@@ -41,6 +41,7 @@ while(animal[4]==animal[1]||animal[4]==animal[2]||animal[1]==animal[3]){
 animal[4]=aleatorio(1,21);
 }
 }
+}
 
 var db = window.sqlitePlugin.openDatabase({name: "animales.db", androidLockWorkaround: 1});
 db.transaction(function(tx) {
