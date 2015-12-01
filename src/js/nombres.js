@@ -66,7 +66,7 @@ animal[7]=aleatorio(1,21);
 animal[8]=aleatorio(1,21);
 if(animal[8]==animal[1]||animal[8]==animal[2]||animal[8]==animal[3]||animal[8]==animal[4]||animal[8]==animal[5]||animal[8]==animal[6]||animal[8]==animal[7]){
 while(animal[8]==animal[1]||animal[8]==animal[2]||animal[8]==animal[3]||animal[8]==animal[4]||animal[8]==animal[5]||animal[8]==animal[6]||animal[8]==animal[7]){
-animal[9]=aleatorio(1,21);
+animal[8]=aleatorio(1,21);
 }
 }
 }
