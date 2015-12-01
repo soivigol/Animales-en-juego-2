@@ -22,7 +22,7 @@ window.setTimeout(iniciar,500);
 function iniciar(){
 $('#pagBienvenida').css('display','none');
 $('#pagPpal').css('display','block');
-$('#contPuntuacion').html('<p>Puntuación='+puntuacion+'</p>');
+$('#contPuntuacion').html('<p>Puntuación='+puntuacion+'</p><p>Nivel='+buscarNivel(puntuacion)+'</p>');
 colocarAnimales();
 }
 
@@ -446,4 +446,20 @@ rutaanimal[16]=res.rows.item(0).imagen;
 nombreAnimal[16]=res.rows.item(0).nombre;
 });
 });
+}
+
+function buscarNivel(a){
+if (a<16) {
+return 1;
+}else if (a<30) {
+return 2;
+}else if (a<50) {
+return 3;
+}else if (a<75) {
+return 4;
+}else if (a<100) {
+return 5;
+}else{
+return 6;
+}
 }
