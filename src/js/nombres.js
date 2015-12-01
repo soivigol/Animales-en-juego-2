@@ -41,7 +41,7 @@ while(animal[4]==animal[1]||animal[4]==animal[2]||animal[1]==animal[3]){
 animal[4]=aleatorio(1,21);
 }
 }
-}
+
 
 var db = window.sqlitePlugin.openDatabase({name: "animales.db", androidLockWorkaround: 1});
 db.transaction(function(tx) {
@@ -69,7 +69,6 @@ if (puntuacion<15) {
 animalSeleccionado=aleatorio(1,4);
 $('#contAnimales').html('<div class="nombre4"><div>¿Como se llama este animal? '+nombreAnimal[animalSeleccionado]+'</div><div class="btnAnimal" ><input type="hidden" value="1"/>'+nombreAnimal[1]+'</div><div class="btnAnimal" ><input type="hidden" value="2"/>'+nombreAnimal[2]+'</div><div class="btnAnimal" ><input type="hidden" value="3"/>'+nombreAnimal[3]+'</div><div class="btnAnimal" ><input type="hidden" value="4"/>'+nombreAnimal[4]+'</div></div>');
 }
-}	
 
 $('.btnAnimal').click(comprobarSeleccion);
 
