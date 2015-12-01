@@ -142,25 +142,32 @@ nombreAnimal[8]=res.rows.item(0).nombre;
 tx.executeSql("SELECT * FROM animales WHERE id='"+animal[9]+"'",[],function(tx,res){
 rutaanimal[9]=res.rows.item(0).imagen;
 nombreAnimal[9]=res.rows.item(0).nombre;
-});tx.executeSql("SELECT * FROM animales WHERE id='"+animal[10]+"'",[],function(tx,res){
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[10]+"'",[],function(tx,res){
 rutaanimal[10]=res.rows.item(0).imagen;
 nombreAnimal[10]=res.rows.item(0).nombre;
-});tx.executeSql("SELECT * FROM animales WHERE id='"+animal[11]+"'",[],function(tx,res){
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[11]+"'",[],function(tx,res){
 rutaanimal[11]=res.rows.item(0).imagen;
 nombreAnimal[11]=res.rows.item(0).nombre;
-});tx.executeSql("SELECT * FROM animales WHERE id='"+animal[12]+"'",[],function(tx,res){
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[12]+"'",[],function(tx,res){
 rutaanimal[12]=res.rows.item(0).imagen;
 nombreAnimal[12]=res.rows.item(0).nombre;
-});tx.executeSql("SELECT * FROM animales WHERE id='"+animal[13]+"'",[],function(tx,res){
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[13]+"'",[],function(tx,res){
 rutaanimal[13]=res.rows.item(0).imagen;
 nombreAnimal[13]=res.rows.item(0).nombre;
-});tx.executeSql("SELECT * FROM animales WHERE id='"+animal[14]+"'",[],function(tx,res){
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[14]+"'",[],function(tx,res){
 rutaanimal[14]=res.rows.item(0).imagen;
 nombreAnimal[14]=res.rows.item(0).nombre;
-});tx.executeSql("SELECT * FROM animales WHERE id='"+animal[15]+"'",[],function(tx,res){
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[15]+"'",[],function(tx,res){
 rutaanimal[15]=res.rows.item(0).imagen;
 nombreAnimal[15]=res.rows.item(0).nombre;
-});tx.executeSql("SELECT * FROM animales WHERE id='"+animal[16]+"'",[],function(tx,res){
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[16]+"'",[],function(tx,res){
 rutaanimal[16]=res.rows.item(0).imagen;
 nombreAnimal[16]=res.rows.item(0).nombre;
 });
@@ -189,7 +196,7 @@ $('#contAnimales').html('<div class="nombre16"><div>¿Como se llama este animal?
 
 $('.btnAnimal').click(comprobarSeleccion);
 
-},150);
+},1000);
 
 }
 
