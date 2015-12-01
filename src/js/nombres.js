@@ -199,7 +199,7 @@ if(animalPulsado==animalSeleccionado){
 $('#pagPpal').hide();
 $('#pagAcierto').show();
 puntuacion=puntuacion+1;
-localStorage.setItem('puntuacion',puntuacion);
+localStorage.setItem('puntuacionNombres',puntuacion);
 if (puntuacion==15||puntuacion==30||puntuacion==50||puntuacion==75||puntuacion==100) {
 $('#pagNivel').show();
 $('#pagAcierto').hide();
