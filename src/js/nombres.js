@@ -56,6 +56,21 @@ animal[6]=aleatorio(1,21);
 }
 }
 
+if(puntuacion>29){
+animal[7]=aleatorio(1,21);
+if(animal[7]==animal[1]||animal[7]==animal[2]||animal[7]==animal[3]||animal[7]==animal[4]||animal[7]==animal[5]||animal[7]==animal[6]){
+while(animal[7]==animal[1]||animal[7]==animal[2]||animal[7]==animal[3]||animal[7]==animal[4]||animal[7]==animal[5]||animal[7]==animal[6]){
+animal[7]=aleatorio(1,21);
+}
+}
+animal[8]=aleatorio(1,21);
+if(animal[8]==animal[1]||animal[8]==animal[2]||animal[8]==animal[3]||animal[8]==animal[4]||animal[8]==animal[5]||animal[8]==animal[6]||animal[8]==animal[7]){
+while(animal[8]==animal[1]||animal[8]==animal[2]||animal[8]==animal[3]||animal[8]==animal[4]||animal[8]==animal[5]||animal[8]==animal[6]||animal[8]==animal[7]){
+animal[9]=aleatorio(1,21);
+}
+}
+}
+
 var db = window.sqlitePlugin.openDatabase({name: "animales.db", androidLockWorkaround: 1});
 db.transaction(function(tx) {
 tx.executeSql("SELECT * FROM animales WHERE id='"+animal[1]+"'",[],function(tx,res){
@@ -84,6 +99,16 @@ rutaanimal[6]=res.rows.item(0).imagen;
 nombreAnimal[6]=res.rows.item(0).nombre;
 });
 }
+if (puntuacion>29){
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[7]+"'",[],function(tx,res){
+rutaanimal[7]=res.rows.item(0).imagen;
+nombreAnimal[7]=res.rows.item(0).nombre;
+});
+tx.executeSql("SELECT * FROM animales WHERE id='"+animal[8]+"'",[],function(tx,res){
+rutaanimal[8]=res.rows.item(0).imagen;
+nombreAnimal[8]=res.rows.item(0).nombre;
+});
+}
 
 });
 
@@ -94,6 +119,9 @@ $('#contAnimales').html('<div class="nombre4"><div>¿Como se llama este animal? 
 }else if (puntuacion<30) {
 animalSeleccionado=aleatorio(1,6);
 $('#contAnimales').html('<div class="nombre6"><div>¿Como se llama este animal? '+nombreAnimal[animalSeleccionado]+'</div><div class="btnAnimal" ><input type="hidden" value="1"/>'+nombreAnimal[1]+'</div><div class="btnAnimal" ><input type="hidden" value="2"/>'+nombreAnimal[2]+'</div><div class="btnAnimal" ><input type="hidden" value="3"/>'+nombreAnimal[3]+'</div><div class="btnAnimal" ><input type="hidden" value="4"/>'+nombreAnimal[4]+'</div><div class="btnAnimal" ><input type="hidden" value="5"/>'+nombreAnimal[5]+'</div><div class="btnAnimal" ><input type="hidden" value="6"/>'+nombreAnimal[6]+'</div></div>');	
+}else if (puntuacion<50) {
+animalSeleccionado=aleatorio(1,8);
+$('#contAnimales').html('<div class="nombre8"><div>¿Como se llama este animal? '+nombreAnimal[animalSeleccionado]+'</div><div class="btnAnimal" ><input type="hidden" value="1"/>'+nombreAnimal[1]+'</div><div class="btnAnimal" ><input type="hidden" value="2"/>'+nombreAnimal[2]+'</div><div class="btnAnimal" ><input type="hidden" value="3"/>'+nombreAnimal[3]+'</div><div class="btnAnimal" ><input type="hidden" value="4"/>'+nombreAnimal[4]+'</div><div class="btnAnimal" ><input type="hidden" value="5"/>'+nombreAnimal[5]+'</div><div class="btnAnimal" ><input type="hidden" value="6"/>'+nombreAnimal[6]+'</div><div class="btnAnimal" ><input type="hidden" value="7"/>'+nombreAnimal[7]+'</div><div class="btnAnimal" ><input type="hidden" value="8"/>'+nombreAnimal[8]+'</div></div>');
 }
 
 $('.btnAnimal').click(comprobarSeleccion);
