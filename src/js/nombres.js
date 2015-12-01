@@ -196,7 +196,7 @@ $('#contAnimales').html('<div class="nombre16"><div>¿Como se llama este animal?
 
 $('.btnAnimal').click(comprobarSeleccion);
 
-},1000);
+},120);
 
 }
 
@@ -219,6 +219,7 @@ $('#pagFin').show();
 $('#pagAcierto').hide();
 }else{
 window.setTimeout(function(){
+    alert('hola')
 $('#pagAcierto').hide();
 iniciar();
 },800);
