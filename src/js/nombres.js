@@ -189,7 +189,7 @@ $('#contAnimales').html('<div class="nombre16"><div>¿Como se llama este animal?
 
 $('.btnAnimal').click(comprobarSeleccion);
 
-},70);
+},150);
 
 }
 
