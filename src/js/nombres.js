@@ -37,7 +37,7 @@ animal[3]=aleatorio(1,21)
 }
 animal[4]=aleatorio(1,21);
 if(animal[4]==animal[1]||animal[4]==animal[2]||animal[4]==animal[3]){
-while(animal[4]==animal[1]||animal[4]==animal[2]||animal[1]==animal[3]){
+while(animal[4]==animal[1]||animal[4]==animal[2]||animal[4]==animal[3]){
 animal[4]=aleatorio(1,21);
 }
 }
@@ -79,7 +79,7 @@ animal[9]=aleatorio(1,21);
 }
 }
 animal[10]=aleatorio(1,21);
-if(animal[10]==animal[1]||animal[10]==animal[2]||animal[10]==animal[3]||animal[10]==animal[4]||animal[10]==animal[5]||animal[10]==animal[6]||animal[10]==animal[7]||animal[10]==animal[8]||animal[10]==animal[8]||animal[11]==animal[9]){
+if(animal[10]==animal[1]||animal[10]==animal[2]||animal[10]==animal[3]||animal[10]==animal[4]||animal[10]==animal[5]||animal[10]==animal[6]||animal[10]==animal[7]||animal[10]==animal[8]||animal[10]==animal[9]){
 while(animal[10]==animal[1]||animal[10]==animal[2]||animal[10]==animal[3]||animal[10]==animal[4]||animal[10]==animal[5]||animal[10]==animal[6]||animal[10]==animal[7]||animal[10]==animal[8]||animal[10]==animal[9]){
 animal[10]=aleatorio(1,21);
 }
@@ -88,19 +88,19 @@ animal[10]=aleatorio(1,21);
     
 if(puntuacion>74){
 animal[11]=aleatorio(1,21);
-if(animal[11]==animal[1]||animal[11]==animal[2]||animal[11]==animal[3]||animal[11]==animal[4]||animal[11]==animal[5]||animal[11]==animal[6]||animal[11]==animal[7]||animal[11]==animal[8]||animal[11]==animal[8]||animal[11]==animal[9]||animal[11]==animal[10]){
+if(animal[11]==animal[1]||animal[11]==animal[2]||animal[11]==animal[3]||animal[11]==animal[4]||animal[11]==animal[5]||animal[11]==animal[6]||animal[11]==animal[7]||animal[11]==animal[8]||animal[11]==animal[9]||animal[11]==animal[10]){
 while(animal[11]==animal[1]||animal[11]==animal[2]||animal[11]==animal[3]||animal[11]==animal[4]||animal[11]==animal[5]||animal[11]==animal[6]||animal[11]==animal[7]||animal[11]==animal[8]||animal[11]==animal[9]||animal[11]==animal[10]){
 animal[11]=aleatorio(1,21);
 }
 }
 animal[12]=aleatorio(1,21);
-if(animal[12]==animal[1]||animal[12]==animal[2]||animal[12]==animal[3]||animal[12]==animal[4]||animal[12]==animal[5]||animal[12]==animal[6]||animal[12]==animal[7]||animal[12]==animal[8]||animal[12]==animal[8]||animal[12]==animal[9]||animal[12]==animal[10]||animal[12]==animal[11]){
+if(animal[12]==animal[1]||animal[12]==animal[2]||animal[12]==animal[3]||animal[12]==animal[4]||animal[12]==animal[5]||animal[12]==animal[6]||animal[12]==animal[7]||animal[12]==animal[8]||animal[12]==animal[9]||animal[12]==animal[10]||animal[12]==animal[11]){
 while(animal[12]==animal[1]||animal[12]==animal[2]||animal[12]==animal[3]||animal[12]==animal[4]||animal[12]==animal[5]||animal[12]==animal[6]||animal[12]==animal[7]||animal[12]==animal[8]||animal[12]==animal[9]||animal[12]==animal[10]||animal[12]==animal[11]){
 animal[12]=aleatorio(1,21);
 }
 }
 animal[13]=aleatorio(1,21);
-if(animal[13]==animal[1]||animal[13]==animal[2]||animal[13]==animal[3]||animal[13]==animal[4]||animal[13]==animal[5]||animal[13]==animal[6]||animal[13]==animal[7]||animal[13]==animal[8]||animal[13]==animal[8]||animal[13]==animal[9]||animal[13]==animal[10]||animal[13]==animal[11]||animal[13]==animal[12]){
+if(animal[13]==animal[1]||animal[13]==animal[2]||animal[13]==animal[3]||animal[13]==animal[4]||animal[13]==animal[5]||animal[13]==animal[6]||animal[13]==animal[7]||animal[13]==animal[8]||animal[13]==animal[9]||animal[13]==animal[10]||animal[13]==animal[11]||animal[13]==animal[12]){
 while(animal[13]==animal[1]||animal[13]==animal[2]||animal[13]==animal[3]||animal[13]==animal[4]||animal[13]==animal[5]||animal[13]==animal[6]||animal[13]==animal[7]||animal[13]==animal[8]||animal[13]==animal[9]||animal[13]==animal[10]||animal[13]==animal[11]||animal[13]==animal[12]){
 animal[13]=aleatorio(1,21);
 }
@@ -109,19 +109,19 @@ animal[13]=aleatorio(1,21);
     
 if(puntuacion>99){
 animal[14]=aleatorio(1,21);
-if(animal[14]==animal[1]||animal[14]==animal[2]||animal[14]==animal[3]||animal[14]==animal[4]||animal[14]==animal[5]||animal[14]==animal[6]||animal[14]==animal[7]||animal[14]==animal[8]||animal[14]==animal[8]||animal[14]==animal[9]||animal[14]==animal[10]||animal[14]==animal[11]||animal[14]==animal[12]||animal[14]==animal[13]){
+if(animal[14]==animal[1]||animal[14]==animal[2]||animal[14]==animal[3]||animal[14]==animal[4]||animal[14]==animal[5]||animal[14]==animal[6]||animal[14]==animal[7]||animal[14]==animal[8]||animal[14]==animal[9]||animal[14]==animal[10]||animal[14]==animal[11]||animal[14]==animal[12]||animal[14]==animal[13]){
 while(animal[14]==animal[1]||animal[14]==animal[2]||animal[14]==animal[3]||animal[14]==animal[4]||animal[14]==animal[5]||animal[14]==animal[6]||animal[14]==animal[7]||animal[14]==animal[8]||animal[14]==animal[9]||animal[14]==animal[10]||animal[14]==animal[11]||animal[14]==animal[12]||animal[14]==animal[13]){
 animal[14]=aleatorio(1,21);
 }
 }
 animal[15]=aleatorio(1,21);
-if(animal[15]==animal[1]||animal[15]==animal[2]||animal[15]==animal[3]||animal[15]==animal[4]||animal[15]==animal[5]||animal[15]==animal[6]||animal[15]==animal[7]||animal[15]==animal[8]||animal[15]==animal[8]||animal[15]==animal[9]||animal[15]==animal[10]||animal[15]==animal[11]||animal[15]==animal[12]||animal[15]==animal[13]||animal[15]==animal[14]){
+if(animal[15]==animal[1]||animal[15]==animal[2]||animal[15]==animal[3]||animal[15]==animal[4]||animal[15]==animal[5]||animal[15]==animal[6]||animal[15]==animal[7]||animal[15]==animal[8]||animal[15]==animal[9]||animal[15]==animal[10]||animal[15]==animal[11]||animal[15]==animal[12]||animal[15]==animal[13]||animal[15]==animal[14]){
 while(animal[15]==animal[1]||animal[15]==animal[2]||animal[15]==animal[3]||animal[15]==animal[4]||animal[15]==animal[5]||animal[15]==animal[6]||animal[15]==animal[7]||animal[15]==animal[8]||animal[15]==animal[9]||animal[15]==animal[10]||animal[15]==animal[11]||animal[15]==animal[12]||animal[15]==animal[13]||animal[15]==animal[14]){
 animal[15]=aleatorio(1,21);
 }
 }
 animal[16]=aleatorio(1,21);
-if(animal[16]==animal[1]||animal[16]==animal[2]||animal[16]==animal[3]||animal[16]==animal[4]||animal[16]==animal[5]||animal[16]==animal[6]||animal[16]==animal[7]||animal[16]==animal[8]||animal[16]==animal[8]||animal[16]==animal[9]||animal[16]==animal[10]||animal[16]==animal[11]||animal[16]==animal[12]||animal[16]==animal[13]||animal[16]==animal[14]||animal[16]==animal[15]){
+if(animal[16]==animal[1]||animal[16]==animal[2]||animal[16]==animal[3]||animal[16]==animal[4]||animal[16]==animal[5]||animal[16]==animal[6]||animal[16]==animal[7]||animal[16]==animal[8]||animal[16]==animal[9]||animal[16]==animal[10]||animal[16]==animal[11]||animal[16]==animal[12]||animal[16]==animal[13]||animal[16]==animal[14]||animal[16]==animal[15]){
 while(animal[16]==animal[1]||animal[16]==animal[2]||animal[16]==animal[3]||animal[16]==animal[4]||animal[16]==animal[5]||animal[16]==animal[6]||animal[16]==animal[7]||animal[16]==animal[8]||animal[16]==animal[9]||animal[16]==animal[10]||animal[16]==animal[11]||animal[16]==animal[12]||animal[16]==animal[13]||animal[16]==animal[14]||animal[16]==animal[15]){
 animal[16]=aleatorio(1,21);
 }
