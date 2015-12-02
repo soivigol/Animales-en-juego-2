@@ -40,11 +40,6 @@ body{
     margin: auto;
 }
 
-.encabezado{
-    display: block;
-    margin: 20px 0;
-}
-
 .arriba3 div img{
     padding: 10px 10%;
     min-height: 80px;
@@ -56,26 +51,13 @@ body{
     margin: auto;
 }
 
-.arriba7 div:nth-child(2),.arriba7 div:nth-child(3),.arriba7 div:nth-child(4){
-    width: 33.3%;
-}
-
-.arriba7 div img{
-    padding: 10px 10%;
-    min-height: 80px;
-}
-
-.arriba7 div:nth-child(2) img,.arriba7 div:nth-child(3) img,.arriba7 div:nth-child(4) img{
-    padding: 10px 7%;
-}
-
 .arriba8 div{
     display: inline-block;
     width: 49.5%;
     margin: auto;
 }
 
-.arriba8 div:nth-child(2),.arriba7 div:nth-child(3),.arriba7 div:nth-child(4),.arriba7 div:nth-child(5),.arriba7 div:nth-child(6),.arriba7 div:nth-child(7){
+.tercio{
     width: 33.3%;
 }
 
@@ -84,7 +66,13 @@ body{
     min-height: 80px;
 }
 
-.arriba8 div:nth-child(2) img,.arriba8 div:nth-child(3) img,.arriba8 div:nth-child(4) img,.arriba8 div:nth-child(5) img,.arriba8 div:nth-child(6) img,.arriba8 div:nth-child(7) img{
+.tercio img{
     padding: 10px 7%;
+}
+
+
+.encabezado{
+    display: block;
+    margin: 20px 0;
 }
 
