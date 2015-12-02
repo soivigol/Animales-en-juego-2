@@ -34,6 +34,12 @@ body{
     text-align: center;
 }
 
+.arriba3{
+    position: absolute;
+    margin: auto;
+    border:1px solid black;
+}
+
 .arriba3 div{
     display: inline-block;
     width: 49.5%;
