@@ -2,8 +2,49 @@
 	display: none;
 }
 
+body{
+    background-image: url(../images/fondoSonidos.png);
+}
+
+#contPuntuacion{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 55px;
+}
+
+#contPuntuacion p{
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    float:right;
+    background-image: url(../images/fondoBotones.png);
+    border: 3px outset #8b4513;
+}
+
+#contAnimales{
+    position: fixed;
+    top: 55px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+
 .arriba3 div{
-	display: inline-block;
-	width: 49.5%;
-	text-align: center;
+    display: inline-block;
+    width: 49.5%;
+    margin: auto;
+}
+
+.arriba3 div:nth-child(1){
+    display: block;
+}
+
+.arriba3 div img{
+    padding: 10px 10%;
+    min-height: 80px;
 }
