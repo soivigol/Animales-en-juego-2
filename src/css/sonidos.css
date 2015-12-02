@@ -57,13 +57,13 @@ body{
     margin: auto;
 }
 
-.tercio{
-    width: 33.3%;
-}
-
 .arriba8 div img{
     padding: 10px 10%;
     min-height: 80px;
+}
+
+.tercio{
+    width: 33.3% !important;
 }
 
 .tercio img{
@@ -72,7 +72,7 @@ body{
 
 
 .encabezado{
-    display: block;
+    display: block !important;
     margin: 20px 0;
 }
 
