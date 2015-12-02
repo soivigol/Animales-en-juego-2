@@ -76,7 +76,7 @@ arriba7 div:nth-child(2) img,arriba7 div:nth-child(3) img,arriba7 div:nth-child(
 }
 
 arriba8 div:nth-child(2),arriba7 div:nth-child(3),arriba7 div:nth-child(4),arriba7 div:nth-child(5),arriba7 div:nth-child(6),arriba7 div:nth-child(7){
-    width: 33.3%;
+    width: 33.3% !important;
 }
 
 .arriba8 div img{
