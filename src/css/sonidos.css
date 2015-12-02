@@ -40,7 +40,7 @@ body{
     margin: auto;
 }
 
-#contAnimales div div:nth-child(1){
+.encabezado{
     display: block;
     margin: 20px 0;
 }
@@ -56,7 +56,7 @@ body{
     margin: auto;
 }
 
-arriba7 div:nth-child(2),arriba7 div:nth-child(3),arriba7 div:nth-child(4){
+.arriba7 div:nth-child(2),.arriba7 div:nth-child(3),.arriba7 div:nth-child(4){
     width: 33.3%;
 }
 
@@ -65,7 +65,7 @@ arriba7 div:nth-child(2),arriba7 div:nth-child(3),arriba7 div:nth-child(4){
     min-height: 80px;
 }
 
-arriba7 div:nth-child(2) img,arriba7 div:nth-child(3) img,arriba7 div:nth-child(4) img{
+.arriba7 div:nth-child(2) img,.arriba7 div:nth-child(3) img,.arriba7 div:nth-child(4) img{
     padding: 10px 7%;
 }
 
@@ -75,8 +75,8 @@ arriba7 div:nth-child(2) img,arriba7 div:nth-child(3) img,arriba7 div:nth-child(
     margin: auto;
 }
 
-.tercio{
-    width: 33.3% !important;
+.arriba8 div:nth-child(2),.arriba7 div:nth-child(3),.arriba7 div:nth-child(4),.arriba7 div:nth-child(5),.arriba7 div:nth-child(6),.arriba7 div:nth-child(7){
+    width: 33.3%;
 }
 
 .arriba8 div img{
@@ -84,7 +84,7 @@ arriba7 div:nth-child(2) img,arriba7 div:nth-child(3) img,arriba7 div:nth-child(
     min-height: 80px;
 }
 
-.tercio img{
+.arriba8 div:nth-child(2) img,.arriba8 div:nth-child(3) img,.arriba8 div:nth-child(4) img,.arriba8 div:nth-child(5) img,.arriba8 div:nth-child(6) img,.arriba8 div:nth-child(7) img{
     padding: 10px 7%;
 }
 
