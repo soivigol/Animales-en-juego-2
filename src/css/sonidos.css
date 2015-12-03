@@ -48,7 +48,7 @@ body{
 
 
 .tercio{
-    width: 33.3%;
+    width: 33.3% !important;
 }
 
 .tercio img{
@@ -67,6 +67,6 @@ body{
         width: 33.2%;
     }
     .tercio{
-        width: 24.6%;
+        width: 24.6% !important;
     }
 }
