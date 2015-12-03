@@ -187,8 +187,9 @@ return 6;
 }
 
 function colocarAltura(){
+    alert($(window).width())
 var largoCont=$('#contAnimales').height();
 var largoEncab=$('.encabezado').height();
 var largoContenido=$('.arriba3').height();
-$('.arriba3').css('margin-top',(largoCont-largoEncab-largoContenido)/2+'px');
+$('.arriba3').css('margin-top',(largoCont-largoEncab-largoContenido-20)/2+'px');
 }
