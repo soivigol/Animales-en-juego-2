@@ -45,23 +45,6 @@ body{
     min-height: 80px;
 }
 
-.arriba7 div{
-    display: inline-block;
-    width: 49.5%;
-    margin: auto;
-}
-
-.arriba8 div{
-    display: inline-block;
-    width: 49.5%;
-    margin: auto;
-}
-
-.arriba8 div img{
-    padding: 10px 10%;
-    min-height: 80px;
-}
-
 .tercio{
     width: 33.3% !important;
 }
@@ -73,6 +56,7 @@ body{
 
 .encabezado{
     display: block !important;
-    margin: 20px 0;
+    width: 100% !important;
+    margin: 20px 0 !important;
 }
 

@@ -107,22 +107,28 @@ nombreAnimal[8]=res.rows.item(0).nombre;
 window.setTimeout(function(){
 if (puntuacion<15) {
 animalSeleccionado=aleatorio(1,3);
-$('#contAnimales').html('<div class="arriba3"><div>Donde está el '+nombreAnimal[animalSeleccionado]+'</div><div><input type="hidden" value="1"/><img src="'+rutaanimal[1]+'" class="btnAnimal" alt="'+nombreAnimal[1]+'"/></div><div><input type="hidden" value="2"/><img src="'+rutaanimal[2]+'" class="btnAnimal" alt="'+nombreAnimal[2]+'"/></div><div><input type="hidden" value="3"/><img src="'+rutaanimal[3]+'" class="btnAnimal" alt="'+nombreAnimal[3]+'"/></div></div>');
+$('#contAnimales').html('<div class="encabezado">Donde está el '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba3"><div><input type="hidden" value="1"/><img src="'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="'+rutaanimal[3]+'" class="btnAnimal" /></div></div>');
+colocarAltura();
 }else if (puntuacion<30) {
 animalSeleccionado=aleatorio(1,4);
-$('#contAnimales').html('<div class="arriba3"><div>Donde está el '+nombreAnimal[animalSeleccionado]+'</div><div><input type="hidden" value="1"/><img src="'+rutaanimal[1]+'" class="btnAnimal" alt="'+nombreAnimal[1]+'"/></div><div><input type="hidden" value="2"/><img src="'+rutaanimal[2]+'" class="btnAnimal" alt="'+nombreAnimal[2]+'"/></div><div><input type="hidden" value="3"/><img src="'+rutaanimal[3]+'" class="btnAnimal" alt="'+nombreAnimal[3]+'"/></div><div><input type="hidden" value="4"/><img src="'+rutaanimal[4]+'" class="btnAnimal" alt="'+nombreAnimal[4]+'"/></div></div>');	
+$('#contAnimales').html('<div>Donde está el '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba3"><div><input type="hidden" value="1"/><img src="'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="'+rutaanimal[2]+'" class="btnAnimal" /></div><div><input type="hidden" value="3"/><img src="'+rutaanimal[3]+'" class="btnAnimal" /></div><div><input type="hidden" value="4"/><img src="'+rutaanimal[4]+'" class="btnAnimal" /></div></div>');
+colocarAltura();	
 }else if (puntuacion<50) {
 animalSeleccionado=aleatorio(1,5);
-$('#contAnimales').html('<div class="arriba3"><div>Donde está el '+nombreAnimal[animalSeleccionado]+'</div><div><input type="hidden" value="1"/><img src="'+rutaanimal[1]+'" class="btnAnimal" alt="'+nombreAnimal[1]+'"/></div><div><input type="hidden" value="2"/><img src="'+rutaanimal[2]+'" class="btnAnimal" alt="'+nombreAnimal[2]+'"/></div><div><input type="hidden" value="3"/><img src="'+rutaanimal[3]+'" class="btnAnimal" alt="'+nombreAnimal[3]+'"/></div><div><input type="hidden" value="4"/><img src="'+rutaanimal[4]+'" class="btnAnimal" alt="'+nombreAnimal[4]+'"/></div><div><input type="hidden" value="5"/><img src="'+rutaanimal[5]+'" class="btnAnimal" alt="'+nombreAnimal[5]+'"/></div></div>');
+$('#contAnimales').html('<div class="encabezado">Donde está el '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba3"><div><input type="hidden" value="1"/><img src="'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="'+rutaanimal[5]+'" class="btnAnimal" /></div></div>');
+colocarAltura();
 }else if (puntuacion<75) {
 animalSeleccionado=aleatorio(1,6);
-$('#contAnimales').html('<div class="arriba3"><div>Donde está el '+nombreAnimal[animalSeleccionado]+'</div><div><input type="hidden" value="1"/><img src="'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="'+rutaanimal[2]+'" class="btnAnimal" /></div><div><input type="hidden" value="3"/><img src="'+rutaanimal[3]+'" class="btnAnimal" /></div><div><input type="hidden" value="4"/><img src="'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="'+rutaanimal[5]+'" class="btnAnimal" /></div><div><input type="hidden" value="6"/><img src="'+rutaanimal[6]+'" class="btnAnimal" /></div></div>');
+$('#contAnimales').html('<div class="encabezado">Donde está el '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba3"><div><input type="hidden" value="1"/><img src="'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="'+rutaanimal[2]+'" class="btnAnimal" /></div><div><input type="hidden" value="3"/><img src="'+rutaanimal[3]+'" class="btnAnimal" /></div><div><input type="hidden" value="4"/><img src="'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="'+rutaanimal[5]+'" class="btnAnimal" /></div><div><input type="hidden" value="6"/><img src="'+rutaanimal[6]+'" class="btnAnimal" /></div></div>');
+colocarAltura();
 }else if (puntuacion<100) {
 animalSeleccionado=aleatorio(1,7);
-$('#contAnimales').html('<div class="arriba7"><div class="encabezado">Donde está el '+nombreAnimal[animalSeleccionado]+'</div><div class="tercio"><input type="hidden" value="1"/><img src="'+rutaanimal[1]+'" class="btnAnimal"/></div><div class="tercio"><input type="hidden" value="2"/><img src="'+rutaanimal[2]+'" class="btnAnimal" /></div><div class="tercio"><input type="hidden" value="3"/><img src="'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="'+rutaanimal[5]+'" class="btnAnimal"/></div><div><input type="hidden" value="6"/><img src="'+rutaanimal[6]+'" class="btnAnimal" /></div><div><input type="hidden" value="7"/><img src="'+rutaanimal[7]+'" class="btnAnimal"/></div></div>');
+$('#contAnimales').html('<div class="encabezado">Donde está el '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba3"><div class="tercio"><input type="hidden" value="1"/><img src="'+rutaanimal[1]+'" class="btnAnimal"/></div><div class="tercio"><input type="hidden" value="2"/><img src="'+rutaanimal[2]+'" class="btnAnimal" /></div><div class="tercio"><input type="hidden" value="3"/><img src="'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="'+rutaanimal[5]+'" class="btnAnimal"/></div><div><input type="hidden" value="6"/><img src="'+rutaanimal[6]+'" class="btnAnimal" /></div><div><input type="hidden" value="7"/><img src="'+rutaanimal[7]+'" class="btnAnimal"/></div></div>');
+colocarAltura();
 }else{
 animalSeleccionado=aleatorio(1,8);
-$('#contAnimales').html('<div class="arriba8"><div class="encabezado">Donde está el '+nombreAnimal[animalSeleccionado]+'</div><div class="tercio"><input type="hidden" value="1"/><img src="'+rutaanimal[1]+'" class="btnAnimal"/></div><div class="tercio"><input type="hidden" value="2"/><img src="'+rutaanimal[2]+'" class="btnAnimal"/></div><div class="tercio"><input type="hidden" value="3"/><img src="'+rutaanimal[3]+'" class="btnAnimal"/></div><div class="tercio"><input type="hidden" value="4"/><img src="'+rutaanimal[4]+'" class="btnAnimal"/></div><div class="tercio"><input type="hidden" value="5"/><img src="'+rutaanimal[5]+'" class="btnAnimal" /></div><div class="tercio"><input type="hidden" value="6"/><img src="'+rutaanimal[6]+'" class="btnAnimal" /></div><div><input type="hidden" value="7"/><img src="'+rutaanimal[7]+'" class="btnAnimal"/></div><div><input type="hidden" value="8"/><img src="'+rutaanimal[8]+'" class="btnAnimal" /></div></div>');
+$('#contAnimales').html('<div class="encabezado">Donde está el '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba3"><div class="tercio"><input type="hidden" value="1"/><img src="'+rutaanimal[1]+'" class="btnAnimal"/></div><div class="tercio"><input type="hidden" value="2"/><img src="'+rutaanimal[2]+'" class="btnAnimal"/></div><div class="tercio"><input type="hidden" value="3"/><img src="'+rutaanimal[3]+'" class="btnAnimal"/></div><div class="tercio"><input type="hidden" value="4"/><img src="'+rutaanimal[4]+'" class="btnAnimal"/></div><div class="tercio"><input type="hidden" value="5"/><img src="'+rutaanimal[5]+'" class="btnAnimal" /></div><div class="tercio"><input type="hidden" value="6"/><img src="'+rutaanimal[6]+'" class="btnAnimal" /></div><div><input type="hidden" value="7"/><img src="'+rutaanimal[7]+'" class="btnAnimal"/></div><div><input type="hidden" value="8"/><img src="'+rutaanimal[8]+'" class="btnAnimal" /></div></div>');
+colocarAltura();
 }	
 
 $('.btnAnimal').click(comprobarSeleccion);
@@ -178,4 +184,11 @@ return 5;
 }else{
 return 6;
 }
+}
+
+function colocarAltura(){
+var largoCont=$('#contAnimales').height();
+var largoEncab=$('.encabezado').height();
+var largoContenido=$('.arriba3').height();
+$('.arriba3').css('margin-top',(largoCont-largoEncab-largoContenido)/2+'px');
 }
