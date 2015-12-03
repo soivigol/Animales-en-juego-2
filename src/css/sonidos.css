@@ -65,21 +65,4 @@ body{
     font-weight: bold;
 }
 
-@media(min-width:480px){
-    .arriba3 div{
-        width: 33.3%;
-    }
-    
-    .arriba3 div img{
-        width: 33.3%;
-    }
-    
-    .tercio{
-        width: 24.6%;
-    }
-    
-    .tercio img{
-        width: 24.6%;
-    }
-}
 
