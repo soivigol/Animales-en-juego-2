@@ -38,10 +38,11 @@ body{
     display: inline-block;
     width: 49.5%;
     margin: 10px auto;
-    padding: 0 10%;
 }
 
 .arriba3 div img{
+    
+    max-width: 150px;
     min-height: 80px;
 }
 
