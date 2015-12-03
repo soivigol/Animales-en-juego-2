@@ -43,6 +43,7 @@ body{
 
 .arriba3 div img{
     min-height: 80px;
+    width: 49.5%;
     max-width: 150px;
     display: block;
     margin: auto;
@@ -54,6 +55,7 @@ body{
 
 .tercio img{
     padding: 10px 7%;
+    width: 33.3% !important;
 }
 
 
@@ -70,7 +72,15 @@ body{
         width: 33.3%;
     }
     
+    .arriba3 div img{
+        width: 33.3%;
+    }
+    
     .tercio{
+        width: 24.6%;
+    }
+    
+    .tercio img{
         width: 24.6%;
     }
 }
