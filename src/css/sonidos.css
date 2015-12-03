@@ -45,8 +45,8 @@ body{
     min-height: 80px;
     width: 49.5%;
     max-width: 150px;
-    display: block;
-    margin: auto;
+    display: inline-block;
+    margin:auto;
 }
 
 .tercio{
