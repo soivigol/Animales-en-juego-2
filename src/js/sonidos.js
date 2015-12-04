@@ -20,6 +20,10 @@ window.setTimeout(iniciar,500);
 function iniciar(){
 $('#pagBienvenida').css('display','none');
 $('#pagPpal').css('display','block');
+$('#botonAtras').css('display','block');
+$('#botonAtras').click(function(){
+window.history.back();
+});
 $('#contPuntuacion').html('<p>Puntuación='+puntuacion+'</p><p>Nivel='+buscarNivel(puntuacion)+'</p>');
 colocarAnimales();
 }

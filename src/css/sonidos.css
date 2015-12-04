@@ -20,7 +20,7 @@ h1{
 
 #contPuntuacion p{
     display: inline-block;
-    margin: 5px 10px;
+    margin: 5px 10px 5px 0;
     padding: 10px;
     font-size: 14px;
     text-align: center;
@@ -45,7 +45,7 @@ h1{
     padding: 10px 7%;
 }
 
-.arriba8{
+.arriba8 div{
     display: inline-block;
     width: 33.3% !important;
     padding: 10px 7%;
@@ -59,12 +59,11 @@ h1{
 }
 
 #botonAtras{
-    display: inline-block;
+    display: none;
     float:left;
     background-image: url(../images/fondoBotones.png);
     border: 3px outset #8b4513;
-    width: 40px;
-    height: 40px;
+    margin: 5px 0 5px 10px;
 }
 
 #botonAtras img{
@@ -75,7 +74,7 @@ h1{
     .arriba3 div{
         width: 33.2%;
     }
-    .arriba8{
+    .arriba8 div{
         width: 24.6% !important;
     }
 }
