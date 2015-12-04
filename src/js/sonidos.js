@@ -164,7 +164,7 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
 }else{
     var determinante='el';
 }
-$('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba8"><div><input type="hidden" value="1"/><img src="../images/imagenesAnimales/"'+rutaanimal[1]+'" class="btnAnimal"/></div><div><input type="hidden" value="2"/><img src="../images/imagenesAnimales/"'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="../images/imagenesAnimales/"'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="../images/imagenesAnimales/"'+rutaanimal[4]+'" class="btnAnimal"/></div><div><input type="hidden" value="5"/><img src="../images/imagenesAnimales/"'+rutaanimal[5]+'" class="btnAnimal" /></div><div><input type="hidden" value="6"/><img src="../images/imagenesAnimales/"'+rutaanimal[6]+'" class="btnAnimal" /></div><div><input type="hidden" value="7"/><img src="../images/imagenesAnimales/"'+rutaanimal[7]+'" class="btnAnimal"/></div><div><input type="hidden" value="8"/><img src="../images/imagenesAnimales/"'+rutaanimal[8]+'" class="btnAnimal" /></div></div>');
+$('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba8 item"><div><input type="hidden" value="1"/><img src="../images/imagenesAnimales/"'+rutaanimal[1]+'" class="btnAnimal"/></div><div><input type="hidden" value="2"/><img src="../images/imagenesAnimales/"'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="../images/imagenesAnimales/"'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="../images/imagenesAnimales/"'+rutaanimal[4]+'" class="btnAnimal"/></div><div><input type="hidden" value="5"/><img src="../images/imagenesAnimales/"'+rutaanimal[5]+'" class="btnAnimal" /></div><div><input type="hidden" value="6"/><img src="../images/imagenesAnimales/"'+rutaanimal[6]+'" class="btnAnimal" /></div><div><input type="hidden" value="7"/><img src="../images/imagenesAnimales/"'+rutaanimal[7]+'" class="btnAnimal"/></div><div><input type="hidden" value="8"/><img src="../images/imagenesAnimales/"'+rutaanimal[8]+'" class="btnAnimal" /></div></div>');
 colocarAltura();
 }	
 
@@ -227,6 +227,7 @@ return 6;
 function colocarAltura(){
 var largoCont=$('#contAnimales').height();
 var largoEncab=$('.encabezado').height();
-var largoContenido=$('.arriba3').height();
-$('.arriba3').css('margin-top',(largoCont-largoEncab-largoContenido-40)/2+'px');
+var largoContenido=$('.item').height();
+$('.arriba3').css('margin-top',(largoCont-largoEncab-largoContenido-20)/2+'px');
+    
 }

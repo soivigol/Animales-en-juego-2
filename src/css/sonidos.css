@@ -61,11 +61,11 @@ p{
 .arriba8 div{
     display: inline-block;
     width: 33.3%;
-    margin: 10px auto;
+    margin: 0px auto;
 }
 
 .arriba8 div img{
-    padding: 10px 7%;
+    padding: 10px 10%;
     width: 85%;
 }
 

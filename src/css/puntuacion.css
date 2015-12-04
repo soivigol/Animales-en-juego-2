@@ -21,6 +21,10 @@ body{
     font-size: 10px;
 }
 
+.limpiador{
+    clear: both;
+}
+
 #contPuntNivel div{
     background: rgba(255,255,255,0.4);
     border: 1px solid black;
