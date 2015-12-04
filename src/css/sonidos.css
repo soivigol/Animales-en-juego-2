@@ -42,22 +42,14 @@ h1{
     display: inline-block;
     width: 49.5%;
     margin: 10px auto;
-    
-}
-
-.arriba3 div img{
     padding: 10px 7%;
 }
 
 .arriba8 div{
     display: inline-block;
-    width: 33.1% !important;
-    padding: 0 7%;
-    margin: 10px auto;
-}
-
-.arriba8 div img{
+    width: 33.3% !important;
     padding: 10px 7%;
+    margin: 10px auto;
 }
 
 .encabezado{
@@ -67,11 +59,11 @@ h1{
 }
 
 #botonAtras{
+    display: inline-block;
     float:left;
     background-image: url(../images/fondoBotones.png);
     border: 3px outset #8b4513;
     margin: 5px 0 5px 10px;
-    padding: 0;
 }
 
 #botonAtras img{
