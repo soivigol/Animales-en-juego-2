@@ -8,7 +8,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady () {
 window.addEventListener("orientationchange", function() {
-colocarAltura();
+window.setTimeout(colocarAltura,60);
 }, false);
 puntuacion=Number(localStorage.getItem("puntuacion"));
 if (puntuacion==null) {
