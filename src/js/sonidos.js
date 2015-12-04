@@ -228,7 +228,7 @@ function colocarAltura(){
 var largoCont=$('#contAnimales').height();
 var largoEncab=$('.encabezado').height();
  if($(window).width()>480){ 
-var altoMax=(largoCont-largoEncab-20)/2;
+var altoMax=(largoCont-largoEncab-50)/2;
 $('.item div').css('max-height',altoMax+'px');  
 }
 
