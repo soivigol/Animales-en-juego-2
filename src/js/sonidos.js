@@ -136,7 +136,7 @@ colocarAltura();
 
 $('.btnAnimal').click(comprobarSeleccion);
 
-},120);
+},150);
 
 }
 
