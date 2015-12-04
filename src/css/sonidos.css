@@ -6,6 +6,10 @@ body{
     background-image: url(../images/fondoSonidos.png);
 }
 
+h1{
+    text-align: center;
+}
+
 #contPuntuacion{
     position: fixed;
     top: 0;
@@ -38,23 +42,15 @@ body{
     display: inline-block;
     width: 49.5%;
     margin: 10px auto;
-}
-
-.arriba3 div img{
-    
-    max-width: 150px;
-    min-height: 80px;
-}
-
-
-.tercio{
-    width: 33.3% !important;
-}
-
-.tercio img{
     padding: 10px 7%;
 }
 
+.arriba8{
+    display: inline-block;
+    width: 33.3% !important;
+    padding: 10px 7%;
+    margin: 10px auto;
+}
 
 .encabezado{
     display: block !important;
@@ -66,7 +62,7 @@ body{
     .arriba3 div{
         width: 33.2%;
     }
-    .tercio{
+    .arriba8{
         width: 24.6% !important;
     }
 }
