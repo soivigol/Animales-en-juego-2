@@ -42,7 +42,11 @@ h1{
     display: inline-block;
     width: 49.5%;
     margin: 10px auto;
+}
+
+.arriba3 div img{
     padding: 10px 7%;
+    width: 85%;
 }
 
 .arriba8 div{
@@ -53,6 +57,7 @@ h1{
 
 .arriba8 div img{
     padding: 10px 7%;
+    width: 85%;
 }
 
 .encabezado{
