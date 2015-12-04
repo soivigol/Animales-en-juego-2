@@ -227,11 +227,11 @@ return 6;
 function colocarAltura(){
 var largoCont=$('#contAnimales').height();
 var largoEncab=$('.encabezado').height();
-var largoContenido=$('.item').height();
-if($(window).height()>480){ 
+if($(window).width()>480){ 
 var altoMax=largoCont-largoEncab-20;
 $('.item').css('max-height',altoMax+'px');  
 } 
-$('.item').css('margin-top',(largoCont-largoEncab-largoContenido-20)/2+'px');
+var largoContenido=$('.item').height();
+$('.item').css('margin-top',(largoCont-largoEncab-largoContenido-40)/2+'px');
 
 }
