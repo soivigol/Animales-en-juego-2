@@ -45,11 +45,19 @@ h1{
     padding: 10px 7%;
 }
 
+.arriba3 div img{
+    width: 86%;
+}
+
 .arriba8 div{
     display: inline-block;
     width: 33.3% !important;
     padding: 10px 7%;
     margin: 10px auto;
+}
+
+.arriba8 div img{
+    width: 86%;
 }
 
 .encabezado{
@@ -64,6 +72,7 @@ h1{
     background-image: url(../images/fondoBotones.png);
     border: 3px outset #8b4513;
     margin: 5px 0 5px 10px;
+    padding: 0;
 }
 
 #botonAtras img{
