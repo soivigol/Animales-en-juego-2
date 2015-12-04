@@ -10,6 +10,15 @@ h1{
     text-align: center;
 }
 
+#reiniciarEsto{
+    float: right;
+    margin-right: 20px;
+}
+
+p{
+    text-align: center;
+}
+
 #contPuntuacion{
     position: fixed;
     top: 0;

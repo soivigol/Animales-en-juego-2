@@ -1,0 +1,15 @@
+.nombre{
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+.puntuacion, .nivel{
+    width: 25%;
+    display: inline-block;
+    text-align: center; 
+}
+
+.restaurar,.superado,.bloqueo{
+    float: right;
+}
