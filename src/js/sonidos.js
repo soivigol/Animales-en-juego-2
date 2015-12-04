@@ -231,7 +231,5 @@ var largoEncab=$('.encabezado').height();
 var altoMax=(largoCont-largoEncab-20)/2;
 $('.item div').css('max-height',altoMax+'px');  
 }
-var largoContenido=$('.item').height();
-$('.arriba8').css('margin-top',(largoCont-largoEncab-largoContenido-40)/2+'px');
 
 }
