@@ -63,6 +63,8 @@ h1{
     float:left;
     background-image: url(../images/fondoBotones.png);
     border: 3px outset #8b4513;
+    width: 40px;
+    height: 40px;
 }
 
 #botonAtras img{
