@@ -72,6 +72,7 @@ p{
     display: block !important;
     width: 100% !important;
     padding-top: 20px !important;
+    background: rgba(255,255,255,0.4);
 }
 
 #botonAtras{

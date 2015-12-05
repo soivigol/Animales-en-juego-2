@@ -12,6 +12,9 @@ var b=0;
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady () {
+window.addEventListener("orientationchange", function() {
+window.setTimeout(colocarAltura,150);
+}, false);
 puntuacion=Number(localStorage.getItem("puntuacionNumeros"));
 if (puntuacion==null) {
 puntuacion=0;
