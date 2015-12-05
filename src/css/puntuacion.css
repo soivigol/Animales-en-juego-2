@@ -19,6 +19,11 @@ body{
 .restaurar,.superado,.bloqueo{
     float: right;
     font-size: 10px;
+    margin: 5px;
+}
+
+.bloqueo{
+    height: 12px;
 }
 
 .limpiador{

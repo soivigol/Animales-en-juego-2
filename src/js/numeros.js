@@ -93,8 +93,8 @@ nombreAnimal[6]=res.rows.item(0).nombre;
 });
 if(puntuacion<15){
 window.setTimeout(function(){
-$('#contAnimales').html('<div class="numeros6"><div>¿Cuantos '+nombreAnimal[0]+'s hay?</div><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>'+rutaanimal[3]+'</div><div>'+rutaanimal[4]+'</div><div>'+rutaanimal[5]+'</div><div>'+rutaanimal[6]+'</div></div>');
-
+$('#contAnimales').html('<div class="encabezado">¿Cuantos '+nombreAnimal[0]+'s hay?</div><div class="numeros6 item"><div><img src="images/imagenesAnimales/'+rutaanimal[1]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[2]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[3]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[4]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[5]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[6]+'"/></div></div>');
+window.setTimeout(colocarAltura,150);
 posicionElecta=aleatorio(1,3);
 numeros[1]=aleatorio(1,6);
 numeros[2]=aleatorio(1,6);
@@ -462,4 +462,15 @@ return 5;
 }else{
 return 6;
 }
+}
+
+function colocarAltura(){
+var largoCont=$('#contAnimales').height();
+var largoEncab=$('.encabezado').innerHeight();
+ if($(window).width()>480){ 
+var altoMax=(largoCont-largoEncab-50)/2;
+$('.item div img').css('max-height',altoMax+'px'); 
+}
+$('.item').css('margin-top',(largoCont-largoEncab-($('.item').height())-60)/2+'px');
+
 }

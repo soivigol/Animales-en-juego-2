@@ -114,7 +114,7 @@ nombreAnimal[8]=res.rows.item(0).nombre;
 window.setTimeout(function(){
 if (puntuacion<15) {
 animalSeleccionado=aleatorio(1,3);
-if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==17||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
+if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==16||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
     var determinante='la';
 }else{
     var determinante='el';
@@ -123,7 +123,7 @@ $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+
 window.setTimeout(colocarAltura,150);
 }else if (puntuacion<30) {
 animalSeleccionado=aleatorio(1,4);
-if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==17||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
+if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==16||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
     var determinante='la';
 }else{
     var determinante='el';
@@ -132,7 +132,7 @@ $('#contAnimales').html('<div>Donde está '+determinante+' '+nombreAnimal[animal
 window.setTimeout(colocarAltura,150);
 }else if (puntuacion<50) {
 animalSeleccionado=aleatorio(1,5);
-if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==17||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
+if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==16||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
     var determinante='la';
 }else{
     var determinante='el';
@@ -141,7 +141,7 @@ $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+
 window.setTimeout(colocarAltura,150);
 }else if (puntuacion<75) {
 animalSeleccionado=aleatorio(1,6);
-if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==17||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
+if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==16||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
     var determinante='la';
 }else{
     var determinante='el';
@@ -150,7 +150,7 @@ $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+
 window.setTimeout(colocarAltura,150);
 }else if (puntuacion<100) {
 animalSeleccionado=aleatorio(1,7);
-if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==17||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
+if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==16||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
     var determinante='la';
 }else{
     var determinante='el';
@@ -159,7 +159,7 @@ $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+
 window.setTimeout(colocarAltura,150);
 }else{
 animalSeleccionado=aleatorio(1,8);
-if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==17||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
+if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==16||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
     var determinante='la';
 }else{
     var determinante='el';

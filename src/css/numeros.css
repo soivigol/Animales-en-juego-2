@@ -1,0 +1,87 @@
+#pagPaal, #pagAcierto, #pagFallo,#pagNivel,#pagFin{
+	display: none;
+}
+
+body{
+    background-image: url(../images/fondoSonidos.png);
+}
+
+h1{
+    text-align: center;
+}
+
+#reiniciarEsto{
+    float: right;
+    margin-right: 20px;
+}
+
+p{
+    text-align: center;
+}
+
+#contPuntuacion{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 55px;
+}
+
+#contPuntuacion p{
+    display: inline-block;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    float:right;
+    background-image: url(../images/fondoBotones.png);
+    border: 3px outset #8b4513;
+}
+
+#botonAtras{
+    display: inline-block;
+    float:left;
+    background-image: url(../images/fondoBotones.png);
+    border: 3px outset #8b4513;
+    margin: 5px 0 5px 10px;
+}
+
+#botonAtras img{
+    width: 40px;
+}
+
+#contAnimales{
+    position: fixed;
+    top: 55px;
+    bottom: 60px;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+
+#contNumeros{
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    height: 60px;
+}
+
+#contNumeros button{
+    height: 60px;
+    font-size: 20px;
+    background: url(../images/fondoBotones.png);
+    border: 3px outset #8b4513;
+    margin: 0 5px;
+    padding: 0 5px;
+}
+
+.numeros6 div{
+    padding: 10px 10%;
+    width: 30%
+}
+
+.item div img{
+    width: 100%;
+}
