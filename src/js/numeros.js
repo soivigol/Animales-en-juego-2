@@ -143,7 +143,7 @@ nombreAnimal[9]=res.rows.item(0).nombre;
 });
 });
 window.setTimeout(function(){
-$('#contAnimales').html('<div class="numeros9"><div>¿Cuantos '+nombreAnimal[0]+'s hay?</div><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>'+rutaanimal[3]+'</div><div>'+rutaanimal[4]+'</div><div>'+rutaanimal[5]+'</div><div>'+rutaanimal[6]+'</div><div>'+rutaanimal[7]+'</div><div>'+rutaanimal[8]+'</div><div>'+rutaanimal[9]+'</div></div>');
+$('#contAnimales').html('<div class="encabezado">¿Cuantos '+nombreAnimal[0]+'s hay?</div><div class="numeros9" item><div><img src="images/imagenesAnimales/'+rutaanimal[1]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[2]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[3]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[4]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[5]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[6]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[7]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[8]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[9]+'"/></div></div>');
 
 posicionElecta=aleatorio(1,3);
 numeros[1]=aleatorio(1,9);
@@ -216,7 +216,7 @@ nombreAnimal[12]=res.rows.item(0).nombre;
 });
 });
 window.setTimeout(function(){
-$('#contAnimales').html('<div class="numeros12"><div>¿Cuantos '+nombreAnimal[0]+'s hay?</div><div>'+rutaanimal[1]+'</div><div>'+rutaanimal[2]+'</div><div>'+rutaanimal[3]+'</div><div>'+rutaanimal[4]+'</div><div>'+rutaanimal[5]+'</div><div>'+rutaanimal[6]+'</div><div>'+rutaanimal[7]+'</div><div>'+rutaanimal[8]+'</div><div>'+rutaanimal[9]+'</div><div>'+rutaanimal[10]+'</div><div>'+rutaanimal[11]+'</div><div>'+rutaanimal[12]+'</div></div>');
+$('#contAnimales').html('<div class="encabezado">¿Cuantos '+nombreAnimal[0]+'s hay?</div><div class="numeros12"><div><img src="images/imagenesAnimales/'+rutaanimal[1]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[2]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[3]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[4]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[5]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[6]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[7]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[8]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[9]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[10]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[11]+'"/></div><div>'+rutaanimal[12]+'"/></div></div>');
 
 posicionElecta=aleatorio(1,3);
 numeros[1]=aleatorio(1,12);

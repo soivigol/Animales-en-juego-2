@@ -89,3 +89,13 @@ p{
 .item div img{
     width: 100%;
 }
+
+.numeros9 div{
+    padding: 10px 6%;
+    width: 21.2%
+}
+
+.numeros12 div{
+    padding: 10px 5%;
+    width: 15%;
+}
