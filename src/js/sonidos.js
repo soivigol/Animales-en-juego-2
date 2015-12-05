@@ -225,14 +225,12 @@ return 6;
 }
 
 function colocarAltura(){
-    alert($('.item').height())
 var largoCont=$('#contAnimales').height();
 var largoEncab=$('.encabezado').innerHeight();
  if($(window).width()>480){ 
 var altoMax=(largoCont-largoEncab-50)/2;
 $('.item div img').css('max-height',altoMax+'px'); 
-     alert($('.item').height())
 }
-alert(largoCont-largoEncab-$('.item').height())
+$('.item').css('margin-top',(largoCont-largoEncab-($('.item').height()))/2+'px');
 
 }
