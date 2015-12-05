@@ -70,13 +70,12 @@ p{
 
 #contNumeros button{
     height: 55px;
-    width: 40px;
+    width: 45px;
     font-size: 20px;
     text-align: center;
     background: url(../images/fondoBotones.png);
     border: 3px outset #8b4513;
     margin: 0 10px;
-    padding: 0 10px;
 }
 
 .numeros6 div{
@@ -104,16 +103,16 @@ p{
 
 @media (min-width: 480px){
     .numeros9 div{
-        padding: 10px 10%;
-        width: 30%;
+        padding: 10px 2.5%;
+        width: 15%;
     }
     
     .numeros6 div{
-        padding: 10px 4%;
-        width: 17%;
+        padding: 10px 2%;
+        width: 12%;
     }
     .numeros12 div{
-        padding: 10px 4%;
-        width: 17%;
+        padding: 10px 1.25%;
+        width: 10%;
     }
 }
