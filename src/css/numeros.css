@@ -82,6 +82,10 @@ p{
     width: 30%
 }
 
+.item div{
+    display: inline-block;
+}
+
 .item div img{
     width: 100%;
 }
