@@ -471,6 +471,6 @@ var largoEncab=$('.encabezado').innerHeight();
 var altoMax=(largoCont-largoEncab-50)/2;
 $('.item div img').css('max-height',altoMax+'px'); 
 }
-$('.item').css('margin-top',(largoCont-largoEncab-($('.item').height())-60)/2+'px');
+$('.item').css('margin-top',(largoCont-largoEncab-($('.item').height()))/2+'px');
 
 }
