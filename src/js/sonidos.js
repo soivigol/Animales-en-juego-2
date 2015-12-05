@@ -119,8 +119,8 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
 }else{
     var determinante='el';
 }
-$('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba3"><div><input type="hidden" value="1"/><img src="../images/imagenesAnimales/"'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="../images/imagenesAnimales/"'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="../images/imagenesAnimales/"'+rutaanimal[3]+'" class="btnAnimal" /></div></div>');
-colocarAltura();
+$('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba3 item"><div><input type="hidden" value="1"/><img src="../images/imagenesAnimales/"'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="../images/imagenesAnimales/"'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="../images/imagenesAnimales/"'+rutaanimal[3]+'" class="btnAnimal" /></div></div>');
+window.setTimeout(colocarAltura,150);
 }else if (puntuacion<30) {
 animalSeleccionado=aleatorio(1,4);
 if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==17||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
@@ -128,8 +128,8 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
 }else{
     var determinante='el';
 }
-$('#contAnimales').html('<div>Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba3"><div><input type="hidden" value="1"/><img src="../images/imagenesAnimales/"'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="../images/imagenesAnimales/"'+rutaanimal[2]+'" class="btnAnimal" /></div><div><input type="hidden" value="3"/><img src="../images/imagenesAnimales/"'+rutaanimal[3]+'" class="btnAnimal" /></div><div><input type="hidden" value="4"/><img src="../images/imagenesAnimales/"'+rutaanimal[4]+'" class="btnAnimal" /></div></div>');
-colocarAltura();	
+$('#contAnimales').html('<div>Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba3 item"><div><input type="hidden" value="1"/><img src="../images/imagenesAnimales/"'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="../images/imagenesAnimales/"'+rutaanimal[2]+'" class="btnAnimal" /></div><div><input type="hidden" value="3"/><img src="../images/imagenesAnimales/"'+rutaanimal[3]+'" class="btnAnimal" /></div><div><input type="hidden" value="4"/><img src="../images/imagenesAnimales/"'+rutaanimal[4]+'" class="btnAnimal" /></div></div>');
+window.setTimeout(colocarAltura,150);
 }else if (puntuacion<50) {
 animalSeleccionado=aleatorio(1,5);
 if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==17||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
@@ -137,8 +137,8 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
 }else{
     var determinante='el';
 }
-$('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba3"><div><input type="hidden" value="1"/><img src="../images/imagenesAnimales/"'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="../images/imagenesAnimales/"'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="../images/imagenesAnimales/"'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="../images/imagenesAnimales/"'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="../images/imagenesAnimales/"'+rutaanimal[5]+'" class="btnAnimal" /></div></div>');
-colocarAltura();
+$('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba3 item"><div><input type="hidden" value="1"/><img src="../images/imagenesAnimales/"'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="../images/imagenesAnimales/"'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="../images/imagenesAnimales/"'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="../images/imagenesAnimales/"'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="../images/imagenesAnimales/"'+rutaanimal[5]+'" class="btnAnimal" /></div></div>');
+window.setTimeout(colocarAltura,150);
 }else if (puntuacion<75) {
 animalSeleccionado=aleatorio(1,6);
 if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==17||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
@@ -146,8 +146,8 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
 }else{
     var determinante='el';
 }
-$('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba3"><div><input type="hidden" value="1"/><img src="../images/imagenesAnimales/"'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="../images/imagenesAnimales/"'+rutaanimal[2]+'" class="btnAnimal" /></div><div><input type="hidden" value="3"/><img src="../images/imagenesAnimales/"'+rutaanimal[3]+'" class="btnAnimal" /></div><div><input type="hidden" value="4"/><img src="../images/imagenesAnimales/"'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="../images/imagenesAnimales/"'+rutaanimal[5]+'" class="btnAnimal" /></div><div><input type="hidden" value="6"/><img src="../images/imagenesAnimales/"'+rutaanimal[6]+'" class="btnAnimal" /></div></div>');
-colocarAltura();
+$('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba3 item"><div><input type="hidden" value="1"/><img src="../images/imagenesAnimales/"'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="../images/imagenesAnimales/"'+rutaanimal[2]+'" class="btnAnimal" /></div><div><input type="hidden" value="3"/><img src="../images/imagenesAnimales/"'+rutaanimal[3]+'" class="btnAnimal" /></div><div><input type="hidden" value="4"/><img src="../images/imagenesAnimales/"'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="../images/imagenesAnimales/"'+rutaanimal[5]+'" class="btnAnimal" /></div><div><input type="hidden" value="6"/><img src="../images/imagenesAnimales/"'+rutaanimal[6]+'" class="btnAnimal" /></div></div>');
+window.setTimeout(colocarAltura,150);
 }else if (puntuacion<100) {
 animalSeleccionado=aleatorio(1,7);
 if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==17||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
@@ -155,8 +155,8 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
 }else{
     var determinante='el';
 }
-$('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba8"><div><input type="hidden" value="1"/><img src="../images/imagenesAnimales/"'+rutaanimal[1]+'" class="btnAnimal"/></div><div><input type="hidden" value="2"/><img src="../images/imagenesAnimales/"'+rutaanimal[2]+'" class="btnAnimal" /></div><div><input type="hidden" value="3"/><img src="../images/imagenesAnimales/"'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="../images/imagenesAnimales/"'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="../images/imagenesAnimales/"'+rutaanimal[5]+'" class="btnAnimal"/></div><div><input type="hidden" value="6"/><img src="../images/imagenesAnimales/"'+rutaanimal[6]+'" class="btnAnimal" /></div><div><input type="hidden" value="7"/><img src="../images/imagenesAnimales/"'+rutaanimal[7]+'" class="btnAnimal"/></div></div>');
-colocarAltura();
+$('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba8 item"><div><input type="hidden" value="1"/><img src="../images/imagenesAnimales/"'+rutaanimal[1]+'" class="btnAnimal"/></div><div><input type="hidden" value="2"/><img src="../images/imagenesAnimales/"'+rutaanimal[2]+'" class="btnAnimal" /></div><div><input type="hidden" value="3"/><img src="../images/imagenesAnimales/"'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="../images/imagenesAnimales/"'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="../images/imagenesAnimales/"'+rutaanimal[5]+'" class="btnAnimal"/></div><div><input type="hidden" value="6"/><img src="../images/imagenesAnimales/"'+rutaanimal[6]+'" class="btnAnimal" /></div><div><input type="hidden" value="7"/><img src="../images/imagenesAnimales/"'+rutaanimal[7]+'" class="btnAnimal"/></div></div>');
+window.setTimeout(colocarAltura,150);
 }else{
 animalSeleccionado=aleatorio(1,8);
 if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==17||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
