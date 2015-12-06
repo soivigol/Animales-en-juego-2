@@ -165,7 +165,7 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
     var determinante='el';
 }
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba8 item"><div><input type="hidden" value="1"/><img src="../images/imagenesAnimales/"'+rutaanimal[1]+'" class="btnAnimal"/></div><div><input type="hidden" value="2"/><img src="../images/imagenesAnimales/"'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="../images/imagenesAnimales/"'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="../images/imagenesAnimales/"'+rutaanimal[4]+'" class="btnAnimal"/></div><div><input type="hidden" value="5"/><img src="../images/imagenesAnimales/"'+rutaanimal[5]+'" class="btnAnimal" /></div><div><input type="hidden" value="6"/><img src="../images/imagenesAnimales/"'+rutaanimal[6]+'" class="btnAnimal" /></div><div><input type="hidden" value="7"/><img src="../images/imagenesAnimales/"'+rutaanimal[7]+'" class="btnAnimal"/></div><div><input type="hidden" value="8"/><img src="../images/imagenesAnimales/"'+rutaanimal[8]+'" class="btnAnimal" /></div></div>');
-window.setTimeout(colocarAltura,150);
+window.setTimeout(colocarAltura,20);
 }	
 
 $('.btnAnimal').click(comprobarSeleccion);
@@ -177,7 +177,7 @@ $('.btnAnimal').click(comprobarSeleccion);
 function comprobarSeleccion(){
 var animalPulsado=$(this).parent().find('input').val();
 if(animalPulsado==animalSeleccionado){
-var audio=document.createElement('audio');
+audio=document.createElement('audio');
 audio.src='audio/Aplausos.mp3';
 audio.play();
 $('#pagPpal').hide();
@@ -190,6 +190,7 @@ $('#pagAcierto').hide();
 $('#nivel').html('Nivel '+buscarNivel(puntuacion));
 window.setTimeout(function(){
 $('#pagNivel').hide();
+audio.stop();
 iniciar();
 },800);
 }else if(puntuacion==150){
