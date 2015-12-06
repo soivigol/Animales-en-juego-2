@@ -89,9 +89,6 @@ p{
 
 @media (min-width: 480px){
 	.encabezado img{
-		display: block;
-		float: left;
-		width: 100px;
-		margin: 10px;
+		width: 50px;
 	}
 }
