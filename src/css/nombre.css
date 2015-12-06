@@ -1,0 +1,92 @@
+#pagPaal, #pagAcierto, #pagFallo,#pagNivel,#pagFin{
+	display: none;
+}
+
+body{
+    background-image: url(../images/fondoSonidos.png);
+}
+
+h1{
+    text-align: center;
+}
+
+#reiniciarEsto{
+    float: right;
+    margin-right: 20px;
+}
+
+p{
+    text-align: center;
+}
+
+#contPuntuacion{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 55px;
+}
+
+#contPuntuacion p{
+    display: inline-block;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    float:right;
+    background-image: url(../images/fondoBotones.png);
+    border: 3px outset #8b4513;
+}
+
+#contAnimales{
+    position: fixed;
+    top: 55px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+
+.encabezado{
+    display: block !important;
+    width: 100% !important;
+    padding-top: 20px !important;
+}
+
+.encabezado img{
+	display: block;
+	width: 100px;
+	margin: 10px auto 0;
+}
+
+.item{
+	background-image: url(../images/fondoBotones.png);
+	border: 3px outset #8b4513;
+	text-align: center;
+	padding: 10px 0;
+	font-size: 18px;	
+	margin: 20px auto;
+}
+
+.nombre4 div{
+	width: 40%;
+	padding: 0 5%;
+}
+
+.nombre5 div{
+	width: 27%;
+	padding: 0 3%;
+}
+
+
+#botonAtras{
+    display: inline-block;
+    float:left;
+    background-image: url(../images/fondoBotones.png);
+    border: 3px outset #8b4513;
+    margin: 5px 0 5px 10px;
+}
+
+#botonAtras img{
+    width: 40px;
+}
