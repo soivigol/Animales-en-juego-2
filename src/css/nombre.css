@@ -64,18 +64,16 @@ p{
 	background-image: url(../images/fondoBotones.png);
 	border: 3px outset #8b4513;
 	text-align: center;
-	padding: 10px 0;
+	padding: 5px 5px;
 	font-size: 18px;	
 }
 
 .nombre4 div{
-	width: 40%;
-	margin: 20px 5%;
+	margin: 10px;
 }
 
 .nombre5 div{
-	width: 27%;
-	margin: 10px 3%;
+	margin: 5px;
 }
 
 
