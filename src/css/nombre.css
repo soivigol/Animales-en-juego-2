@@ -76,15 +76,6 @@ p{
 	margin: 5px;
 }
 
-@media (min-width: 480px){
-    .arriba3 div{
-        width: 33.2%;
-    }
-    .arriba8 div{
-        width: 24.6% !important;
-    }
-}
-
 
 #botonAtras{
     display: inline-block;
@@ -96,4 +87,13 @@ p{
 
 #botonAtras img{
     width: 40px;
+}
+
+@media (min-width: 480px){
+	.encabezado img{
+		display: block;
+		float: left;
+		width: 100px;
+		margin: 10px;
+	}
 }
