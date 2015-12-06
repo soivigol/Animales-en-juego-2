@@ -59,7 +59,8 @@ p{
 	margin: 10px auto 0;
 }
 
-.item{
+.item div{
+	display: inline-block;
 	background-image: url(../images/fondoBotones.png);
 	border: 3px outset #8b4513;
 	text-align: center;
