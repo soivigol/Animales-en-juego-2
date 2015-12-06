@@ -3,7 +3,7 @@
 }
 
 body{
-    background-image: url(../images/fondoSonidos.png);
+    background-image: url(../images/fondoNombres.png);
 }
 
 h1{
@@ -66,17 +66,16 @@ p{
 	text-align: center;
 	padding: 10px 0;
 	font-size: 18px;	
-	margin: 20px auto;
 }
 
 .nombre4 div{
 	width: 40%;
-	padding: 0 5%;
+	margin: 20px 5%;
 }
 
 .nombre5 div{
 	width: 27%;
-	padding: 0 3%;
+	margin: 10px 3%;
 }
 
 
