@@ -177,6 +177,9 @@ $('.btnAnimal').click(comprobarSeleccion);
 function comprobarSeleccion(){
 var animalPulsado=$(this).parent().find('input').val();
 if(animalPulsado==animalSeleccionado){
+var audio=document.createElement('audio');
+audio.src='audio/Aplausos.mp3';
+audio.play();
 $('#pagPpal').hide();
 $('#pagAcierto').show();
 puntuacion=puntuacion+1;
