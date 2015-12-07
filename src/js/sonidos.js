@@ -200,8 +200,6 @@ $('.btnAnimal').click(comprobarSeleccion);
 function comprobarSeleccion(){
 var animalPulsado=$(this).parent().find('input').val();
 if(animalPulsado==animalSeleccionado){
-audio.pause();
-audio.currentTime=0;
 audio.src='audio/Aplausos.mp3';
 audio.play();
 $('#pagPpal').hide();
