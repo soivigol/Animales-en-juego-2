@@ -193,6 +193,7 @@ window.setTimeout(function(){
 $('#pagNivel').hide();
 audio.pause();
 audio.currentTime=0;
+audio.src='';
 iniciar();
 },800);
 }else if(puntuacion==150){
