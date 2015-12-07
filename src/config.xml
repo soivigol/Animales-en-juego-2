@@ -80,7 +80,6 @@
     <!--
         <gap:plugin name="com.phonegap.plugins.barcodescanner" />
     -->
-	<plugin name="cordova-plugin-media" spec="1.0.1" source="pgb" />
     <gap:plugin name="com.sharinglabs.cordova.plugin.datepicker" />
     <gap:plugin name="nl.x-services.plugins.toast" />
 	<gap:plugin name="com.brodysoft.sqliteplugin" />
@@ -120,16 +119,10 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-	
-	
-<feature name="Media">
-    <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
-</feature>
 
 <gap:config-file platform="android" parent="/manifest">
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-<uses-permission android:name="android.permission.RECORD_AUDIO" />
-<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
 </gap:config-file>	
 	
 

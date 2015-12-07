@@ -26,6 +26,7 @@ $('#reiniciarEsto').click(function(){
 localStorage.setItem("puntuacion","0");
 iniciar();
 });
+audio=document.createElement('audio');
 colocarAnimales();
 }
 
@@ -178,7 +179,7 @@ $('.btnAnimal').click(comprobarSeleccion);
 function comprobarSeleccion(){
 var animalPulsado=$(this).parent().find('input').val();
 if(animalPulsado==animalSeleccionado){
-audio=new Media('file:///android_asset/www/audio/Aplausos.mp3');
+audio.src='audio/Aplausos.mp3';
 audio.play();
 $('#pagPpal').hide();
 $('#pagAcierto').show();
@@ -197,7 +198,8 @@ $('#pagFin').show();
 $('#pagAcierto').hide();
 }else{
 window.setTimeout(function(){
-audio.stop();
+audio.pause();
+audio.currentTime=0;
 $('#pagAcierto').hide();
 iniciar();
 },800);
