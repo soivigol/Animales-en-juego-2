@@ -191,7 +191,7 @@ $('#pagAcierto').hide();
 $('#nivel').html('Nivel '+buscarNivel(puntuacion));
 window.setTimeout(function(){
 $('#pagNivel').hide();
-audio.pause();
+audio.currentTime=0;
 iniciar();
 },800);
 }else if(puntuacion==150){
