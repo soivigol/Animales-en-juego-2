@@ -3,6 +3,7 @@ var animal=new Array();
 var rutaanimal= new Array();
 var animalSeleccionado=0;
 var nombreAnimal= new Array();
+var audioAnimal=new Array();
 var audio;
 
 document.addEventListener("deviceready", onDeviceReady, false);
@@ -83,34 +84,42 @@ db.transaction(function(tx) {
 tx.executeSql("SELECT * FROM animales WHERE id='"+animal[1]+"'",[],function(tx,res){
 rutaanimal[1]=res.rows.item(0).imagen;
 nombreAnimal[1]=res.rows.item(0).nombre;
+audioAnimal[1]=res.rows.item(0).sonido;
 });
 tx.executeSql("SELECT * FROM animales WHERE id='"+animal[2]+"'",[],function(tx,res){
 rutaanimal[2]=res.rows.item(0).imagen;
 nombreAnimal[2]=res.rows.item(0).nombre;
+audioAnimal[2]=res.rows.item(0).sonido;
 });
 tx.executeSql("SELECT * FROM animales WHERE id='"+animal[3]+"'",[],function(tx,res){
 rutaanimal[3]=res.rows.item(0).imagen;
 nombreAnimal[3]=res.rows.item(0).nombre;
+audioAnimal[3]=res.rows.item(0).sonido;
 });
 tx.executeSql("SELECT * FROM animales WHERE id='"+animal[4]+"'",[],function(tx,res){
 rutaanimal[4]=res.rows.item(0).imagen;
 nombreAnimal[4]=res.rows.item(0).nombre;
+audioAnimal[4]=res.rows.item(0).sonido;
 });
 tx.executeSql("SELECT * FROM animales WHERE id='"+animal[5]+"'",[],function(tx,res){
 rutaanimal[5]=res.rows.item(0).imagen;
 nombreAnimal[5]=res.rows.item(0).nombre;
+audioAnimal[5]=res.rows.item(0).sonido;
 });
 tx.executeSql("SELECT * FROM animales WHERE id='"+animal[6]+"'",[],function(tx,res){
 rutaanimal[6]=res.rows.item(0).imagen;
 nombreAnimal[6]=res.rows.item(0).nombre;
+audioAnimal[6]=res.rows.item(0).sonido;
 });
 tx.executeSql("SELECT * FROM animales WHERE id='"+animal[7]+"'",[],function(tx,res){
 rutaanimal[7]=res.rows.item(0).imagen;
 nombreAnimal[7]=res.rows.item(0).nombre;
+audioAnimal[7]=res.rows.item(0).sonido;
 });
 tx.executeSql("SELECT * FROM animales WHERE id='"+animal[8]+"'",[],function(tx,res){
 rutaanimal[8]=res.rows.item(0).imagen;
 nombreAnimal[8]=res.rows.item(0).nombre;
+audioAnimal[8]=res.rows.item(0).sonido;
 });
 });
 window.setTimeout(function(){
@@ -122,6 +131,8 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
     var determinante='el';
 }
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba3 item"><div><input type="hidden" value="1"/><img src="../images/imagenesAnimales/"'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="../images/imagenesAnimales/"'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="../images/imagenesAnimales/"'+rutaanimal[3]+'" class="btnAnimal" /></div></div>');
+audio.src='audio/'+audioAnimal[animalSeleccionado];
+audio.play();
 window.setTimeout(colocarAltura,20);
 }else if (puntuacion<30) {
 animalSeleccionado=aleatorio(1,4);
@@ -131,6 +142,8 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
     var determinante='el';
 }
 $('#contAnimales').html('<div>Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba3 item"><div><input type="hidden" value="1"/><img src="../images/imagenesAnimales/"'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="../images/imagenesAnimales/"'+rutaanimal[2]+'" class="btnAnimal" /></div><div><input type="hidden" value="3"/><img src="../images/imagenesAnimales/"'+rutaanimal[3]+'" class="btnAnimal" /></div><div><input type="hidden" value="4"/><img src="../images/imagenesAnimales/"'+rutaanimal[4]+'" class="btnAnimal" /></div></div>');
+audio.src='audio/'+audioAnimal[animalSeleccionado];
+audio.play();
 window.setTimeout(colocarAltura,20);
 }else if (puntuacion<50) {
 animalSeleccionado=aleatorio(1,5);
@@ -140,6 +153,8 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
     var determinante='el';
 }
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba3 item"><div><input type="hidden" value="1"/><img src="../images/imagenesAnimales/"'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="../images/imagenesAnimales/"'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="../images/imagenesAnimales/"'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="../images/imagenesAnimales/"'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="../images/imagenesAnimales/"'+rutaanimal[5]+'" class="btnAnimal" /></div></div>');
+audio.src='audio/'+audioAnimal[animalSeleccionado];
+audio.play();
 window.setTimeout(colocarAltura,20);
 }else if (puntuacion<75) {
 animalSeleccionado=aleatorio(1,6);
@@ -149,6 +164,8 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
     var determinante='el';
 }
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba3 item"><div><input type="hidden" value="1"/><img src="../images/imagenesAnimales/"'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="../images/imagenesAnimales/"'+rutaanimal[2]+'" class="btnAnimal" /></div><div><input type="hidden" value="3"/><img src="../images/imagenesAnimales/"'+rutaanimal[3]+'" class="btnAnimal" /></div><div><input type="hidden" value="4"/><img src="../images/imagenesAnimales/"'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="../images/imagenesAnimales/"'+rutaanimal[5]+'" class="btnAnimal" /></div><div><input type="hidden" value="6"/><img src="../images/imagenesAnimales/"'+rutaanimal[6]+'" class="btnAnimal" /></div></div>');
+audio.src='audio/'+audioAnimal[animalSeleccionado];
+audio.play();
 window.setTimeout(colocarAltura,20);
 }else if (puntuacion<100) {
 animalSeleccionado=aleatorio(1,7);
@@ -158,6 +175,8 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
     var determinante='el';
 }
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba8 item"><div><input type="hidden" value="1"/><img src="../images/imagenesAnimales/"'+rutaanimal[1]+'" class="btnAnimal"/></div><div><input type="hidden" value="2"/><img src="../images/imagenesAnimales/"'+rutaanimal[2]+'" class="btnAnimal" /></div><div><input type="hidden" value="3"/><img src="../images/imagenesAnimales/"'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="../images/imagenesAnimales/"'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="../images/imagenesAnimales/"'+rutaanimal[5]+'" class="btnAnimal"/></div><div><input type="hidden" value="6"/><img src="../images/imagenesAnimales/"'+rutaanimal[6]+'" class="btnAnimal" /></div><div><input type="hidden" value="7"/><img src="../images/imagenesAnimales/"'+rutaanimal[7]+'" class="btnAnimal"/></div></div>');
+audio.src='audio/'+audioAnimal[animalSeleccionado];
+audio.play();
 window.setTimeout(colocarAltura,20);
 }else{
 animalSeleccionado=aleatorio(1,8);
@@ -167,6 +186,8 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
     var determinante='el';
 }
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'</div><div class="arriba8 item"><div><input type="hidden" value="1"/><img src="../images/imagenesAnimales/"'+rutaanimal[1]+'" class="btnAnimal"/></div><div><input type="hidden" value="2"/><img src="../images/imagenesAnimales/"'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="../images/imagenesAnimales/"'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="../images/imagenesAnimales/"'+rutaanimal[4]+'" class="btnAnimal"/></div><div><input type="hidden" value="5"/><img src="../images/imagenesAnimales/"'+rutaanimal[5]+'" class="btnAnimal" /></div><div><input type="hidden" value="6"/><img src="../images/imagenesAnimales/"'+rutaanimal[6]+'" class="btnAnimal" /></div><div><input type="hidden" value="7"/><img src="../images/imagenesAnimales/"'+rutaanimal[7]+'" class="btnAnimal"/></div><div><input type="hidden" value="8"/><img src="../images/imagenesAnimales/"'+rutaanimal[8]+'" class="btnAnimal" /></div></div>');
+audio.src='audio/'+audioAnimal[animalSeleccionado];
+audio.play();
 window.setTimeout(colocarAltura,20);
 }	
 
@@ -179,6 +200,8 @@ $('.btnAnimal').click(comprobarSeleccion);
 function comprobarSeleccion(){
 var animalPulsado=$(this).parent().find('input').val();
 if(animalPulsado==animalSeleccionado){
+audio.pause();
+audio.currentTime=0;
 audio.src='audio/Aplausos.mp3';
 audio.play();
 $('#pagPpal').hide();
