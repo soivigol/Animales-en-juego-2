@@ -190,7 +190,6 @@ $('#pagAcierto').hide();
 $('#nivel').html('Nivel '+buscarNivel(puntuacion));
 window.setTimeout(function(){
 $('#pagNivel').hide();
-audio.stop();
 iniciar();
 },800);
 }else if(puntuacion==150){
@@ -198,6 +197,7 @@ $('#pagFin').show();
 $('#pagAcierto').hide();
 }else{
 window.setTimeout(function(){
+audio.stop();
 $('#pagAcierto').hide();
 iniciar();
 },800);
