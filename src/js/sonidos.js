@@ -178,7 +178,7 @@ $('.btnAnimal').click(comprobarSeleccion);
 function comprobarSeleccion(){
 var animalPulsado=$(this).parent().find('input').val();
 if(animalPulsado==animalSeleccionado){
-audio=new Media('../audio/Aplausos.mp3');
+audio=new Media('file:///android_asset/www/audio/Aplausos.mp3');
 audio.play();
 $('#pagPpal').hide();
 $('#pagAcierto').show();
