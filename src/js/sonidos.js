@@ -3,6 +3,7 @@ var animal=new Array();
 var rutaanimal= new Array();
 var animalSeleccionado=0;
 var nombreAnimal= new Array();
+var audio;
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -25,6 +26,7 @@ $('#reiniciarEsto').click(function(){
 localStorage.setItem("puntuacion","0");
 iniciar();
 });
+audio=document.createElement('audio');
 colocarAnimales();
 }
 
@@ -177,7 +179,6 @@ $('.btnAnimal').click(comprobarSeleccion);
 function comprobarSeleccion(){
 var animalPulsado=$(this).parent().find('input').val();
 if(animalPulsado==animalSeleccionado){
-audio=document.createElement('audio');
 audio.src='audio/Aplausos.mp3';
 audio.play();
 $('#pagPpal').hide();
