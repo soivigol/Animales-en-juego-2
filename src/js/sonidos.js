@@ -29,6 +29,7 @@ $('#pagFin').css('display','none');
 iniciar();
 });
 audio=document.createElement('audio');
+audio.loop=true;
 colocarAnimales();
 }
 
