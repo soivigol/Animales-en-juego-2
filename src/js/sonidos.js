@@ -3,7 +3,7 @@ var animal=new Array();
 var rutaanimal= new Array();
 var animalSeleccionado=0;
 var nombreAnimal= new Array();
-var audio=new Audio();
+var audio;
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -178,7 +178,7 @@ $('.btnAnimal').click(comprobarSeleccion);
 function comprobarSeleccion(){
 var animalPulsado=$(this).parent().find('input').val();
 if(animalPulsado==animalSeleccionado){
-audio.src='audio/Aplausos.mp3';
+audio=new Media('audio/Aplausos.mp3');
 audio.play();
 $('#pagPpal').hide();
 $('#pagAcierto').show();
@@ -190,9 +190,7 @@ $('#pagAcierto').hide();
 $('#nivel').html('Nivel '+buscarNivel(puntuacion));
 window.setTimeout(function(){
 $('#pagNivel').hide();
-audio.pause();
-audio.currentTime=0;
-audio.src='';
+audio.stop();
 iniciar();
 },800);
 }else if(puntuacion==150){
