@@ -3,7 +3,7 @@ var animal=new Array();
 var rutaanimal= new Array();
 var animalSeleccionado=0;
 var nombreAnimal= new Array();
-var audio;
+var audio=new Audio();
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -26,7 +26,6 @@ $('#reiniciarEsto').click(function(){
 localStorage.setItem("puntuacion","0");
 iniciar();
 });
-audio=document.createElement('audio');
 colocarAnimales();
 }
 
