@@ -190,6 +190,8 @@ $('#pagNivel').show();
 $('#pagAcierto').hide();
 $('#nivel').html('Nivel '+buscarNivel(puntuacion));
 window.setTimeout(function(){
+audio.pause();
+audio.currentTime=0;
 $('#pagNivel').hide();
 iniciar();
 },800);
@@ -205,9 +207,13 @@ iniciar();
 },800);
 }
 }else{
+audio.src='audio/Fallo.mp3';
+audio.play();
 $('#pagPpal').hide();
 $('#pagFallo').show();
 window.setTimeout(function(){
+audio.pause();
+audio.currentTime=0;	
 $('#pagFallo').hide();
 iniciar();
 },800);
