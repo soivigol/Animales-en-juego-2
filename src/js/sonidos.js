@@ -28,8 +28,7 @@ localStorage.setItem("puntuacion","0");
 $('#pagFin').css('display','none');
 iniciar();
 });
-audio=document.createElement('audio');
-audio.setAttribute('loop');
+audio=$('body').html('<audio loop></audio>');
 colocarAnimales();
 }
 
