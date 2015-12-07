@@ -25,6 +25,7 @@ $('#pagPpal').css('display','block');
 $('#contPuntuacion').html('<a href="index.html" id="botonAtras"><img src="images/aspa.png"/></a><p>Puntuación='+puntuacion+'</p><p>Nivel='+buscarNivel(puntuacion)+'</p>');
 $('#reiniciarEsto').click(function(){
 localStorage.setItem("puntuacion","0");
+$('#pagFin').css('display','none');
 iniciar();
 });
 audio=document.createElement('audio');
