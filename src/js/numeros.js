@@ -94,12 +94,12 @@ rutaanimal[6]=res.rows.item(0).imagen;
 nombreAnimal[6]=res.rows.item(0).nombre;
 });
 });
-if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==16||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
+if (animal[0]==1||animal[0]==4||animal[0]==16||animal[0]==20||animal[0]==21){
     var determinante='Cuantas';
 }else{
     var determinante='Cuantos';
 }
-if(animal[animalSeleccionado]==12){
+if(animal[0]==12){
 	var plurar='es';
 }else{
 	var plurar='s';
@@ -336,7 +336,7 @@ while(numeros[5]==numeros[1]||numeros[5]==numeros[2]||numeros[5]==numeros[3]||nu
 numeros[5]=aleatorio(1,16);
 }
 }
-$('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button><button>'+numeros[4]+'</button><button>'+numeros[6]+'</button>');
+$('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button><button>'+numeros[4]+'</button><button>'+numeros[5]+'</button>');
 $('#contNumeros button').click(comprobar);
 },120);
 }

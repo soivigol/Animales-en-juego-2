@@ -48,14 +48,15 @@ p{
 }
 
 .encabezado{
-    display: block !important;
-    width: 100% !important;
-    padding-top: 20px !important;
+    display: block;
+    width: 100%;
+    padding-top: 20px;
 }
 
 .encabezado img{
 	display: block;
 	width: 100px;
+	height: 100px;
 	margin: 10px auto 0;
 }
 
@@ -89,7 +90,7 @@ p{
     width: 40px;
 }
 
-@media (min-width: 480px){
+@media (min-width: 520px){
 	.encabezado img{
 		display: block;
 		float: left;
