@@ -52,9 +52,9 @@ p{
 }
 
 .item div img{
-	width: 100%;
     display: block;
     margin: 0 auto;
+    padding: 0;
 }
 
 .arriba3 div{
@@ -63,8 +63,12 @@ p{
 }
 
 .arriba4 div{
-    width: 35.4%;
+    width: 35%;
     padding: 10px 7%;
+}
+
+.arriba4 div img{
+    width: 85%;
 }
 
 .arriba8 div{
