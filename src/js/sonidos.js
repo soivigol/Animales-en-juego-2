@@ -10,7 +10,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady () {
 window.addEventListener("orientationchange", function() {
-window.setTimeout(colocarAltura,150);
+window.setTimeout(colocarAltura,250);
 }, false);
 puntuacion=Number(localStorage.getItem("puntuacion"));
 if (puntuacion==null) {
@@ -189,7 +189,7 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'<img src="images/altavoz.png" class="altavoz"/></div><div class="arriba8 item"><div><input type="hidden" value="1"/><img src="images/imagenesAnimales/'+rutaanimal[1]+'" class="btnAnimal"/></div><div><input type="hidden" value="2"/><img src="images/x'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="images/imagenesAnimales/'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="images/imagenesAnimales/'+rutaanimal[4]+'" class="btnAnimal"/></div><div><input type="hidden" value="5"/><img src="images/imagenesAnimales/'+rutaanimal[5]+'" class="btnAnimal" /></div><div><input type="hidden" value="6"/><img src="images/imagenesAnimales/'+rutaanimal[6]+'" class="btnAnimal" /></div><div><input type="hidden" value="7"/><img src="images/imagenesAnimales/'+rutaanimal[7]+'" class="btnAnimal"/></div><div><input type="hidden" value="8"/><img src="images/imagenesAnimales/'+rutaanimal[8]+'" class="btnAnimal" /></div></div>');
 audio.src='audio/'+audioAnimal[animalSeleccionado];
 audio.play();
-window.setTimeout(colocarAltura,20);
+window.setTimeout(colocarAltura,5);
 }	
 
 $('.btnAnimal').click(comprobarSeleccion);
@@ -198,7 +198,7 @@ audio.src='audio/'+audioAnimal[animalSeleccionado];
 audio.play();	
 });
 
-},150);
+},250);
 
 }
 
@@ -267,7 +267,7 @@ var largoCont=$('#contAnimales').height();
 var largoEncab=$('.encabezado').innerHeight();
  if($(window).width()>480){ 
 var altoMax=(largoCont-largoEncab-50)/2;
-$('.item div img').css('max-height',altoMax+'px'); 
+$('.item div img').css({'max-height':altoMax+'px','max-width':altoMax+'px'}); 
 }
 $('.item').css('margin-top',(largoCont-largoEncab-($('.item').height()))/2+'px');
 
