@@ -89,6 +89,12 @@ p{
     width: 40px;
 }
 
+.altavoz{
+	height: 25px;
+	float: right;
+	margin-right: 10px;
+}
+
 @media (min-width: 520px){
 	.arriba3 div{
 		width: 25%;
