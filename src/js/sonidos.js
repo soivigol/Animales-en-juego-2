@@ -156,7 +156,7 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'<img src="images/altavoz.png" class="altavoz"/></div><div class="arriba4 item"><div><input type="hidden" value="1"/><img src="images/imagenesAnimales/'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="images/imagenesAnimales/'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="images/imagenesAnimales/'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="images/imagenesAnimales/'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="images/imagenesAnimales/'+rutaanimal[5]+'" class="btnAnimal" /></div></div>');
 audio.src='audio/'+audioAnimal[animalSeleccionado];
 audio.play();
-window.setTimeout(colocarAltura,20);
+colocarAltura();
 }else if (puntuacion<75) {
 animalSeleccionado=aleatorio(1,6);
 if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==16||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
@@ -267,7 +267,7 @@ var largoCont=$('#contAnimales').height();
 var largoEncab=$('.encabezado').innerHeight();
  if($(window).width()>480){ 
 var altoMax=(largoCont-largoEncab-50)/2;
-$('.item div img').css({'max-height':altoMax+'px','max-width':altoMax+'px'}); 
+$('.item div').css({'max-height':altoMax+'px','max-width':altoMax+'px'}); 
 }
 $('.item').css('margin-top',(largoCont-largoEncab-($('.item').height()))/2+'px');
 

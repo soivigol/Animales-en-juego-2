@@ -58,12 +58,12 @@ p{
 }
 
 .arriba3 div{
-    width: 40%;
+    width: 39.5%;
     padding: 10px 5%;
 }
 
 .arriba4 div{
-    width: 36%;
+    width: 35.4%;
     padding: 10px 7%;
 }
 
@@ -99,12 +99,12 @@ p{
 
 @media (min-width: 520px){
 	.arriba3 div{
-		width: 25%;
+		width: 24%;
 		padding: 10px 4%;
     }
 	
 	.arriba4 div{
-        width: 25%;
+        width: 24%;
         padding: 10px 4%;
 	}
     .arriba8 div{
