@@ -52,19 +52,20 @@ p{
 }
 
 .item div img{
+    width: 100%;
     display: block;
     margin: 0 auto;
     padding: 0;
 }
 
 .arriba3 div{
-    width: 39.5%;
-    padding: 10px 5%;
+    padding: 10px 10%;
+    width: 30%;
 }
 
 .arriba4 div{
-    width: 35%;
-    padding: 10px 7%;
+    padding: 10px 10%;
+    width: 30%;
 }
 
 .arriba4 div img{
