@@ -19,8 +19,8 @@ puntuacion=Number(localStorage.getItem("puntuacionNumeros"));
 if (puntuacion==null) {
 puntuacion=0;
 }
-TTS.speak('hola', function () {
-        alert('success');
+TTS.speak('hola amigo', function () {
+        
     }, function (reason) {
         alert(reason);
     });
@@ -495,5 +495,5 @@ var largoCont=$('#contAnimales').height();
 var largoEncab=$('.encabezado').innerHeight();
 
 $('.item').css('margin-top',(largoCont-largoEncab-($('.item').height()))/2+'px');
-$('#contNumeros').css('visibility','visible');
+$('#contAnimales').css('visibility','visible');
 }
