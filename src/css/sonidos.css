@@ -52,7 +52,7 @@ p{
 }
 
 .item div img{
-    width: 100%;
+    width: 85%;
     display: block;
     margin: 0 auto;
     padding: 0;
@@ -66,10 +66,6 @@ p{
 .arriba4 div{
     padding: 10px 10%;
     width: 30%;
-}
-
-.arriba4 div img{
-    width: 85%;
 }
 
 .arriba8 div{
@@ -100,6 +96,7 @@ p{
 	height: 30px;
 	float: right;
 	margin-right: 15px;
+    margin-bottom: 10px;
 }
 
 @media (orientation: landscape){
