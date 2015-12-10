@@ -101,8 +101,12 @@ p{
 
 @media (orientation: landscape){
 	.arriba3 div{
-        padding: 10px 4%;
-		width: 24%;
+        padding: 10px 7%;
+		width: 18%;
+    }
+
+    .arriba3 div img{
+        max-width: 100px;
     }
 	
 	.arriba4 div{
