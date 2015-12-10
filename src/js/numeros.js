@@ -19,11 +19,7 @@ puntuacion=Number(localStorage.getItem("puntuacionNumeros"));
 if (puntuacion==null) {
 puntuacion=0;
 }
-TTS.speak('hola amigo', function () {
-        
-    }, function (reason) {
-        alert(reason);
-    });
+window.plugins.tts.speak("Hola amigo", function(){alert('bien')}, function(){alert('fallo')});
 window.setTimeout(iniciar,500);
 }
 
