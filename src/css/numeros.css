@@ -110,7 +110,7 @@ p{
 }
 
 .numeros9 div img{
-    max-width: 150px;
+    max-width: 80px;
 }
 
 .numeros6 div img{
@@ -118,19 +118,19 @@ p{
 }
 
 .numeros12 div img{
-    max-width: 100px;
+    max-width: 70px;
 }
 
 @media (min-width: 520px){
     .numeros9 div{
-        width: 20%;
+        width: 16%;
     }
     
     .numeros6 div{
         width: 33%;
     }
     .numeros12 div{
-        width: 15%;
+        width: 12%;
     }
 
     .numeros9 div img{
