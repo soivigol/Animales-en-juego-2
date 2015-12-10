@@ -198,7 +198,7 @@ audio.src='audio/'+audioAnimal[animalSeleccionado];
 audio.play();	
 });
 
-},100);
+},250);
 
 }
 
@@ -265,7 +265,7 @@ return 6;
 function colocarAltura(){
 var largoCont=$('#contAnimales').height();
 var largoEncab=$('.encabezado').innerHeight();
- if($(window).width()>520){ 
+ if($(window).width()>520&&$(window).height()<521){ 
 var altoMax=(largoCont-largoEncab-50)/2;
 $('.item div').css({'max-height':altoMax+'px','max-width':altoMax+'px'}); 
 }
