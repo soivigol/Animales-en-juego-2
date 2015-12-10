@@ -105,6 +105,8 @@ p{
 .altavoz{
 	height: 30px;position: absolute;
     right: 15px;
+    top: 50%;
+    margin-top: -15px;
 }
 
 @media (orientation: landscape){

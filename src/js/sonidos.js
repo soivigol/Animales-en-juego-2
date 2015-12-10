@@ -29,6 +29,7 @@ $('#pagFin').css('display','none');
 iniciar();
 });
 audio=document.createElement('audio');
+$('#contAnimales').css('visibility','hidden');
 colocarAnimales();
 }
 
@@ -268,4 +269,5 @@ var largoEncab=$('.encabezado').innerHeight();
 
 $('.item').css('margin-top',(largoCont-largoEncab-($('.item').height()))/2+'px');
 
+$('#contAnimales').css('visibility','visible');
 }
