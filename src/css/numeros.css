@@ -86,41 +86,62 @@ p{
     margin: 0 10px;
 }
 
-.numeros6 div{
-    padding: 10px 10%;
-    width: 30%;
-}
-
 .item div{
     display: inline-block;
 }
 
 .item div img{
-    width: 100%;
+    display: inline-block;
+    width: 85%;
+    margin: 10px auto;
+    padding: 0;
 }
 
 .numeros9 div{
-    padding: 10px 6%;
-    width: 21.2%;
+    width: 33%;
+}
+
+.numeros6 div{
+    width: 50%;
 }
 
 .numeros12 div{
-    padding: 10px 4%;
-    width: 17%;
+    width: 25%;
+}
+
+.numeros9 div img{
+    max-width: 150px;
+}
+
+.numeros6 div img{
+    max-width: 120px;
+}
+
+.numeros12 div img{
+    max-width: 100px;
 }
 
 @media (min-width: 520px){
     .numeros9 div{
-        padding: 10px 2.5%;
-        width: 15%;
+        width: 20%;
     }
     
     .numeros6 div{
-        padding: 10px 2%;
-        width: 12%;
+        width: 33%;
     }
     .numeros12 div{
-        padding: 10px 1.25%;
-        width: 10%;
+        width: 15%;
+    }
+
+    .numeros9 div img{
+        max-width: 70px;
+    }
+
+    .numeros6 div img{
+        max-width: 80px;
+    }
+
+    .numeros12 div img{
+        max-width: 60px;
     }
 }

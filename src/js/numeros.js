@@ -26,6 +26,7 @@ function iniciar(){
 $('#pagBienvenida').css('display','none');
 $('#pagPpal').css('display','block');
 $('#contPuntuacion').html('<a href="index.html" id="botonAtras"><img src="images/aspa.png"/></a><p>Puntuación='+puntuacion+'</p><p>Nivel='+buscarNivel(puntuacion)+'</p>');
+$('#contNumeros').css('visibility','hidden');
 colocarAnimales();
 }
 
@@ -127,7 +128,7 @@ numeros[3]=aleatorio(1,6);
 
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button>');
 $('#contNumeros button').click(comprobar);
-},120);
+},250);
 }else if (puntuacion<30) {
 animal[7]=aleatorio(a,b);
 if(animalSeleccionado==animal[7]){
@@ -176,7 +177,7 @@ numeros[3]=aleatorio(1,9);
 }
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button>');
 $('#contNumeros button').click(comprobar);
-},120);
+},250);
 }else if(puntuacion<50){
 animal[7]=aleatorio(a,b);
 if(animalSeleccionado==animal[7]){
@@ -249,7 +250,7 @@ numeros[3]=aleatorio(1,12);
 }
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button>');
 $('#contNumeros button').click(comprobar);
-},120);
+},250);
 }else if(puntuacion<75){
 colocar16Animales();
 window.setTimeout(function(){
@@ -273,12 +274,12 @@ numeros[3]=aleatorio(1,16);
 }
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button>');
 $('#contNumeros button').click(comprobar);
-},120);
+},250);
 }else if (puntuacion<100) {
 colocar16Animales();
 window.setTimeout(function(){
 $('#contAnimales').html('<div class="encabezado">¿'+determinante+' '+nombreAnimal[0]+''+plurar+' hay?</div><div class="numeros12 item"><div><img src="images/imagenesAnimales/'+rutaanimal[1]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[2]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[3]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[4]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[5]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[6]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[7]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[8]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[9]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[10]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[11]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[12]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[13]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[14]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[15]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[16]+'"/></div></div>');
-window.setTimeout(colocarAltura,20);
+window.setTimeout(colocarAltura,50);
 
 posicionElecta=aleatorio(1,4);
 numeros[1]=aleatorio(1,16);
@@ -303,12 +304,12 @@ numeros[4]=aleatorio(1,16);
 }
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button><button>'+numeros[4]+'</button>');
 $('#contNumeros button').click(comprobar);
-},120);
-}else{
+},250);
+}else if(puntuacion<150){
 colocar16Animales();
 window.setTimeout(function(){
 $('#contAnimales').html('<div class="encabezado">¿'+determinante+' '+nombreAnimal[0]+''+plurar+' hay?</div><div class="numeros12 item"><div><img src="images/imagenesAnimales/'+rutaanimal[1]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[2]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[3]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[4]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[5]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[6]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[7]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[8]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[9]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[10]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[11]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[12]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[13]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[14]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[15]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[16]+'"/></div></div>');
-window.setTimeout(colocarAltura,20);
+window.setTimeout(colocarAltura,50);
 
 posicionElecta=aleatorio(1,5);
 numeros[1]=aleatorio(1,16);
@@ -339,7 +340,10 @@ numeros[5]=aleatorio(1,16);
 }
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button><button>'+numeros[4]+'</button><button>'+numeros[5]+'</button>');
 $('#contNumeros button').click(comprobar);
-},120);
+},250);
+}else{
+	$('#pagPpal').hide();
+    $('#pagFin').show(); 
 }
 }
 
@@ -359,7 +363,7 @@ $('#pagAcierto').hide();
 window.setTimeout(function(){
 $('#pagNivel').hide();
 iniciar();
-},800);
+},2000);
 }else if(puntuacion==150){
 $('#pagFin').show();
 $('#pagAcierto').hide();
@@ -367,7 +371,7 @@ $('#pagAcierto').hide();
 window.setTimeout(function(){
 $('#pagAcierto').hide();
 iniciar();
-},800);
+},2000);
 }
 }else{
 $('#pagPpal').hide();
@@ -375,7 +379,7 @@ $('#pagFallo').show();
 window.setTimeout(function(){
 $('#pagFallo').hide();
 iniciar();
-},800);
+},2000);
 }
 }
 
@@ -484,10 +488,7 @@ return 6;
 function colocarAltura(){
 var largoCont=$('#contAnimales').height();
 var largoEncab=$('.encabezado').innerHeight();
- if($(window).width()>480){ 
-var altoMax=(largoCont-largoEncab-50)/2;
-$('.item div img').css('max-height',altoMax+'px'); 
-}
-$('.item').css('margin-top',(largoCont-largoEncab-($('.item').height()))/2+'px');
 
+$('.item').css('margin-top',(largoCont-largoEncab-($('.item').height()))/2+'px');
+$('#contNumeros').css('visibility','visible');
 }
