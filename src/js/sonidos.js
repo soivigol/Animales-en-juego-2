@@ -136,7 +136,7 @@ audio.src='audio/'+audioAnimal[animalSeleccionado];
 audio.play();
 window.setTimeout(function(){
     colocarAltura(1);
-},20);
+},100);
 }else if (puntuacion<30) {
 animalSeleccionado=aleatorio(1,4);
 if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalSeleccionado]==16||animal[animalSeleccionado]==20||animal[animalSeleccionado]==21){
@@ -277,7 +277,7 @@ return 6;
 function colocarAltura(n){
 var largoCont=$('#contAnimales').height();
 var largoEncab=$('.encabezado').innerHeight();
- if($(window).width()>520&&$(window).height()){ 
+ if($(window).width()>520&&$(window).height()<520){ 
 var altoMax=(largoCont-largoEncab-50)/n;
 $('.item div img').css({'max-height':altoMax+'px','max-width':altoMax+'px'}); 
 }
