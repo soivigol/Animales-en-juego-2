@@ -85,6 +85,7 @@
     <gap:plugin name="nl.x-services.plugins.toast" />
 	<gap:plugin name="com.brodysoft.sqliteplugin" />
 <gap:plugin name="cordova-plugin-velda-devicefeedback" source="npm"/>
+	<gap:plugin name="cordova-plugin-tts" source="npm"/>
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />

@@ -19,6 +19,11 @@ puntuacion=Number(localStorage.getItem("puntuacionNumeros"));
 if (puntuacion==null) {
 puntuacion=0;
 }
+TTS.speak('hola', function () {
+        alert('success');
+    }, function (reason) {
+        alert(reason);
+    });
 window.setTimeout(iniciar,500);
 }
 
@@ -26,7 +31,7 @@ function iniciar(){
 $('#pagBienvenida').css('display','none');
 $('#pagPpal').css('display','block');
 $('#contPuntuacion').html('<a href="index.html" id="botonAtras"><img src="images/aspa.png"/></a><p>Puntuación='+puntuacion+'</p><p>Nivel='+buscarNivel(puntuacion)+'</p>');
-$('#contNumeros').css('visibility','hidden');
+$('#contAnimales').css('visibility','hidden');
 colocarAnimales();
 }
 
