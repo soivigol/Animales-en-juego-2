@@ -54,7 +54,7 @@ p{
 .item div img{
     width: 85%;
     display: block;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 0;
 }
 
@@ -101,8 +101,7 @@ p{
 
 @media (orientation: landscape){
 	.arriba3 div{
-        padding: 10px 7%;
-		width: 18%;
+		width: 32%;
     }
 
     .arriba3 div img{
