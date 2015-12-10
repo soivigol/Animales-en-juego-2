@@ -6,7 +6,6 @@ function onDeviceReady () {
 $('a').on('touchend', function(){
 window.plugins.deviceFeedback.acoustic();
 });
-alert($(window).width())
 puntuacion=localStorage.getItem("puntuacion");
 if (puntuacion==null) {
 puntuacion=0;
