@@ -269,7 +269,7 @@ $('#pagNivel').hide();
 	audio.pause();
 audio.currentTime=0;
 iniciar();
-},800);
+},2000);
 }else if(puntuacion==150){
 $('#pagFin').show();
 $('#pagAcierto').hide();
@@ -279,7 +279,7 @@ $('#pagAcierto').hide();
 	audio.pause();
 audio.currentTime=0;
 iniciar();
-},800);
+},2000);
 }
 }else{
 $('#pagPpal').hide();
@@ -291,7 +291,7 @@ $('#pagFallo').hide();
 	audio.pause();
 audio.currentTime=0;
 iniciar();
-},800);
+},2000);
 }
 }
 

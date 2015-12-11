@@ -349,6 +349,7 @@ $('#contNumeros button').click(comprobar);
 $('.altavoz').click(function(){
 audio.src='audio/'+audioanimal[0];
 audio.play();	
+})
 },250);
 }else{
 	$('#pagPpal').hide();
