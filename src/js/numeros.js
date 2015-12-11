@@ -75,7 +75,7 @@ db.transaction(function(tx) {
 tx.executeSql("SELECT * FROM animales WHERE id='"+animalSeleccionado+"'",[],function(tx,res){
 rutaanimal[0]=res.rows.item(0).imagen;
 nombreAnimal[0]=res.rows.item(0).nombre;
-audioanimal[0]=res.rows.item(0).nombre;
+audioanimal[0]=res.rows.item(0).sonido2;
 });
 tx.executeSql("SELECT * FROM animales WHERE id='"+animal[1]+"'",[],function(tx,res){
 rutaanimal[1]=res.rows.item(0).imagen;
