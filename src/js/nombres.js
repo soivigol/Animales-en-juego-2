@@ -7,6 +7,7 @@ var nombreAnimal= new Array();
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady () {
+document.onselectstart = function() {return false;}
 window.addEventListener("orientationchange", function() {
 window.setTimeout(colocarAltura,150);
 }, false);

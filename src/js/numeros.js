@@ -12,6 +12,7 @@ var b=0;
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady () {
+document.onselectstart = function() {return false;}
 window.addEventListener("orientationchange", function() {
 window.setTimeout(colocarAltura,150);
 }, false);
@@ -19,8 +20,7 @@ puntuacion=Number(localStorage.getItem("puntuacionNumeros"));
 if (puntuacion==null) {
 puntuacion=0;
 }
-var msg = new SpeechSynthesisUtterance('Hello World');
-    window.speechSynthesis.speak(msg);
+
 window.setTimeout(iniciar,500);
 }
 

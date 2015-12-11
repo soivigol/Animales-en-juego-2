@@ -3,6 +3,7 @@ var puntuacion=0;
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady () {
+document.onselectstart = function() {return false;}
 $('a').on('touchend', function(){
 window.plugins.deviceFeedback.acoustic();
 });

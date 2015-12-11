@@ -9,6 +9,7 @@ var audio;
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady () {
+document.onselectstart = function() {return false;}
 window.addEventListener("orientationchange", function() {
 window.setTimeout(colocarAltura,250);
 }, false);
