@@ -15,6 +15,7 @@ h1{
     width: 100% !important;
     padding-top: 20px !important;
     background: rgba(255,255,255,0.4);
+	position: relative;
 }
 
 
@@ -115,7 +116,7 @@ p{
 }
 
 .numeros6 div img{
-    max-width: 120px;
+    max-width: 100px;
 }
 
 .numeros12 div img{

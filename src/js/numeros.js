@@ -134,6 +134,12 @@ numeros[3]=aleatorio(1,6);
 
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button>');
 $('#contNumeros button').click(comprobar);
+audio.src='audio/'+audioanimal[0];
+audio.play();
+$('.altavoz').click(function(){
+audio.src='audio/'+audioanimal[0];
+audio.play();	
+})
 },250);
 }else if (puntuacion<30) {
 animal[7]=aleatorio(a,b);
@@ -183,6 +189,12 @@ numeros[3]=aleatorio(1,9);
 }
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button>');
 $('#contNumeros button').click(comprobar);
+audio.src='audio/'+audioanimal[0];
+audio.play();
+$('.altavoz').click(function(){
+audio.src='audio/'+audioanimal[0];
+audio.play();	
+})
 },250);
 }else if(puntuacion<50){
 animal[7]=aleatorio(a,b);
@@ -256,6 +268,12 @@ numeros[3]=aleatorio(1,12);
 }
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button>');
 $('#contNumeros button').click(comprobar);
+audio.src='audio/'+audioanimal[0];
+audio.play();
+$('.altavoz').click(function(){
+audio.src='audio/'+audioanimal[0];
+audio.play();	
+})
 },250);
 }else if(puntuacion<75){
 colocar16Animales();
@@ -280,6 +298,12 @@ numeros[3]=aleatorio(1,16);
 }
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button>');
 $('#contNumeros button').click(comprobar);
+audio.src='audio/'+audioanimal[0];
+audio.play();
+$('.altavoz').click(function(){
+audio.src='audio/'+audioanimal[0];
+audio.play();	
+})
 },250);
 }else if (puntuacion<100) {
 colocar16Animales();
@@ -310,6 +334,12 @@ numeros[4]=aleatorio(1,16);
 }
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button><button>'+numeros[4]+'</button>');
 $('#contNumeros button').click(comprobar);
+audio.src='audio/'+audioanimal[0];
+audio.play();
+$('.altavoz').click(function(){
+audio.src='audio/'+audioanimal[0];
+audio.play();	
+})
 },250);
 }else if(puntuacion<150){
 colocar16Animales();
@@ -346,6 +376,8 @@ numeros[5]=aleatorio(1,16);
 }
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button><button>'+numeros[4]+'</button><button>'+numeros[5]+'</button>');
 $('#contNumeros button').click(comprobar);
+audio.src='audio/'+audioanimal[0];
+audio.play();
 $('.altavoz').click(function(){
 audio.src='audio/'+audioanimal[0];
 audio.play();	
