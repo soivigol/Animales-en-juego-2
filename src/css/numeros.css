@@ -123,6 +123,14 @@ p{
 	margin: 5px auto;
 }
 
+.altavoz{
+	height: 30px;position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -15px;
+}
+
+
 @media (orientation: landscape){
     .numeros9 div{
         width: 16%;

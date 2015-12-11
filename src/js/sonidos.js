@@ -13,11 +13,14 @@ document.onselectstart = function() {return false;}
 window.addEventListener("orientationchange", function() {
 window.setTimeout(colocarAltura,250);
 }, false);
+audio=document.createElement('audio');
+audio.src='audio/tituloSonidos.mp3';
+audio.play();
 puntuacion=Number(localStorage.getItem("puntuacion"));
 if (puntuacion==null) {
 puntuacion=0;
 }
-window.setTimeout(iniciar,500);
+window.setTimeout(iniciar,5000);
 }
 
 function iniciar(){
@@ -29,7 +32,6 @@ localStorage.setItem("puntuacion","0");
 $('#pagFin').css('display','none');
 iniciar();
 });
-audio=document.createElement('audio');
 $('#contAnimales').css('visibility','hidden');
 colocarAnimales();
 }

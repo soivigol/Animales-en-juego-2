@@ -90,7 +90,7 @@ p{
     width: 40px;
 }
 
-@media (min-width: 520px){
+@media (orientation: landscape)){
 	.encabezado img{
 		display: block;
 		float: left;
