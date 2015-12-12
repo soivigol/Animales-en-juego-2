@@ -254,7 +254,7 @@ iniciar();
 }
 
 function buscarNivel(a){
-if (a<16) {
+if (a<15) {
 return 1;
 }else if (a<30) {
 return 2;

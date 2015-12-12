@@ -522,7 +522,7 @@ nombreAnimal[16]=res.rows.item(0).nombre;
 }
 
 function buscarNivel(a){
-if (a<16) {
+if (a<15) {
 return 1;
 }else if (a<30) {
 return 2;
