@@ -16,8 +16,11 @@ window.setTimeout(colocarAltura,250);
 audio=document.createElement('audio');
 audio.src='audio/tituloSonidos.mp3';
 audio.play();
+if(audio.play()==null){
 var media = new Media('file:///android_asset/www/audio/tituloSonidos.mp3');
 media.play();
+}
+
 puntuacion=Number(localStorage.getItem("puntuacion"));
 if (puntuacion==null) {
 puntuacion=0;
