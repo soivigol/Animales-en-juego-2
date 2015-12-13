@@ -16,7 +16,7 @@ window.setTimeout(colocarAltura,250);
 audio=document.createElement('audio');
 audio.src='audio/tituloSonidos.mp3';
 audio.play();
-var media = new Media('audio/tituloSonidos.mp3');
+var media = new Media('file:///com.soivigol.animalesenjuego2/audio/tituloSonidos.mp3');
 media.play();
 puntuacion=Number(localStorage.getItem("puntuacion"));
 if (puntuacion==null) {
