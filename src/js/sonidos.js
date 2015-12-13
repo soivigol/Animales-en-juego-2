@@ -13,7 +13,9 @@ document.onselectstart = function() {return false;}
 window.addEventListener("orientationchange", function() {
 window.setTimeout(colocarAltura,250);
 }, false);
-	alert(Number(device.version))
+	if(device.version>=5){
+		alert('hola')
+	}
 
 audio=document.createElement('audio');
 audio.src='audio/tituloSonidos.mp3';
