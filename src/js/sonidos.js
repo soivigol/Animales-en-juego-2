@@ -13,10 +13,16 @@ document.onselectstart = function() {return false;}
 window.addEventListener("orientationchange", function() {
 window.setTimeout(colocarAltura,250);
 }, false);
-
+if(Number(device.version)>5){
+	alert(Number(device.version))
+}
+audio=document.createElement('audio');
+audio.src='audio/tituloSonidos.mp3';
+audio.play();
+if(Number(device.version)<5){
 var media = new Media('file:///android_asset/www/audio/tituloSonidos.mp3');
 media.play();
-
+}
 
 puntuacion=Number(localStorage.getItem("puntuacion"));
 if (puntuacion==null) {
