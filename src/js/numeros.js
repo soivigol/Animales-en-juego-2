@@ -26,17 +26,12 @@ if (puntuacion==null) {
 puntuacion=0;
 }
 audio=document.createElement('audio');
-audio.src='audio/tituloNumeros.mp3';
-audio.play();
 var expr=/^4/;
 var cadena=device.version;
 if(expr.test(cadena)){
 android4=true;
 }
-if(android4){
-media=new Media('file:///android_asset/www/audio/tituloNumeros.mp3');
-media.play();
-}
+reproductor('audio/tituloNumeros.mp3');
 window.setTimeout(iniciar,5000);
 }
 
@@ -147,11 +142,9 @@ numeros[3]=aleatorio(1,6);
 
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button>');
 $('#contNumeros button').click(comprobar);
-audio.src='audio/'+audioanimal[0];
-audio.play();
+reproductor('audio/'+audioanimal[0]);
 $('.altavoz').click(function(){
-audio.src='audio/'+audioanimal[0];
-audio.play();	
+reproductor('audio/'+audioanimal[0]);
 })
 },250);
 }else if (puntuacion<30) {
@@ -202,11 +195,9 @@ numeros[3]=aleatorio(1,9);
 }
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button>');
 $('#contNumeros button').click(comprobar);
-audio.src='audio/'+audioanimal[0];
-audio.play();
+reproductor('audio/'+audioanimal[0]);
 $('.altavoz').click(function(){
-audio.src='audio/'+audioanimal[0];
-audio.play();	
+reproductor('audio/'+audioanimal[0]);
 })
 },250);
 }else if(puntuacion<50){
@@ -281,11 +272,9 @@ numeros[3]=aleatorio(1,12);
 }
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button>');
 $('#contNumeros button').click(comprobar);
-audio.src='audio/'+audioanimal[0];
-audio.play();
+reproductor('audio/'+audioanimal[0]);
 $('.altavoz').click(function(){
-audio.src='audio/'+audioanimal[0];
-audio.play();	
+reproductor('audio/'+audioanimal[0]);
 })
 },250);
 }else if(puntuacion<75){
@@ -311,11 +300,9 @@ numeros[3]=aleatorio(1,16);
 }
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button>');
 $('#contNumeros button').click(comprobar);
-audio.src='audio/'+audioanimal[0];
-audio.play();
+reproductor('audio/'+audioanimal[0]);
 $('.altavoz').click(function(){
-audio.src='audio/'+audioanimal[0];
-audio.play();	
+reproductor('audio/'+audioanimal[0]);	
 })
 },250);
 }else if (puntuacion<100) {
@@ -347,11 +334,9 @@ numeros[4]=aleatorio(1,16);
 }
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button><button>'+numeros[4]+'</button>');
 $('#contNumeros button').click(comprobar);
-audio.src='audio/'+audioanimal[0];
-audio.play();
+reproductor('audio/'+audioanimal[0]);
 $('.altavoz').click(function(){
-audio.src='audio/'+audioanimal[0];
-audio.play();	
+reproductor('audio/'+audioanimal[0]);
 })
 },250);
 }else if(puntuacion<150){
@@ -389,11 +374,9 @@ numeros[5]=aleatorio(1,16);
 }
 $('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button><button>'+numeros[4]+'</button><button>'+numeros[5]+'</button>');
 $('#contNumeros button').click(comprobar);
-audio.src='audio/'+audioanimal[0];
-audio.play();
+reproductor('audio/'+audioanimal[0]);
 $('.altavoz').click(function(){
-audio.src='audio/'+audioanimal[0];
-audio.play();	
+reproductor('audio/'+audioanimal[0]);
 })
 },250);
 }else{
@@ -408,10 +391,12 @@ return Math.round(Math.random()*(b-a)+parseInt(a))
 
 function comprobar(){
 if(Number($(this).text())==sumatorio){
+if(android4){
+media.stop();
+}
 $('#pagPpal').hide();
 $('#pagAcierto').show();
-audio.src='audio/Aplausos.mp3';
-audio.play();
+reproductor('audio/Aplausos.mp3');
 puntuacion=puntuacion+1;
 localStorage.setItem('puntuacionNumeros',puntuacion);
 if (puntuacion==15||puntuacion==30||puntuacion==50||puntuacion==75||puntuacion==100) {
@@ -421,6 +406,9 @@ window.setTimeout(function(){
 $('#pagNivel').hide();
 audio.pause();
 audio.currentTime=0;
+if(android4){
+media.stop();
+}
 iniciar();
 },2000);
 }else if(puntuacion==150){
@@ -431,16 +419,21 @@ window.setTimeout(function(){
 $('#pagAcierto').hide();
 audio.pause();
 audio.currentTime=0;
+if(android4){
+media.stop();
+}
 iniciar();
 },2000);
 }
 }else{
 $('#pagPpal').hide();
 $('#pagFallo').show();
-audio.src='audio/Fallo.mp3';
-audio.play();
+reproductor('audio/Fallo.mp3');
 window.setTimeout(function(){
 $('#pagFallo').hide();
+if(android4){
+media.stop();
+}
 audio.pause();
 audio.currentTime=0;
 iniciar();
@@ -556,4 +549,13 @@ var largoEncab=$('.encabezado').innerHeight();
 
 $('.item').css('margin-top',(largoCont-largoEncab-($('.item').height()))/2+'px');
 $('#contAnimales').css('visibility','visible');
+}
+
+function reproductor(a){
+audio.src=a;
+audio.play();
+if(android4){
+media=new Media('file:///android_asset/www/'+a);
+media.play();
+}
 }
