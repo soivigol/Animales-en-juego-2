@@ -41,7 +41,6 @@ $('#pagFin').css('display','none');
 iniciar();
 });
 $('#contAnimales').css('visibility','hidden');
-window
 colocarAnimales();
 }
 
@@ -214,7 +213,7 @@ function comprobarSeleccion(){
 var animalPulsado=$(this).parent().find('input').val();
 if(animalPulsado==animalSeleccionado){
 if(android4){
-md2.pause();
+md2.stop();
 }
 reproductor(1,'audio/Aplausos.mp3');
 $('#pagPpal').hide();
@@ -229,7 +228,7 @@ window.setTimeout(function(){
 audio.pause();
 audio.currentTime=0;
 if(android4){
-md1.pause();
+md1.stop();
 }
 $('#pagNivel').hide();
 iniciar();
@@ -242,7 +241,7 @@ window.setTimeout(function(){
 audio.pause();
 audio.currentTime=0;
 if(android4){
-md1.pause();
+md1.stop();
 }
 $('#pagAcierto').hide();
 iniciar();
@@ -250,7 +249,7 @@ iniciar();
 }
 }else{
 if(android4){
-md2.pause();
+md2.stop();
 }
 reproductor(1,'audio/Fallo.mp3');
 $('#pagPpal').hide();
@@ -259,7 +258,7 @@ window.setTimeout(function(){
 audio.pause();
 audio.currentTime=0;
 if(android4){
-md1.pause();
+md1.stop();
 }
 $('#pagFallo').hide();
 iniciar();
@@ -297,11 +296,13 @@ audio.src=a;
 audio.play();
 if(android4){
 if(n==1){
-md1 = new Audio('file:///android_asset/www/'+a);
+md1 = new Media('file:///android_asset/www/'+a,function(){},function(){
+	window.setTimeout(iniciar,200);
+});
 md1.play();	
 }
 if(n==2){
-md2 = new Audio('file:///android_asset/www/'+a);
+md2 = new Media('file:///android_asset/www/'+a);
 md2.play();	
 }
 }
