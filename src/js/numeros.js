@@ -9,6 +9,8 @@ var posicionElecta=0;
 var numeros= new Array();
 var a=0;
 var b=0;
+var android4=false;
+var media;
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -21,12 +23,21 @@ puntuacion=Number(localStorage.getItem("puntuacionNumeros"));
 if (puntuacion==null) {
 puntuacion=0;
 }
+
+var expr=/^4/;
+var cadena=device.version;
+if(expr.test(cadena)){
+android4=true;
+}
 audio=document.createElement('audio');
 reproductor('audio/tituloNumeros.mp3');
 window.setTimeout(iniciar,5000);
 }
 
 function iniciar(){
+if(android4){
+media.stop();
+}
 $('#pagBienvenida').css('display','none');
 $('#pagPpal').css('display','block');
 $('#contPuntuacion').html('<a href="index.html" id="botonAtras"><img src="images/aspa.png"/></a><p>Puntuación='+puntuacion+'</p><p>Nivel='+buscarNivel(puntuacion)+'</p>');
@@ -382,6 +393,9 @@ return Math.round(Math.random()*(b-a)+parseInt(a))
 
 function comprobar(){
 if(Number($(this).text())==sumatorio){
+if(android4){
+media.stop();
+}
 $('#pagPpal').hide();
 $('#pagAcierto').show();
 reproductor('audio/Aplausos.mp3');
@@ -394,7 +408,9 @@ window.setTimeout(function(){
 $('#pagNivel').hide();
 audio.pause();
 audio.currentTime=0;
-media.stop(;)
+if(android4){
+media.stop();
+}
 iniciar();
 },2000);
 }else if(puntuacion==150){
@@ -405,11 +421,16 @@ window.setTimeout(function(){
 $('#pagAcierto').hide();
 audio.pause();
 audio.currentTime=0;
+if(android4){
 media.stop();
+}
 iniciar();
 },2000);
 }
 }else{
+if(android4){
+media.stop();
+}
 $('#pagPpal').hide();
 $('#pagFallo').show();
 reproductor('audio/Fallo.mp3'):
@@ -417,7 +438,9 @@ window.setTimeout(function(){
 $('#pagFallo').hide();
 audio.pause();
 audio.currentTime=0;
+if(android4){
 media.stop();
+}
 iniciar();
 },2000);
 }
@@ -536,9 +559,7 @@ $('#contAnimales').css('visibility','visible');
 function reproductor(a){
 audio.src=a;
 audio.play();
-var expr=/^4/;
-var cadena=device.version;
-if(expr.test(cadena)){
+if(android4){
 media = new Media('file:///android_asset/www/'+a);
 media.play();
 }
