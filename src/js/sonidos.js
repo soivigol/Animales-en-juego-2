@@ -238,10 +238,12 @@ $('#pagFin').show();
 $('#pagAcierto').hide();
 }else{
 window.setTimeout(function(){
-audio.pause();
-audio.currentTime=0;
+
 if(android4){
 md1.stop();
+}else{
+audio.pause();
+audio.currentTime=0;	
 }
 $('#pagAcierto').hide();
 iniciar();
@@ -292,8 +294,7 @@ $('#contAnimales').css('visibility','visible');
 }
 
 function reproductor(n,a){
-audio.src=a;
-audio.play();
+
 if(android4){
 if(n==1){
 md1 = new Media('file:///android_asset/www/'+a,function(){},function(){
@@ -305,5 +306,8 @@ if(n==2){
 md2 = new Media('file:///android_asset/www/'+a);
 md2.play();	
 }
+}else{
+audio.src=a;
+audio.play();
 }
 }
