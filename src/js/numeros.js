@@ -147,7 +147,7 @@ $('#contNumeros button').click(comprobar);
 reproductor('audio/'+audioanimal[0]);
 $('.altavoz').click(function(){
 reproductor('audio/'+audioanimal[0]);	
-})
+});
 },250);
 }else if (puntuacion<30) {
 animal[7]=aleatorio(a,b);
@@ -200,7 +200,7 @@ $('#contNumeros button').click(comprobar);
 reproductor('audio/'+audioanimal[0]);
 $('.altavoz').click(function(){
 reproductor('audio/'+audioanimal[0]);	
-})
+});
 },250);
 }else if(puntuacion<50){
 animal[7]=aleatorio(a,b);
@@ -277,7 +277,7 @@ $('#contNumeros button').click(comprobar);
 reproductor('audio/'+audioanimal[0]);
 $('.altavoz').click(function(){
 reproductor('audio/'+audioanimal[0]);	
-})
+});
 },250);
 }else if(puntuacion<75){
 colocar16Animales();
@@ -305,7 +305,7 @@ $('#contNumeros button').click(comprobar);
 reproductor('audio/'+audioanimal[0]);
 $('.altavoz').click(function(){
 reproductor('audio/'+audioanimal[0]);	
-})
+});
 },250);
 }else if (puntuacion<100) {
 colocar16Animales();
@@ -339,7 +339,7 @@ $('#contNumeros button').click(comprobar);
 reproductor('audio/'+audioanimal[0]);
 $('.altavoz').click(function(){
 reproductor('audio/'+audioanimal[0]);	
-})
+});
 },250);
 }else if(puntuacion<150){
 colocar16Animales();
@@ -379,7 +379,7 @@ $('#contNumeros button').click(comprobar);
 reproductor('audio/'+audioanimal[0]);
 $('.altavoz').click(function(){
 reproductor('audio/'+audioanimal[0]);	
-})
+});
 },250);
 }else{
 	$('#pagPpal').hide();
