@@ -195,8 +195,9 @@ window.setTimeout(colocarAltura,50);
 
 $('.btnAnimal').click(comprobarSeleccion);
 $('.altavoz').click(function(){
-
-},150);
+reproductor('audio/'+audioAnimal[animalSeleccionado]);
+});
+},350);
 
 }
 
