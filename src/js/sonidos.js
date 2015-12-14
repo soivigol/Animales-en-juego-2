@@ -22,7 +22,7 @@ if(expr.test(cadena)){
 android4=true;
 }
 audio=document.createElement('audio');
-reproductor(md1,'audio/tituloSonidos.mp3');
+reproductor(1,'audio/tituloSonidos.mp3');
 puntuacion=Number(localStorage.getItem("puntuacion"));
 if (puntuacion==null) {
 puntuacion=0;
@@ -144,7 +144,7 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
     var determinante='el';
 }
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'<img src="images/altavoz.png" class="altavoz"/></div><div class="arriba3 item"><div><input type="hidden" value="1"/><img src="images/imagenesAnimales/'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="images/imagenesAnimales/'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="images/imagenesAnimales/'+rutaanimal[3]+'" class="btnAnimal" /></div></div>');
-reproductor(md2,'audio/'+audioAnimal[animalSeleccionado]);
+reproductor(2,'audio/'+audioAnimal[animalSeleccionado]);
 window.setTimeout(colocarAltura,50);
 }else if (puntuacion<30) {
 animalSeleccionado=aleatorio(1,4);
@@ -154,7 +154,7 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
     var determinante='el';
 }
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'<img src="images/altavoz.png" class="altavoz"/></div><div class="arriba3 item"><div><input type="hidden" value="1"/><img src="images/imagenesAnimales/'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="images/imagenesAnimales/'+rutaanimal[2]+'" class="btnAnimal" /></div><div><input type="hidden" value="3"/><img src="images/imagenesAnimales/'+rutaanimal[3]+'" class="btnAnimal" /></div><div><input type="hidden" value="4"/><img src="images/imagenesAnimales/'+rutaanimal[4]+'" class="btnAnimal" /></div></div>');
-reproductor(md2,'audio/'+audioAnimal[animalSeleccionado]);
+reproductor(2,'audio/'+audioAnimal[animalSeleccionado]);
 window.setTimeout(colocarAltura,50);
 }else if (puntuacion<50) {
 animalSeleccionado=aleatorio(1,5);
@@ -164,7 +164,7 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
     var determinante='el';
 }
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'<img src="images/altavoz.png" class="altavoz"/></div><div class="arriba4 item"><div><input type="hidden" value="1"/><img src="images/imagenesAnimales/'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="images/imagenesAnimales/'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="images/imagenesAnimales/'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="images/imagenesAnimales/'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="images/imagenesAnimales/'+rutaanimal[5]+'" class="btnAnimal" /></div></div>');
-reproductor(md2,'audio/'+audioAnimal[animalSeleccionado]);
+reproductor(2,'audio/'+audioAnimal[animalSeleccionado]);
 window.setTimeout(colocarAltura,50);
 }else if (puntuacion<75) {
 animalSeleccionado=aleatorio(1,6);
@@ -174,7 +174,7 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
     var determinante='el';
 }
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'<img src="images/altavoz.png" class="altavoz"/></div><div class="arriba4 item"><div><input type="hidden" value="1"/><img src="images/imagenesAnimales/'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="images/imagenesAnimales/'+rutaanimal[2]+'" class="btnAnimal" /></div><div><input type="hidden" value="3"/><img src="images/imagenesAnimales/'+rutaanimal[3]+'" class="btnAnimal" /></div><div><input type="hidden" value="4"/><img src="images/imagenesAnimales/'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="images/imagenesAnimales/'+rutaanimal[5]+'" class="btnAnimal" /></div><div><input type="hidden" value="6"/><img src="images/imagenesAnimales/'+rutaanimal[6]+'" class="btnAnimal" /></div></div>');
-reproductor(md2,'audio/'+audioAnimal[animalSeleccionado]);
+reproductor(2,'audio/'+audioAnimal[animalSeleccionado]);
 window.setTimeout(colocarAltura,50);
 }else if (puntuacion<100) {
 animalSeleccionado=aleatorio(1,7);
@@ -184,7 +184,7 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
     var determinante='el';
 }
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'<img src="images/altavoz.png" class="altavoz"/></div><div class="arriba8 item"><div><input type="hidden" value="1"/><img src="images/imagenesAnimales/'+rutaanimal[1]+'" class="btnAnimal"/></div><div><input type="hidden" value="2"/><img src="images/imagenesAnimales/'+rutaanimal[2]+'" class="btnAnimal" /></div><div><input type="hidden" value="3"/><img src="images/imagenesAnimales/'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="images/imagenesAnimales/'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="images/imagenesAnimales/'+rutaanimal[5]+'" class="btnAnimal"/></div><div><input type="hidden" value="6"/><img src="images/imagenesAnimales/'+rutaanimal[6]+'" class="btnAnimal" /></div><div><input type="hidden" value="7"/><img src="images/imagenesAnimales/'+rutaanimal[7]+'" class="btnAnimal"/></div></div>');
-reproductor(md2,'audio/'+audioAnimal[animalSeleccionado]);
+reproductor(2,'audio/'+audioAnimal[animalSeleccionado]);
 window.setTimeout(colocarAltura,50);
 }else if (puntuacion<150){
 animalSeleccionado=aleatorio(1,8);
@@ -194,7 +194,7 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
     var determinante='el';
 }
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'<img src="images/altavoz.png" class="altavoz"/></div><div class="arriba8 item"><div><input type="hidden" value="1"/><img src="images/imagenesAnimales/'+rutaanimal[1]+'" class="btnAnimal"/></div><div><input type="hidden" value="2"/><img src="images/imagenesAnimales/'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="images/imagenesAnimales/'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="images/imagenesAnimales/'+rutaanimal[4]+'" class="btnAnimal"/></div><div><input type="hidden" value="5"/><img src="images/imagenesAnimales/'+rutaanimal[5]+'" class="btnAnimal" /></div><div><input type="hidden" value="6"/><img src="images/imagenesAnimales/'+rutaanimal[6]+'" class="btnAnimal" /></div><div><input type="hidden" value="7"/><img src="images/imagenesAnimales/'+rutaanimal[7]+'" class="btnAnimal"/></div><div><input type="hidden" value="8"/><img src="images/imagenesAnimales/'+rutaanimal[8]+'" class="btnAnimal" /></div></div>');
-reproductor(md2,'audio/'+audioAnimal[animalSeleccionado]);
+reproductor(2,'audio/'+audioAnimal[animalSeleccionado]);
 window.setTimeout(colocarAltura,50);
 }else{
     $('#pagPpal').hide();
@@ -203,7 +203,7 @@ window.setTimeout(colocarAltura,50);
 
 $('.btnAnimal').click(comprobarSeleccion);
 $('.altavoz').click(function(){
-reproductor(md2,'audio/'+audioAnimal[animalSeleccionado]);
+reproductor(2,'audio/'+audioAnimal[animalSeleccionado]);
 });
 },350);
 
@@ -215,7 +215,7 @@ if(animalPulsado==animalSeleccionado){
 if(android4){
 md2.stop();
 }
-reproductor(md1,'audio/Aplausos.mp3');
+reproductor(1,'audio/Aplausos.mp3');
 $('#pagPpal').hide();
 $('#pagAcierto').show();
 puntuacion=puntuacion+1;
@@ -251,7 +251,7 @@ iniciar();
 if(android4){
 md2.stop();
 }
-reproductor(md1,'audio/Fallo.mp3');
+reproductor(1,'audio/Fallo.mp3');
 $('#pagPpal').hide();
 $('#pagFallo').show();
 window.setTimeout(function(){
@@ -295,7 +295,13 @@ function reproductor(n,a){
 audio.src=a;
 audio.play();
 if(android4){
-n = new Media('file:///android_asset/www/'+a);
-n.play();
+if(n==1){
+md1 = new Media('file:///android_asset/www/'+a);
+md1.play();	
+}
+if(n==2){
+md2 = new Media('file:///android_asset/www/'+a);
+md2.play();	
+}
 }
 }
