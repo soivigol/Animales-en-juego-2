@@ -296,11 +296,11 @@ audio.src=a;
 audio.play();
 if(android4){
 if(n==1){
-md1 = new Media('file:///android_asset/www/'+a,function(){},function(e){alert(e)});
+md1 = new Media('file:///android_asset/www/'+a,function(){},function(e){alert(e.message)});
 md1.play();	
 }
 if(n==2){
-md2 = new Media('file:///android_asset/www/'+a,function(){},function(e){alert(e)});
+md2 = new Media('file:///android_asset/www/'+a,function(){},function(e){alert(e.message)});
 md2.play();	
 }
 }
