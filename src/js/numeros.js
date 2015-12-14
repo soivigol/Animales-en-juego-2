@@ -9,6 +9,10 @@ var posicionElecta=0;
 var numeros= new Array();
 var a=0;
 var b=0;
+var audio;
+var media;
+var android4=false;
+
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -24,6 +28,15 @@ puntuacion=0;
 audio=document.createElement('audio');
 audio.src='audio/tituloNumeros.mp3';
 audio.play();
+var expr=/^4/;
+var cadena=device.version;
+if(expr.test(cadena)){
+android4=true;
+}
+if(android4){
+media=new Media('file:///android_asset/www/audio/tituloNumeros.mp3');
+media.play();
+}
 window.setTimeout(iniciar,5000);
 }
 
