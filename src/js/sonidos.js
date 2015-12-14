@@ -5,6 +5,7 @@ var animalSeleccionado=0;
 var nombreAnimal= new Array();
 var audioAnimal=new Array();
 var audio;
+var media;
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -13,18 +14,8 @@ document.onselectstart = function() {return false;}
 window.addEventListener("orientationchange", function() {
 window.setTimeout(colocarAltura,250);
 }, false);
-	if(device.version>=5){
-		alert('hola')
-	}
-
 audio=document.createElement('audio');
-audio.src='audio/tituloSonidos.mp3';
-audio.play();
-if(Number(device.version)<5){
-var media = new Media('file:///android_asset/www/audio/tituloSonidos.mp3');
-media.play();
-}
-
+reproductor('audio/tituloSonidos.mp3');
 puntuacion=Number(localStorage.getItem("puntuacion"));
 if (puntuacion==null) {
 puntuacion=0;
@@ -145,8 +136,7 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
     var determinante='el';
 }
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'<img src="images/altavoz.png" class="altavoz"/></div><div class="arriba3 item"><div><input type="hidden" value="1"/><img src="images/imagenesAnimales/'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="images/imagenesAnimales/'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="images/imagenesAnimales/'+rutaanimal[3]+'" class="btnAnimal" /></div></div>');
-audio.src='audio/'+audioAnimal[animalSeleccionado];
-audio.play();
+reproductor('audio/'+audioAnimal[animalSeleccionado]);
 window.setTimeout(colocarAltura,50);
 }else if (puntuacion<30) {
 animalSeleccionado=aleatorio(1,4);
@@ -156,8 +146,7 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
     var determinante='el';
 }
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'<img src="images/altavoz.png" class="altavoz"/></div><div class="arriba3 item"><div><input type="hidden" value="1"/><img src="images/imagenesAnimales/'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="images/imagenesAnimales/'+rutaanimal[2]+'" class="btnAnimal" /></div><div><input type="hidden" value="3"/><img src="images/imagenesAnimales/'+rutaanimal[3]+'" class="btnAnimal" /></div><div><input type="hidden" value="4"/><img src="images/imagenesAnimales/'+rutaanimal[4]+'" class="btnAnimal" /></div></div>');
-audio.src='audio/'+audioAnimal[animalSeleccionado];
-audio.play();
+reproductor('audio/'+audioAnimal[animalSeleccionado]);
 window.setTimeout(colocarAltura,50);
 }else if (puntuacion<50) {
 animalSeleccionado=aleatorio(1,5);
@@ -167,8 +156,7 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
     var determinante='el';
 }
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'<img src="images/altavoz.png" class="altavoz"/></div><div class="arriba4 item"><div><input type="hidden" value="1"/><img src="images/imagenesAnimales/'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="images/imagenesAnimales/'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="images/imagenesAnimales/'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="images/imagenesAnimales/'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="images/imagenesAnimales/'+rutaanimal[5]+'" class="btnAnimal" /></div></div>');
-audio.src='audio/'+audioAnimal[animalSeleccionado];
-audio.play();
+reproductor('audio/'+audioAnimal[animalSeleccionado]);
 window.setTimeout(colocarAltura,50);
 }else if (puntuacion<75) {
 animalSeleccionado=aleatorio(1,6);
@@ -178,8 +166,7 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
     var determinante='el';
 }
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'<img src="images/altavoz.png" class="altavoz"/></div><div class="arriba4 item"><div><input type="hidden" value="1"/><img src="images/imagenesAnimales/'+rutaanimal[1]+'" class="btnAnimal" /></div><div><input type="hidden" value="2"/><img src="images/imagenesAnimales/'+rutaanimal[2]+'" class="btnAnimal" /></div><div><input type="hidden" value="3"/><img src="images/imagenesAnimales/'+rutaanimal[3]+'" class="btnAnimal" /></div><div><input type="hidden" value="4"/><img src="images/imagenesAnimales/'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="images/imagenesAnimales/'+rutaanimal[5]+'" class="btnAnimal" /></div><div><input type="hidden" value="6"/><img src="images/imagenesAnimales/'+rutaanimal[6]+'" class="btnAnimal" /></div></div>');
-audio.src='audio/'+audioAnimal[animalSeleccionado];
-audio.play();
+reproductor('audio/'+audioAnimal[animalSeleccionado]);
 window.setTimeout(colocarAltura,50);
 }else if (puntuacion<100) {
 animalSeleccionado=aleatorio(1,7);
@@ -189,8 +176,7 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
     var determinante='el';
 }
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'<img src="images/altavoz.png" class="altavoz"/></div><div class="arriba8 item"><div><input type="hidden" value="1"/><img src="images/imagenesAnimales/'+rutaanimal[1]+'" class="btnAnimal"/></div><div><input type="hidden" value="2"/><img src="images/imagenesAnimales/'+rutaanimal[2]+'" class="btnAnimal" /></div><div><input type="hidden" value="3"/><img src="images/imagenesAnimales/'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="images/imagenesAnimales/'+rutaanimal[4]+'" class="btnAnimal" /></div><div><input type="hidden" value="5"/><img src="images/imagenesAnimales/'+rutaanimal[5]+'" class="btnAnimal"/></div><div><input type="hidden" value="6"/><img src="images/imagenesAnimales/'+rutaanimal[6]+'" class="btnAnimal" /></div><div><input type="hidden" value="7"/><img src="images/imagenesAnimales/'+rutaanimal[7]+'" class="btnAnimal"/></div></div>');
-audio.src='audio/'+audioAnimal[animalSeleccionado];
-audio.play();
+reproductor('audio/'+audioAnimal[animalSeleccionado]);
 window.setTimeout(colocarAltura,50);
 }else if (puntuacion<150){
 animalSeleccionado=aleatorio(1,8);
@@ -200,8 +186,7 @@ if (animal[animalSeleccionado]==1||animal[animalSeleccionado]==4||animal[animalS
     var determinante='el';
 }
 $('#contAnimales').html('<div class="encabezado">Donde está '+determinante+' '+nombreAnimal[animalSeleccionado]+'<img src="images/altavoz.png" class="altavoz"/></div><div class="arriba8 item"><div><input type="hidden" value="1"/><img src="images/imagenesAnimales/'+rutaanimal[1]+'" class="btnAnimal"/></div><div><input type="hidden" value="2"/><img src="images/imagenesAnimales/'+rutaanimal[2]+'" class="btnAnimal"/></div><div><input type="hidden" value="3"/><img src="images/imagenesAnimales/'+rutaanimal[3]+'" class="btnAnimal"/></div><div><input type="hidden" value="4"/><img src="images/imagenesAnimales/'+rutaanimal[4]+'" class="btnAnimal"/></div><div><input type="hidden" value="5"/><img src="images/imagenesAnimales/'+rutaanimal[5]+'" class="btnAnimal" /></div><div><input type="hidden" value="6"/><img src="images/imagenesAnimales/'+rutaanimal[6]+'" class="btnAnimal" /></div><div><input type="hidden" value="7"/><img src="images/imagenesAnimales/'+rutaanimal[7]+'" class="btnAnimal"/></div><div><input type="hidden" value="8"/><img src="images/imagenesAnimales/'+rutaanimal[8]+'" class="btnAnimal" /></div></div>');
-audio.src='audio/'+audioAnimal[animalSeleccionado];
-audio.play();
+reproductor('audio/'+audioAnimal[animalSeleccionado]);
 window.setTimeout(colocarAltura,50);
 }else{
     $('#pagPpal').hide();
@@ -210,9 +195,6 @@ window.setTimeout(colocarAltura,50);
 
 $('.btnAnimal').click(comprobarSeleccion);
 $('.altavoz').click(function(){
-audio.src='audio/'+audioAnimal[animalSeleccionado];
-audio.play();	
-});
 
 },150);
 
@@ -221,8 +203,7 @@ audio.play();
 function comprobarSeleccion(){
 var animalPulsado=$(this).parent().find('input').val();
 if(animalPulsado==animalSeleccionado){
-audio.src='audio/Aplausos.mp3';
-audio.play();
+reproductor('audio/Aplausos.mp3');
 $('#pagPpal').hide();
 $('#pagAcierto').show();
 puntuacion=puntuacion+1;
@@ -234,6 +215,7 @@ $('#nivel').html('Nivel '+buscarNivel(puntuacion));
 window.setTimeout(function(){
 audio.pause();
 audio.currentTime=0;
+media.stop();
 $('#pagNivel').hide();
 iniciar();
 },2000);
@@ -244,18 +226,19 @@ $('#pagAcierto').hide();
 window.setTimeout(function(){
 audio.pause();
 audio.currentTime=0;
+media.stop();
 $('#pagAcierto').hide();
 iniciar();
 },2000);
 }
 }else{
-audio.src='audio/Fallo.mp3';
-audio.play();
+reproductor('audio/Fallo.mp3');
 $('#pagPpal').hide();
 $('#pagFallo').show();
 window.setTimeout(function(){
 audio.pause();
-audio.currentTime=0;	
+audio.currentTime=0;
+media.stop();
 $('#pagFallo').hide();
 iniciar();
 },2000);
@@ -285,4 +268,15 @@ var largoEncab=$('.encabezado').innerHeight();
 $('.item').css('margin-top',(largoCont-largoEncab-($('.item').height()))/2+'px');
 
 $('#contAnimales').css('visibility','visible');
+}
+
+function reproductor(a){
+audio.src=a;
+audio.play();
+var expr=/^4/;
+var cadena=device.version;
+if(expr.test(cadena)){
+media = new Media('file:///android_asset/www/'+a);
+media.play();
+}
 }
