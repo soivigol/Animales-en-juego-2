@@ -16,8 +16,12 @@ if (puntuacion==null) {
 puntuacion=0;
 }
 audio=document.createElement('audio');
-audio.src='audio/tituloNombres.mp3';
-audio.play();
+var expr=/^4/;
+var cadena=device.version;
+if(expr.test(cadena)){
+android4=true;
+}
+reproductor('audio/tituloNombres.mp3');
 window.setTimeout(iniciar,5000);
 }
 
@@ -27,6 +31,15 @@ $('#pagPpal').css('display','block');
 $('#contPuntuacion').html('<a href="index.html" id="botonAtras"><img src="images/aspa.png"/></a><p>Puntuación='+puntuacion+'</p><p>Nivel='+buscarNivel(puntuacion)+'</p>');
 $('#contAnimales').css('visibility','hidden');
 colocarAnimales();
+}
+
+function reproductor(a){
+audio.src=a;
+audio.play();
+if(android4){
+media=new Media('file:///android_asset/www/'+a);
+media.play();
+}
 }
 
 function colocarAnimales(){
@@ -248,7 +261,7 @@ window.setTimeout(colocarAltura,20);
 
 $('.btnAnimal').click(comprobarSeleccion);
 
-},120);
+},250);
 
 }
 
@@ -257,8 +270,7 @@ var animalPulsado=$(this).find('input').val();
 if(animalPulsado==animalSeleccionado){
 $('#pagPpal').hide();
 $('#pagAcierto').show();
-audio.src='audio/Aplausos.mp3';
-audio.play();
+reproductor('audio/Aplausos.mp3');
 puntuacion=puntuacion+1;
 localStorage.setItem('puntuacionNombres',puntuacion);
 if (puntuacion==15||puntuacion==30||puntuacion==50||puntuacion==75||puntuacion==100) {
@@ -268,6 +280,9 @@ window.setTimeout(function(){
 $('#pagNivel').hide();
 	audio.pause();
 audio.currentTime=0;
+if(android4){
+media.stop();
+}
 iniciar();
 },2000);
 }else if(puntuacion==150){
@@ -278,18 +293,23 @@ window.setTimeout(function(){
 $('#pagAcierto').hide();
 	audio.pause();
 audio.currentTime=0;
+if(android4){
+media.stop();
+}
 iniciar();
 },2000);
 }
 }else{
 $('#pagPpal').hide();
 $('#pagFallo').show();
-audio.src='audio/Fallo.mp3';
-audio.play();
+reproductor('audio/Fallo.mp3');
 window.setTimeout(function(){
 $('#pagFallo').hide();
 	audio.pause();
 audio.currentTime=0;
+if(android4){
+media.stop();
+}
 iniciar();
 },2000);
 }
