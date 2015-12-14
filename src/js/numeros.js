@@ -11,10 +11,12 @@ var a=0;
 var b=0;
 var android4=false;
 var media;
+var audio;
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
-function onDeviceReady () {
+function onDeviceReady() {
+	alert('hola')
 document.onselectstart = function() {return false;}
 window.addEventListener("orientationchange", function() {
 window.setTimeout(colocarAltura,150);
@@ -35,9 +37,6 @@ window.setTimeout(iniciar,5000);
 }
 
 function iniciar(){
-if(android4){
-media.stop();
-}
 $('#pagBienvenida').css('display','none');
 $('#pagPpal').css('display','block');
 $('#contPuntuacion').html('<a href="index.html" id="botonAtras"><img src="images/aspa.png"/></a><p>Puntuación='+puntuacion+'</p><p>Nivel='+buscarNivel(puntuacion)+'</p>');
@@ -125,7 +124,7 @@ if(animal[0]==12){
 if(puntuacion<15){
 window.setTimeout(function(){
 $('#contAnimales').html('<div class="encabezado">¿'+determinante+' '+nombreAnimal[0]+''+plurar+' hay?<img src="images/altavoz.png" class="altavoz"/></div><div class="numeros6 item"><div><img src="images/imagenesAnimales/'+rutaanimal[1]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[2]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[3]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[4]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[5]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[6]+'"/></div></div>');
-window.setTimeout(colocarAltura,20);
+window.setTimeout(colocarAltura,50);
 posicionElecta=aleatorio(1,3);
 numeros[1]=aleatorio(1,6);
 numeros[2]=aleatorio(1,6);
