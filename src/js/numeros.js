@@ -22,7 +22,7 @@ if (puntuacion==null) {
 puntuacion=0;
 }
 audio=document.createElement('audio');
-reproductor('audio/'+audioanimal[0]);
+reproductor('audio/tituloNumeros.mp3');
 window.setTimeout(iniciar,5000);
 }
 
