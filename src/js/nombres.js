@@ -4,6 +4,7 @@ var rutaanimal= new Array();
 var animalSeleccionado=0;
 var nombreAnimal= new Array();
 var audio;
+var android4=false;
 
 document.addEventListener("deviceready", onDeviceReady, false);
 

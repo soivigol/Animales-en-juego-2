@@ -56,7 +56,7 @@ animalSeleccionado=aleatorio(1,21);
 animal[0]=animalSeleccionado;
 if(animalSeleccionado<19&&animalSeleccionado>1){
 a=animalSeleccionado-1; b=animalSeleccionado+2;
-}else if(animalSeleccionado>19){
+}else if(animalSeleccionado>18){
 b=animalSeleccionado; a=animalSeleccionado-3;
 }else if(animalSeleccionado<2){
 a=animalSeleccionado; b=animalSeleccionado+3;
