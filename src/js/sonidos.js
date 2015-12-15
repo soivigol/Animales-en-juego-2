@@ -224,6 +224,7 @@ if(android4){
 md2.stop();
 }
 
+localStorage.setItem('tipoResultado','');
 }
 window.open('acierto.html', '_blank', 'location=yes'); 	
 }

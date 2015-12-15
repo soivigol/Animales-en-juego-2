@@ -25,6 +25,8 @@ function onDeviceReady(){
 		if(android4){
 			md1.stop();
 		}
+		window.history.back();
+		localStorage.setItem('dondeViene','acierto.html');
 		},2500);
 	}else{
 		$('#pagFallo').show();
@@ -39,8 +41,9 @@ function onDeviceReady(){
 		if(android4){
 			md1.stop();
 		}
+
+		window.history.back();
+		localStorage.setItem('dondeViene','acierto.html');
 		},2500);
 	}
-	window.history.back();
-	localStorage.setItem('dondeViene','acierto.html')
 }
