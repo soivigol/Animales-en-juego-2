@@ -3,6 +3,7 @@ var animal=new Array();
 var rutaanimal= new Array();
 var animalSeleccionado=0;
 var nombreAnimal= new Array();
+var audio;
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -275,16 +276,10 @@ $('.btnAnimal').click(comprobarSeleccion);
 function comprobarSeleccion(){
 var animalPulsado=$(this).find('input').val();
 if(animalPulsado==animalSeleccionado){
-if(android4){
-media.stop();
-}
 puntuacion=puntuacion+1;
 localStorage.setItem('puntuacionNombres',puntuacion);
 localStorage.setItem('tipoResultado','acierto');
 }else{
-if(android4){
-media.stop();
-}
 
 localStorage.setItem('tipoResultado','');
 }
