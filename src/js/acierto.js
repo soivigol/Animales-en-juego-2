@@ -17,7 +17,7 @@ function onDeviceReady(){
 		audio.src='audio/Aplausos.mp3';
 		audio.play();
 		if(android4){
-		md1 = new Media('file:///android_asset/www/audio/acierto.mp3');
+		md1 = new Media('file:///android_asset/www/audio/Aplausos.mp3');
 		md1.play();	
 		}
 		window.setTimeout(function(){
@@ -33,7 +33,7 @@ function onDeviceReady(){
 		audio.src='audio/Fallo.mp3';
 		audio.play();
 		if(android4){
-		md1 = new Media('file:///android_asset/www/audio/fallo.mp3');
+		md1 = new Media('file:///android_asset/www/audio/Fallo.mp3');
 		md1.play();	
 		}
 		window.setTimeout(function(){

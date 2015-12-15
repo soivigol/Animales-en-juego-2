@@ -21,15 +21,16 @@ var cadena=device.version;
 if(expr.test(cadena)){
 android4=true;
 }
+audio=document.createElement('audio');
 puntuacion=Number(localStorage.getItem("puntuacion"));
 if (puntuacion==null) {
 puntuacion=0;
 }
 var dondeViene=localStorage.getItem('dondeViene');
 if(dondeViene=='acierto.html'){
+	localStorage.setItem('dondeViene','');
 	iniciar();
 }else{
-audio=document.createElement('audio');
 reproductor(1,'audio/tituloSonidos.mp3');	
 window.setTimeout(iniciar,5000);
 }
