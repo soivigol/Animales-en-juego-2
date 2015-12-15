@@ -1,11 +1,18 @@
 var audio;
 var md1;
 var android4=false;
+var puntuacion=0;
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady(){
 	var tipo=localStorage.getItem('tipoResultado');
+	puntuacion=Number(localStorage.getItem("puntuacion"));
+	$('#reiniciarEsto').click(function(){
+	localStorage.setItem("puntuacion","0");
+	localStorage.setItem('dondeViene','');
+	window.history.back();
+	});
 	var expr=/^4/;
 		var cadena=device.version;
 		if(expr.test(cadena)){
@@ -25,8 +32,18 @@ function onDeviceReady(){
 		if(android4){
 			md1.stop();
 		}
-		window.history.back();
-		localStorage.setItem('dondeViene','acierto.html');
+		if(puntuacion==15||puntuacion==30||puntuacion==50||puntuacion==75||puntuacion==100){
+			$('#pagAcierto').hide();
+			$('#pagNivel').show();
+			window.setTimeout(function(){
+			localStorage.setItem('dondeViene','acierto.html');			  window.history.back();
+			},2500);
+		}else if(puntuacion==150){
+			$('#pagAcierto').hide();
+			$('#pagFin').show();
+		}else{
+			localStorage.setItem('dondeViene','acierto.html');			  window.history.back();
+		}
 		},2500);
 	}else{
 		$('#pagFallo').show();

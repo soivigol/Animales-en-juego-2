@@ -31,13 +31,13 @@ if(dondeViene=='acierto.html'){
 	localStorage.setItem('dondeViene','');
 	iniciar();
 }else{
+$('#pagBienvenida').css('display','block');
 reproductor(1,'audio/tituloSonidos.mp3');	
 window.setTimeout(iniciar,5000);
 }
 }
 
 function iniciar(){
-
 $('#pagBienvenida').css('display','none');
 $('#pagPpal').css('display','block');
 $('#contPuntuacion').html('<a href="index.html" id="botonAtras"><img src="images/aspa.png"/></a><p>Puntuación='+puntuacion+'</p><p>Nivel='+buscarNivel(puntuacion)+'</p>');
