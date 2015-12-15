@@ -31,8 +31,15 @@ var cadena=device.version;
 if(expr.test(cadena)){
 android4=true;
 }
-reproductor('audio/tituloNumeros.mp3');
+var dondeViene=localStorage.getItem('dondeViene');
+if(dondeViene=='resultadoNumeros'){
+	localStorage.setItem('dondeViene','');
+	iniciar();
+}else{
+$('#pagBienvenida').css('display','block');
+reproductor('audio/tituloNumeros.mp3');	
 window.setTimeout(iniciar,5000);
+}
 }
 
 function iniciar(){
@@ -394,51 +401,17 @@ if(Number($(this).text())==sumatorio){
 if(android4){
 media.stop();
 }
-$('#pagPpal').hide();
-$('#pagAcierto').show();
-reproductor('audio/Aplausos.mp3');
 puntuacion=puntuacion+1;
 localStorage.setItem('puntuacionNumeros',puntuacion);
-if (puntuacion==15||puntuacion==30||puntuacion==50||puntuacion==75||puntuacion==100) {
-$('#pagNivel').show();
-$('#pagAcierto').hide();
-window.setTimeout(function(){
-$('#pagNivel').hide();
-audio.pause();
-audio.currentTime=0;
-if(android4){
-media.stop();
-}
-iniciar();
-},2000);
-}else if(puntuacion==150){
-$('#pagFin').show();
-$('#pagAcierto').hide();
+localStorage.setItem('tipoResultado','acierto');
 }else{
-window.setTimeout(function(){
-$('#pagAcierto').hide();
-audio.pause();
-audio.currentTime=0;
 if(android4){
 media.stop();
 }
-iniciar();
-},2000);
+
+localStorage.setItem('tipoResultado','');
 }
-}else{
-$('#pagPpal').hide();
-$('#pagFallo').show();
-reproductor('audio/Fallo.mp3');
-window.setTimeout(function(){
-$('#pagFallo').hide();
-if(android4){
-media.stop();
-}
-audio.pause();
-audio.currentTime=0;
-iniciar();
-},2000);
-}
+window.open('resultadoNumeros.html', '_blank', 'location=yes'); 	
 }
 
 function colocar16Animales(){
