@@ -270,7 +270,7 @@ window.setTimeout(colocarAltura,20);
 
 $('.btnAnimal').click(comprobarSeleccion);
 
-},120);
+},200);
 
 }
 
