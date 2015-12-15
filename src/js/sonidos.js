@@ -243,7 +243,7 @@ if(android4){
 md1.stop();
 }else{
 audio.pause();
-audio.currentTime=0;	
+audio.currentTime=0; 	
 }
 $('#pagAcierto').hide();
 iniciar();
