@@ -14,7 +14,7 @@ function onDeviceReady(){
 		audio=document.createElement('audio');
 	if(tipo=='acierto'){
 		$('#pagAcierto').show();
-		audio.src='audio/acierto.mp3';
+		audio.src='audio/Aplausos.mp3';
 		audio.play();
 		if(android4){
 		md1 = new Media('file:///android_asset/www/audio/acierto.mp3');
@@ -30,7 +30,7 @@ function onDeviceReady(){
 		},2500);
 	}else{
 		$('#pagFallo').show();
-		audio.src='audio/fallo.mp3';
+		audio.src='audio/Fallo.mp3';
 		audio.play();
 		if(android4){
 		md1 = new Media('file:///android_asset/www/audio/fallo.mp3');
