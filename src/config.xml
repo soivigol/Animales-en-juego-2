@@ -8,7 +8,7 @@
         versionCode="1"
     xmlns:android   = "http://schemas.android.com/apk/res/android">
 
-    <name>Animales en juego 2</name>
+    <name>Animales en juego</name>
 
     <description>
         Aplicación para que los niños jueguen con animales y sonidos
@@ -103,10 +103,7 @@
         <allow-intent href="itms-apps:*" />
     </platform>
 
-<gap:config-file platform="android" parent="/manifest">
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-</gap:config-file>	
 	
 
 </widget>

@@ -206,7 +206,7 @@ reproductor(2,'audio/'+audioAnimal[animalSeleccionado]);
 $('.altavoz').click(function(){
 reproductor(2,'audio/'+audioAnimal[animalSeleccionado]);
 });
-},500);
+},300);
 
 }
 

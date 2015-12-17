@@ -1,6 +1,7 @@
 body{
 	background: green;
 	background-image: url(../images/fondoPant.png);
+	padding-top: 30px;
 }
 
 a{
