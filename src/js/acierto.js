@@ -43,7 +43,7 @@ function onDeviceReady(){
 		}
 			window.setTimeout(function(){
 			localStorage.setItem('dondeViene','acierto.html');			  window.history.back();
-			},2500);
+			},5000);
 		}else if(puntuacion==150){
 			$('#pagAcierto').hide();
 			$('#pagFin').show();

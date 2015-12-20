@@ -42,7 +42,7 @@ function onDeviceReady(){
 		md1.play();	}
 			window.setTimeout(function(){
 			localStorage.setItem('dondeViene','resultadoNumeros');			  window.history.back();
-			},2500);
+			},5000);
 		}else if(puntuacion==150){
 			$('#pagAcierto').hide();
 			$('#pagFin').show();
