@@ -87,88 +87,6 @@ animal[6]=aleatorio(a,b);
 if(animalSeleccionado==animal[6]){
 sumatorio=sumatorio+1;
 }
-var db = window.sqlitePlugin.openDatabase({name: "animales.db", androidLockWorkaround: 1});
-db.transaction(function(tx) {
-tx.executeSql("SELECT * FROM animales WHERE id='"+animalSeleccionado+"'",[],function(tx,res){
-rutaanimal[0]=res.rows.item(0).imagen;
-nombreAnimal[0]=res.rows.item(0).nombre;
-audioanimal[0]=res.rows.item(0).sonido2;
-});
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[1]+"'",[],function(tx,res){
-rutaanimal[1]=res.rows.item(0).imagen;
-nombreAnimal[1]=res.rows.item(0).nombre;
-});
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[2]+"'",[],function(tx,res){
-rutaanimal[2]=res.rows.item(0).imagen;
-nombreAnimal[2]=res.rows.item(0).nombre;
-});
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[3]+"'",[],function(tx,res){
-rutaanimal[3]=res.rows.item(0).imagen;
-nombreAnimal[3]=res.rows.item(0).nombre;
-});
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[4]+"'",[],function(tx,res){
-rutaanimal[4]=res.rows.item(0).imagen;
-nombreAnimal[4]=res.rows.item(0).nombre;
-});
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[5]+"'",[],function(tx,res){
-rutaanimal[5]=res.rows.item(0).imagen;
-nombreAnimal[5]=res.rows.item(0).nombre;
-});
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[6]+"'",[],function(tx,res){
-rutaanimal[6]=res.rows.item(0).imagen;
-nombreAnimal[6]=res.rows.item(0).nombre;
-});
-});
-if (animal[0]==1||animal[0]==4||animal[0]==16||animal[0]==20||animal[0]==21){
-    var determinante='Cuantas';
-}else{
-    var determinante='Cuantos';
-}
-if(animal[0]==12){
-	var plurar='es';
-}else{
-	var plurar='s';
-}
-if(puntuacion<15){
-window.setTimeout(function(){
-$('#contAnimales').html('<div class="encabezado">¿'+determinante+' '+nombreAnimal[0]+''+plurar+' hay?<img src="images/altavoz.png" class="altavoz"/></div><div class="numeros6 item"><div><img src="images/imagenesAnimales/'+rutaanimal[1]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[2]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[3]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[4]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[5]+'"/></div><div><img src="images/imagenesAnimales/'+rutaanimal[6]+'"/></div></div>');
-window.setTimeout(colocarAltura,20);
-posicionElecta=aleatorio(1,3);
-numeros[1]=aleatorio(1,6);
-numeros[2]=aleatorio(1,6);
-numeros[3]=aleatorio(1,6);
-numeros[posicionElecta]=sumatorio;
-if(numeros[2]==numeros[1]){
-while(numeros[2]==numeros[1]){
-numeros[2]=aleatorio(1,6);
-}
-}
-if(numeros[3]==numeros[1]||numeros[3]==numeros[2]){
-while(numeros[3]==numeros[1]||numeros[3]==numeros[2]){
-numeros[3]=aleatorio(1,6);
-}
-}
-
-$('#contNumeros').html('<button>'+numeros[1]+'</button><button>'+numeros[2]+'</button><button>'+numeros[3]+'</button>');
-$('#contNumeros button').click(comprobar);
-reproductor('audio/'+audioanimal[0]);
-$('.altavoz').click(function(){
-reproductor('audio/'+audioanimal[0]);
-})
-},250);
-}else if (puntuacion<30) {
-animal[7]=aleatorio(a,b);
-if(animalSeleccionado==animal[7]){
-sumatorio=sumatorio+1;
-}
-animal[8]=aleatorio(a,b);
-if(animalSeleccionado==animal[8]){
-sumatorio=sumatorio+1;
-}
-animal[9]=aleatorio(a,b);
-if(animalSeleccionado==animal[9]){
-sumatorio=sumatorio+1;
-}
 rutaanimal[0]=imagen[animalSeleccionado];
 nombreAnimal[0]=nombre[animalSeleccionado];
 audioanimal[0]=sonido2[animalSeleccionado];
@@ -195,6 +113,7 @@ if (animal[0]==1||animal[0]==4||animal[0]==16||animal[0]==20||animal[0]==21){
 }else{
     var determinante='Cuantos';
 }
+
 if(animal[0]==12){
 	var plurar='es';
 }else{
@@ -225,7 +144,7 @@ $('#contNumeros button').click(comprobar);
 reproductor('audio/'+audioanimal[0]);
 $('.altavoz').click(function(){
 reproductor('audio/'+audioanimal[0]);
-})
+});
 },250);
 }else if (puntuacion<30) {
 animal[7]=aleatorio(a,b);
