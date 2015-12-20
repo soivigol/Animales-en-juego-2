@@ -5,6 +5,8 @@ var animalSeleccionado=0;
 var nombreAnimal= new Array();
 var audio;
 var android4=false;
+var imagen=[0,'Abeja.png','Burro.png','Caballo.png','Cabra.png','Canario.png','Cerdo.png','Cuervo.png','Elefante.png','Gallo.png','Gato.png','Grillo.png','Leon.png','Lobo.png','Mono.png','Oso.png','Oveja.png','Pato.png','Pavo.png','Perro.png','Rana.png','Vaca.png'];
+var nombre=[0,'abeja','burro','caballo','cabra','canario','cerdo','cuervo','elefante','gallo','gato','grillo','leon','lobo','mono','oso','oveja','pato','pavo','perro','rana','vaca'];
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -158,87 +160,63 @@ animal[16]=aleatorio(1,21);
 }    
 }
 
-var db = window.sqlitePlugin.openDatabase({name: "animales.db", androidLockWorkaround: 1});
-db.transaction(function(tx) {
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[1]+"'",[],function(tx,res){
-rutaanimal[1]=res.rows.item(0).imagen;
-nombreAnimal[1]=res.rows.item(0).nombre;
-});
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[2]+"'",[],function(tx,res){
-rutaanimal[2]=res.rows.item(0).imagen;
-nombreAnimal[2]=res.rows.item(0).nombre;
-});
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[3]+"'",[],function(tx,res){
-rutaanimal[3]=res.rows.item(0).imagen;
-nombreAnimal[3]=res.rows.item(0).nombre;
-});
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[4]+"'",[],function(tx,res){
-rutaanimal[4]=res.rows.item(0).imagen;
-nombreAnimal[4]=res.rows.item(0).nombre;
-});
+rutaanimal[1]=imagen[animal[1]];
+nombreAnimal[1]=nombre[animal[1]];
+	
+rutaanimal[2]=imagen[animal[2]];
+nombreAnimal[2]=nombre[animal[2]];
+
+rutaanimal[3]=imagen[animal[3]];
+nombreAnimal[3]=nombre[animal[3]];
+	
+rutaanimal[4]=imagen[animal[4]];
+nombreAnimal[4]=nombre[animal[4]];
+
 if(puntuacion>14){
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[5]+"'",[],function(tx,res){
-rutaanimal[5]=res.rows.item(0).imagen;
-nombreAnimal[5]=res.rows.item(0).nombre;
-});
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[6]+"'",[],function(tx,res){
-rutaanimal[6]=res.rows.item(0).imagen;
-nombreAnimal[6]=res.rows.item(0).nombre;
-});
+rutaanimal[5]=imagen[animal[5]];
+nombreAnimal[5]=nombre[animal[5]];
+
+rutaanimal[6]=imagen[animal[6]];
+nombreAnimal[6]=nombre[animal[6]];
+
 }
 if (puntuacion>29){
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[7]+"'",[],function(tx,res){
-rutaanimal[7]=res.rows.item(0).imagen;
-nombreAnimal[7]=res.rows.item(0).nombre;
-});
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[8]+"'",[],function(tx,res){
-rutaanimal[8]=res.rows.item(0).imagen;
-nombreAnimal[8]=res.rows.item(0).nombre;
-});
+rutaanimal[7]=imagen[animal[7]];
+nombreAnimal[7]=nombre[animal[7]];
+
+rutaanimal[8]=imagen[animal[8]];
+nombreAnimal[8]=nombre[animal[8]];
 }
 
 if(puntuacion>49){
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[9]+"'",[],function(tx,res){
-rutaanimal[9]=res.rows.item(0).imagen;
-nombreAnimal[9]=res.rows.item(0).nombre;
-});
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[10]+"'",[],function(tx,res){
-rutaanimal[10]=res.rows.item(0).imagen;
-nombreAnimal[10]=res.rows.item(0).nombre;
-});
+rutaanimal[9]=imagen[animal[9]];
+nombreAnimal[9]=nombre[animal[9]];
+
+rutaanimal[10]=imagen[animal[10]];
+nombreAnimal[10]=nombre[animal[10]];
 }
     
 if(puntuacion>74){
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[11]+"'",[],function(tx,res){
-rutaanimal[11]=res.rows.item(0).imagen;
-nombreAnimal[11]=res.rows.item(0).nombre;
-});
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[12]+"'",[],function(tx,res){
-rutaanimal[12]=res.rows.item(0).imagen;
-nombreAnimal[12]=res.rows.item(0).nombre;
-});
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[13]+"'",[],function(tx,res){
-rutaanimal[13]=res.rows.item(0).imagen;
-nombreAnimal[13]=res.rows.item(0).nombre;
-});
+rutaanimal[11]=imagen[animal[11]];
+nombreAnimal[11]=nombre[animal[11]];
+	
+rutaanimal[12]=imagen[animal[12]];
+nombreAnimal[12]=nombre[animal[12]];
+
+rutaanimal[13]=imagen[animal[13]];
+nombreAnimal[13]=nombre[animal[13]];
 }
     
 if(puntuacion>99){
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[14]+"'",[],function(tx,res){
-rutaanimal[14]=res.rows.item(0).imagen;
-nombreAnimal[14]=res.rows.item(0).nombre;
-});
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[15]+"'",[],function(tx,res){
-rutaanimal[15]=res.rows.item(0).imagen;
-nombreAnimal[15]=res.rows.item(0).nombre;
-});
-tx.executeSql("SELECT * FROM animales WHERE id='"+animal[16]+"'",[],function(tx,res){
-rutaanimal[16]=res.rows.item(0).imagen;
-nombreAnimal[16]=res.rows.item(0).nombre;
-});  
-}
+rutaanimal[14]=imagen[animal[14]];
+nombreAnimal[14]=nombre[animal[14]];
 
-});
+rutaanimal[15]=imagen[animal[15]];
+nombreAnimal[15]=nombre[animal[15]];
+
+rutaanimal[16]=imagen[animal[16]];
+nombreAnimal[16]=nombre[animal[16]];
+}
 
 window.setTimeout(function(){
 if (puntuacion<15) {

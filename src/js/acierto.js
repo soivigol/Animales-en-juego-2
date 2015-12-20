@@ -34,13 +34,24 @@ function onDeviceReady(){
 		}
 		if(puntuacion==15||puntuacion==30||puntuacion==50||puntuacion==75||puntuacion==100){
 			$('#pagAcierto').hide();
-			$('#pagNivel').show();
+			$('#pagNivel').show();audio.src='audio/Nivel.mp3';
+		audio.play();
+		if(android4){
+		md1 = new Media('file:///android_asset/www/audio/Nivel.mp3');
+		md1.play();	}
+		}
 			window.setTimeout(function(){
 			localStorage.setItem('dondeViene','acierto.html');			  window.history.back();
 			},2500);
 		}else if(puntuacion==150){
 			$('#pagAcierto').hide();
 			$('#pagFin').show();
+			audio.src='audio/Fin.mp3';
+		audio.play();
+		if(android4){
+		md1 = new Media('file:///android_asset/www/audio/Fin.mp3');
+		md1.play();	}
+		}
 		}else{
 			localStorage.setItem('dondeViene','acierto.html');			  window.history.back();
 		}
